@@ -5,25 +5,49 @@
   --yellow: #FFD639;
   --dark: #2C365E;
   --grey: #66666E;
+  --cyan: #00ffff;
+  --red: #ff0000;
 }
 
 .boxBlue {
   height: 200px;
   width: 200px;
-  background-color: #44E4FC;
+  background-color: var(--blue);
+}
+.boxBlue,
+.boxOrange,
+.image,
+.dot {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .boxBlue:hover,
 .boxOrange:hover,
-.image:hover,
+/* .image:hover, */
 .dot:hover {
-  border-radius: 15%;
+  border-radius: 100%;
+  transform: scale(1.2);
+}
+
+.boxBlue:hover {
+  background-color: var(--orange);
 }
 
 .boxOrange {
   height: 200px;
   width: 200px;
-  background-color: #FB7C45;
+  background-color: var(--orange);
+}
+
+.boxOrange:hover {
+  background-color: var(--blue);
+}
+
+.image:hover {
+ -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+  filter: invert(100%);
 }
 
 .dot {

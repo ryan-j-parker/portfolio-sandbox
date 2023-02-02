@@ -4,7 +4,9 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import gsap from 'gsap';
 import { TweenLite } from 'gsap/gsap-core';
 import React, { useRef } from 'react';
-import { ACESFilmicToneMapping, DoubleSide, sRGBEncoding } from 'three';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import { ACESFilmicToneMapping, DoubleSide, InvertStencilOp, sRGBEncoding } from 'three';
 
 function RotatingCircle({ position }) {
   const meshRef = useRef();
@@ -48,6 +50,14 @@ export default function Experience() {
   //   ease: 'none',
   // });
   // });
+  const mouse = useRef([0, 0]);
+
+  const [hovered, hover] = useState(false);
+  useEffect(() => {
+    document.body.style.cursor = hovered
+      ? 'pointer'
+      : "url('https://raw.githubusercontent.com/chenglou/react-motion/master/demos/demo8-draggable-list/cursor.png') 39 39, auto";
+  }, [hovered]);
 
   return (
     <Canvas
@@ -58,6 +68,7 @@ export default function Experience() {
         toneMapping: ACESFilmicToneMapping,
         toneMappingExposure: 1,
       }}
+      mouse={mouse} hover={hover} 
     >
       <Center>
         <Html
@@ -65,7 +76,7 @@ export default function Experience() {
           position-x={-4}
           scale={2}
         >
-          <img src="/r-fav.png" className="image" alt="Ryan Parker" />
+          <img src="/r-fav.png" className="image" alt="Ryan Parker" onPointerOver="invert()" />
         </Html>
         <Html position-y={4}>
           <div className="boxBlue" />
