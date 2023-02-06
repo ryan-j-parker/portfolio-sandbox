@@ -7,24 +7,8 @@ import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { ACESFilmicToneMapping, DoubleSide, InvertStencilOp, sRGBEncoding } from 'three';
+import * as THREE from 'three';
 
-function RotatingCircle({ position }) {
-  const meshRef = useRef();
-
-  useFrame((state, delta) => {
-    TweenLite.to(meshRef.current.rotation, 2, {
-      y: meshRef.current.rotation.y + delta * ((2 * Math.PI) / 5),
-      ease: 'Power0.easeNone',
-    });
-  });
-
-  return (
-    <mesh ref={meshRef} position={position}>
-      <circleBufferGeometry />
-      <meshBasicMaterial />
-    </mesh>
-  );
-}
 
 export default function Experience() {
   const red = useRef();
@@ -36,20 +20,6 @@ export default function Experience() {
   const violet = useRef();
   const dots = useRef();
 
-  // useFrame((state, delta) => {
-  //   gsap.duration(red.current.rotation, {
-  //     //   duration: 10,
-  //     y: (red.current.rotation.y += delta * ((2 * Math.PI) / 5)),
-  //     // repeat: 1,
-  //     ease: 'power0.easeNone',
-  //   });
-  // gsap.to(orange.current.rotation, {
-  //   duration: 10,
-  //   y: 2 * Math.PI,
-  //   repeat: 1,
-  //   ease: 'none',
-  // });
-  // });
   const mouse = useRef([0, 0]);
 
   const [hovered, hover] = useState(false);
@@ -62,11 +32,9 @@ export default function Experience() {
   return (
     <Canvas
       camera={{ position: [0, 0, 10] }}
-      gl={{
-        antialias: true,
-        encoding: sRGBEncoding,
-        toneMapping: ACESFilmicToneMapping,
-        toneMappingExposure: 1,
+      onCreated={({ gl }) => {
+        gl.toneMapping = THREE.ReinhardToneMapping;
+        gl.setClearColor(new THREE.Color('#020207'));
       }}
       mouse={mouse} hover={hover} 
     >
@@ -76,7 +44,7 @@ export default function Experience() {
           position-x={-4}
           scale={2}
         >
-          <img src="/r-fav.png" className="image" alt="Ryan Parker" onPointerOver="invert()" />
+          <img src="/r-fav.png" className="image" />
         </Html>
         <Html position-y={4}>
           <div className="boxBlue" />
