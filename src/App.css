@@ -87,3 +87,19 @@ body,
   height: 100%;
   width: 100%;
 } */
+
+.sound-palette iframe {
+  width: 2048px;
+  height: 2048px;
+  border: none;
+  background: #ffffff;
+  border-radius: 20px;
+}
+
+.collabo iframe {
+  width: 2048px;
+  height: 2048px;
+  border: none;
+  /* background: #000000; */
+  border-radius: 20px;
+}
