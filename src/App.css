@@ -71,8 +71,16 @@ body,
   top: 0;
   left: 0;
   width: 100%;
-  height: 500vh;
+  width: 100vw;
+  height: 100%;
+  height: 100vh;
   background: rgb(44, 44, 44);
+  background: linear-gradient(
+    180deg,
+    rgba(44, 44, 44, 1) 50%,
+    rgb(0, 95, 150) 75%,
+    rgb(170, 0, 0) 125%
+  );
 }
 
 /* .sandbox {
