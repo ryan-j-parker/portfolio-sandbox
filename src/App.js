@@ -6,11 +6,13 @@ import Experience from './Experience';
 import AltEffects from './AltEffects';
 import Sandbox from './Sandbox';
 import { ImageSearch } from './ImageSearch';
+import Profile from './Profile';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Sandbox />} />
+      <Route path="/profile" element={<Profile />} />
       <Route path="/exp" element={<Experience />} />
       <Route path="/alt" element={<AltEffects />} />
       <Route path="/main" element={<Main />} />
