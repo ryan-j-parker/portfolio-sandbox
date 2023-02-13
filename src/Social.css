@@ -1,11 +1,13 @@
 .social-wrapper {
-    position: relative;
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 40px;
+    right: 160px;
 }
 
 .social-list li a {
-  width: 40px;
+border: 3px dashed white;
+
+    width: 40px;
   height: 40px;
   background-color: #fff;
   text-align: center;
