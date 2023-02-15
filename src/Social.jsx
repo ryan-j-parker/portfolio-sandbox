@@ -7,7 +7,7 @@ export default function Social() {
       <ul className="social-list">
         <li>
           <a href="https://linkedin.com/in/ryanparkerdev" target="_blank" rel="noreferrer">
-            <i className="far fa-address-card icon"></i>
+            <i className="fas fa-address-card icon"></i>
           </a>
         </li>
         <li>
