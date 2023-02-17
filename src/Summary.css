@@ -1,69 +1,106 @@
+body,
+html,
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.intro-canvas {
+  height: 20vh;
+  /* width: 100vw; */
+  position: fixed;
+  top: 10vh;
+  left: 0;
+  border: 2px dashed pink;
+  box-sizing: border-box;
+}
 
 .image-wrapper {
-    position: fixed;
-    top: 120px;
-    right: 50px;
-    border: 2px dashed green;
+  position: fixed;
+  top: 120px;
+  right: 50px;
+  border: 2px dashed green;
 }
 
 .headshot {
-    /* border: 2px solid white; */
-    box-shadow: 0 0 14px 10px rgba(255, 255, 255, 0.5);
-    float: right;
-    shape-outside: circle(50%);
-    /* position: relative; */
-    top: 10px;
-    right: 20px;
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
+  /* border: 2px solid white; */
+  box-shadow: 0 0 14px 10px rgba(255, 255, 255, 0.5);
+  float: right;
+  shape-outside: circle(50%);
+  /* position: relative; */
+  top: 10px;
+  right: 20px;
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
 }
 
 .intro {
-    color: white;
-    position: relative;
-    font-size: 1.5rem;
-    margin-top: 100px;
-    padding: 0;
-    border: 2px dashed red;
-    font-family: 'Days One';
+  color: white;
+  position: relative;
+  font-size: 1.5rem;
+  margin-top: 100px;
+  padding: 0;
+  border: 2px dashed red;
+  font-family: 'Days One';
 }
 
 .hi {
-    font-size: 4rem;
-    border: 2px dashed green;
-    text-shadow: 5px 3px rgb(255, 0, 255);
-    position: relative;
-    width: 25%;
-    left: 50px;
-    /* z-index: -1; */
+  font-size: 4rem;
+  border: 2px dashed green;
+  /* text-shadow: 5px 3px rgb(255, 0, 255); */
+  position: relative;
+  width: 25%;
+  left: 50px;
+  color: rgb(116, 116, 116);
+
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  /* z-index: -1; */
 }
 
 .my {
-    width: 50%;
-    position: relative;
-    border: 2px dashed purple;
-    top: 20px;
-    left: 75px;
-    /* z-index: -1; */
+  width: 50%;
+  position: relative;
+  border: 2px dashed purple;
+  /* text-shadow: 5px 3px rgb(255, 0, 255); */
+  /* text-shadow: 2px 2px rgb(255, 128, 127); */
+  top: 20px;
+  left: 50px;
+  color: rgb(116, 116, 116);
+  font-size: 1.6rem;
+  /* z-index: -1; */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
 }
 
 .name {
-    border: 2px dashed purple;
-    font-weight: 700;
-    width: 75%;
-    position: relative;
-    left: 100px;
+  border: 2px dashed purple;
+  font-weight: 700;
+  width: 75%;
+  /* text-shadow: -3px -3px rgb(128, 127, 255); */
+  text-shadow: 2px 2px rgb(212, 212, 212);
+  color: rgb(155, 155, 155);
+
+  font-size: 4rem;
+  position: relative;
+  left: 50px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
 }
 
 .summary {
-    position: relative;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
-    text-align: center;
-    margin-top: 100px;
-    padding: 0;
-    border: 2px dashed red;
-    font-family: 'Days One';
+  position: relative;
+  color: rgb(155, 155, 155);
+  font-size: 2.25rem;
+  line-height: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 100px;
+  padding: 0;
+  border: 2px dashed red;
+  font-family: 'Days One';
 }

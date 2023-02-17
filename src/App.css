@@ -72,13 +72,14 @@ body,
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgb(44, 44, 44);
-  background: linear-gradient(
+  /* background: rgb(44, 44, 44); */
+  background: #292426;
+  /* background: linear-gradient(
     180deg,
     rgba(44, 44, 44, 1) 50%,
     rgb(0, 95, 150) 75%,
     rgb(170, 0, 0) 125%
-  );
+  ); */
 }
 
 /* .sandbox {
