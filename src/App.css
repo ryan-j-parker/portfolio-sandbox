@@ -1,12 +1,16 @@
 :root {
-  --blue: #44E4FC;
-  --green: #00AF54;
-  --orange: #FB7C45;
-  --yellow: #FFD639;
-  --dark: #2C365E;
-  --grey: #66666E;
+  --blue: #44e4fc;
+  --green: #00af54;
+  --orange: #fb7c45;
+  --yellow: #ffd639;
+  --dark: #2c365e;
+  --grey: #66666e;
   --cyan: #00ffff;
   --red: #ff0000;
+}
+
+html {
+  box-sizing: border-box;
 }
 
 .App {
@@ -50,7 +54,7 @@
 }
 
 .image:hover {
- -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
+  -webkit-filter: invert(100%); /* Safari 6.0 - 9.0 */
   filter: invert(100%);
 }
 
@@ -65,17 +69,32 @@ html {
   background: #292426;
 }
 
-.sound-palette iframe {
-  width: 2048px;
-  height: 2048px;
-  border: none;
-  background: #ffffff;
-  border-radius: 20px;
-}
-
 .collabo iframe {
   width: 2048px;
   height: 2048px;
   border: none;
   border-radius: 20px;
 }
+
+/* @media screen and (min-width: 1024px) {
+  .sound-palette iframe {
+    width: 2560px;
+    height: 1984px;
+  }
+} */
+
+/* below dimensions are dialed in for mobile
+    but far too small on desktop, this is still
+      a work in progress
+*/
+
+/* @media screen and (max-width: 768px) {
+  .sound-palette iframe {
+    width: 1592px;
+    height: 1192px;
+  }
+  .collabo iframe {
+    width: 100%;
+    height: 100%;
+  }
+} */

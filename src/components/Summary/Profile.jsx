@@ -12,8 +12,8 @@ export default function Profile() {
     <>
       <Navbar />
       <Social />
-      <MainPage />
-      {/* <MainStage /> */}
+      {/* <MainPage /> */}
+      <MainStage />
       {/* <Summary /> */}
     </>
   );

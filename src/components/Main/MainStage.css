@@ -2,14 +2,14 @@
     position: fixed;
     top: 10vh;
     width: 100vw;
-    height: 100;
+    height: 100vh;
     background: #f2f2f2;
     z-index: 1;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.mainstage-canvas {
+.mainstageCanvas {
   height: 100%;
   width: 100%;
   position: relative;
