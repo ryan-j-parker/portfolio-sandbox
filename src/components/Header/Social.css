@@ -1,5 +1,6 @@
 .social-wrapper {
-  position: absolute;
+  position: fixed;
+  z-index: 1;
   top: 20px;
   left: 120px;
 }

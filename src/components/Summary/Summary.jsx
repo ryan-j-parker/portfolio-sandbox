@@ -2,7 +2,6 @@
 import {
   Center,
   Float,
-  OrbitControls,
   PresentationControls,
   Stars,
   Text3D,
@@ -16,14 +15,9 @@ import * as THREE from 'three';
 export default function Summary() {
   return (
     <>
-      {/* <div className="image-wrapper">
-        <img className="headshot" src="/ryanparker34.png" />
-      </div> */}
-
       <Canvas
         className="intro-canvas"
         orthographic
-        // camera={{ position: [0, 0, 10], fov: 75 }}
         camera={{ near: 0, far: 1000, zoom: 10, position: [0, 0, 10], fov: 15 }}
         onCreated={({ gl }) => {
           gl.encoding = THREE.sRGBEncoding;
@@ -66,10 +60,6 @@ export default function Summary() {
         <h1 className="name">Ryan Parker.</h1>
       </div>
       <div className="summary">
-        {/* <p className="summary-text">
-          I&apos;m a full-stack software developer with a passion for crafting intuitive and
-          engaging user experiences, beautiful UI, and 3D graphics and animation.
-        </p> */}
         <p className="summary-text">full-stack software developer</p>
       </div>
     </>

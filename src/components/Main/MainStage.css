@@ -1,9 +1,8 @@
 .mainstage {
     position: fixed;
     top: 10vh;
-    /* left: 10vw; */
     width: 100vw;
-    height: 100vh;
+    height: 100;
     background: #f2f2f2;
     z-index: 1;
     box-sizing: border-box;

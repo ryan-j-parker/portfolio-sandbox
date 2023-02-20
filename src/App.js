@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Main from './Main';
-import Experience from './Experience';
-import AltEffects from './AltEffects';
-import Sandbox from './Sandbox';
-import { ImageSearch } from './ImageSearch';
-import Profile from './Profile';
+import Main from './components/Main/Main';
+import Experience from './components/Sandbox/Experience';
+import AltEffects from './components/Sandbox/AltEffects';
+import Sandbox from './components/Sandbox/Sandbox';
+import { ImageSearch } from './components/Sandbox/ImageSearch';
+import Profile from './components/Summary/Profile';
 
 function App() {
   return (

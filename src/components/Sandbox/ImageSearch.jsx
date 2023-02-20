@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import searchImages from './services/api';
+import searchImages from '../../services/api';
 
 function SearchBar({ onSubmit }) {
   const [searchTerm, setSearchTerm] = useState('');
