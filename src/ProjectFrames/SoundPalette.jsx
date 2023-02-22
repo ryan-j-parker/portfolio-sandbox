@@ -5,11 +5,31 @@ import { Canvas, useThree, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { useState, useRef } from 'react';
 import './SoundPalette.css';
+// import upArrow from '../Main/up-arrow-svgrepo-com.svg';
+// import downArrow from '../Main/down-arrow-svgrepo-com.svg';
 
 export default function SoundPalette() {
+  const [source, setSource] = useState('https://sound-palette.netlify.app/');
+
+  const sources = [
+    'https://sound-palette.netlify.app/',
+    'https://idyllic-frangollo-1ec6ab.netlify.app/',
+    'https://collabomusic.co',
+  ];
+
   return (
-    <Html position={[-1, 4.34, 4.8]} transform wrapperClass="soundPalette" distanceFactor={1.25} >
-      <iframe scrolling="no" title="Sound Palette" src="https://sound-palette.netlify.app" />
-    </Html>
+    <>
+      <Html position={[-1, 4.4, 4.8]} transform wrapperClass="soundPalette" distanceFactor={1.25}>
+        <iframe scrolling="no" title="Sound Palette" src={source} />
+      </Html>
+      <Html position={[3.2, 5, 4.8]} transform>
+        <div className="channel">
+          {/* <img src={upArrow} className="upArrow" /> */}
+        </div>
+        <div className="channel">
+          {/* <img src={downArrow} className="downArrow" /> */}
+        </div>
+      </Html>
+    </>
   );
 }

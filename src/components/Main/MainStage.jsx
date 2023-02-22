@@ -7,6 +7,8 @@ import {
   Stage,
   Text3D,
   useGLTF,
+  Float,
+  Html,
 } from '@react-three/drei';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
@@ -16,6 +18,9 @@ import crtFragment from '../../shaders/crtFragment';
 import crtVertex from '../../shaders/crtVertex';
 import { useRef, useState } from 'react';
 import SoundPalette from '../../ProjectFrames/SoundPalette';
+import gsap from 'gsap';
+import upArrow from './up-arrow-svgrepo-com.svg';
+import downArrow from './down-arrow-svgrepo-com.svg';
 
 const CrtMaterial = shaderMaterial(
   {
@@ -68,9 +73,38 @@ const CRT = () => {
       {clicked ? (
         // <group position={[-3.8, 6.6, 4.9]}>
         <SoundPalette />
-        // </group>
-      ) : null}
+      ) : // </group>
+        null}
     </>
+  );
+};
+
+const ProjectsText = () => {
+  const textRef = useRef();
+
+  // useFrame(() => {
+  //   gsap.fromTo(textRef, {
+  //     x: 200,
+  //     ease: 'power2.inOut',
+  //     duration: 4,
+  //   }, {
+  //     x: -200,
+  //     ease: 'power2.inOut',
+  //     duration: 4,
+  //   });
+  // });
+
+  return (
+    <group ref={textRef}>
+      <Center position-y={5}>
+        <Float floatIntensity={0.1} floatingRange={0.1} rotationIntensity={0.1}>
+          <Text3D size={1.4} font={'/Righteous_Regular.json'}>
+            Projects
+            <meshNormalMaterial />
+          </Text3D>
+        </Float>
+      </Center>
+    </group>
   );
 };
 
@@ -96,18 +130,29 @@ export default function MainStage() {
           gl.toneMappingExposure = 1;
         }}
       >
-        <Center position-y={6}>
-          <Text3D size={1.4} font={'/Righteous_Regular.json'}>
-            Projects
-            <meshNormalMaterial />
-          </Text3D>
-        </Center>
-        <PresentationControls>
+        <ProjectsText />
+        <PresentationControls
+          polar={[-0.4, 0.4]}
+          azimuth={[-1, 1]}
+          config={{ mass: 2, tension: 400 }}
+          snap={{ mass: 2, tension: 400 }}
+        >
           <Stage shadows="contact" center>
             <ambientLight intensity={0.5} />
             <CRT
             // onClick={handleClick}
             />
+            <Html
+              position={[3.2, 5, 4.8]}
+              transform
+            >
+              <div className="channel">
+                <img src={upArrow} className="upArrow" />
+              </div>
+              <div className="channel">
+                <img src={downArrow} className="downArrow" />
+              </div>
+            </Html>
           </Stage>
         </PresentationControls>
 

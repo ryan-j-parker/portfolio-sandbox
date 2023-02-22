@@ -17,3 +17,13 @@
   box-sizing: border-box;
   background: #f2f2f2;
 }
+
+.upArrow, .downArrow {
+  height: 20px;
+  width: auto;
+}
+
+.channel {
+  background-color: rgb(110, 96, 96);
+  padding: 18px 25px;
+}
