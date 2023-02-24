@@ -24,6 +24,7 @@
 }
 
 .channel {
-  background-color: rgb(110, 96, 96);
+  background-color: #00000C;
   padding: 18px 25px;
+  z-index: 3;
 }

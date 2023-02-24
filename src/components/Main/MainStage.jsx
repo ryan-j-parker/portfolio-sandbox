@@ -32,6 +32,8 @@ const CrtMaterial = shaderMaterial(
 );
 extend({ CrtMaterial });
 
+
+
 const CRT = () => {
   const crt = useGLTF('/CRT/Television_01_1k.gltf');
   const crtMaterial = useRef();
