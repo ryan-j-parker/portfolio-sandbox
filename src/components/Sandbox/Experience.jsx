@@ -2,13 +2,12 @@
 import { Center, Html, OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import gsap from 'gsap';
-import { TweenLite } from 'gsap/gsap-core';
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { ACESFilmicToneMapping, DoubleSide, InvertStencilOp, sRGBEncoding } from 'three';
 import * as THREE from 'three';
-
+import './Experience.css';
 
 export default function Experience() {
   const red = useRef();
@@ -36,7 +35,8 @@ export default function Experience() {
         gl.toneMapping = THREE.ReinhardToneMapping;
         gl.setClearColor(new THREE.Color('#020207'));
       }}
-      mouse={mouse} hover={hover} 
+      mouse={mouse} hover={hover}
+      className="experienceCanvas" 
     >
       <Center>
         <Html

@@ -1,3 +1,5 @@
+// this is still a WIP - bars need to expand and show vertical list when clicked 
+
 import React from 'react';
 import './Navbar.css';
 

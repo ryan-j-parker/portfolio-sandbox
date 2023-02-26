@@ -5,16 +5,20 @@ import './Profile.css';
 import Summary from './Summary';
 import MainStage from '../Main/MainStage';
 import MainPage from '../Main/MainPage';
-// import { ParallaxProvider } from 'react-scroll-parallax';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import Experience from '../Sandbox/Experience';
 
 export default function Profile() {
   return (
     <>
       <Navbar />
       <Social />
-      {/* <MainPage /> */}
-      <MainStage />
-      {/* <Summary /> */}
+      <ParallaxProvider>
+        <Summary />
+        <MainPage />
+        <MainStage />
+        <Experience />
+      </ParallaxProvider>
     </>
   );
 }
