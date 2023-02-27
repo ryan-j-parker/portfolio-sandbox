@@ -5,7 +5,7 @@ import { Parallax, ParallaxProvider, useParallax } from 'react-scroll-parallax';
 export default function MainPage() {
   return (
     <div className="mainPage">
-      <Parallax speed={2}>
+      <Parallax speed={2} translateY={[20, -20]}>
         <div className="page" id="p1">
           <div className="nameBox">
             <h2 className="projName">Sound Palette</h2>
@@ -18,7 +18,7 @@ export default function MainPage() {
           </p>
         </div>
       </Parallax>
-      <Parallax speed={-2}>
+      <Parallax speed={3} translateY={[20, -40]}>
         <div className="page" id="p2">
           <div className="nameBox">
             <h2 className="projName">Collabo</h2>
@@ -31,7 +31,7 @@ export default function MainPage() {
           </p>
         </div>
       </Parallax>
-      <Parallax speed={3} translateY={[-20, 20]}>
+      <Parallax speed={4} translateY={[20, -80]}>
         <div className="page" id="p3">
           <div className="nameBox">
             <h2 className="projName">Escape from Terminal Forest</h2>
@@ -50,17 +50,19 @@ export default function MainPage() {
           </p>
         </div>
       </Parallax>
-      <div className="page" id="p4">
-        <div className="nameBox">
-          <h2 className="projName">Marble Ninja Warrior</h2>
+      <Parallax speed={6} translateY={[20, -160]}>
+        <div className="page" id="p4">
+          <div className="nameBox">
+            <h2 className="projName">Marble Ninja Warrior</h2>
+          </div>
+          <img src="/projects/sq-marble-runner.png" alt="Marble Runner" className="projImg" />
+          <p className="projDesc">
+            A 3D marble runner/obstacle avoidance game built with React Three Fiber and the Rapier
+            physics library. Built as a solo project over 5 days to gain familiarity with the
+            Three.js & WebGL ecosystem.
+          </p>
         </div>
-        <img src="/projects/sq-marble-runner.png" alt="Marble Runner" className="projImg" />
-        <p className="projDesc">
-          A 3D marble runner/obstacle avoidance game built with React Three Fiber and the Rapier
-          physics library. Built as a solo project over 5 days to gain familiarity with the Three.js
-          & WebGL ecosystem.
-        </p>
-      </div>
+      </Parallax>
     </div>
   );
 }
