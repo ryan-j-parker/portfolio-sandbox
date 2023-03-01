@@ -34,7 +34,7 @@ function SearchBar({ onSubmit }) {
 
 export function ImageList({ images }) {
   let date = Math.floor(Date.now() * Math.random() * 0.5);
-  console.log(date);
+
   return (
     <div>
       {images.map((image) => (

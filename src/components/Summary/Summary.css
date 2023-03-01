@@ -1,6 +1,8 @@
-.intro-canvas {
-  height: 20vh;
-  position: fixed;
+.introCanvas {
+  /* height: 60vh; */
+  height: 100%;
+  /* position: fixed; */
+  position: relative;
   top: 10vh;
   left: 0;
   border: 2px dashed pink;

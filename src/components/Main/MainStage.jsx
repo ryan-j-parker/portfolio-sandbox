@@ -21,65 +21,60 @@ import SoundPalette from '../../ProjectFrames/SoundPalette';
 import gsap from 'gsap';
 import upArrow from './up-arrow-svgrepo-com.svg';
 import downArrow from './down-arrow-svgrepo-com.svg';
+import Project from '../../ProjectFrames/Project';
+import CRT from './CRT';
 
-const CrtMaterial = shaderMaterial(
-  {
-    randomFactors: [1, 1, 1],
-    uTime: 0,
-  },
-  crtVertex,
-  crtFragment
-);
-extend({ CrtMaterial });
+// const CrtMaterial = shaderMaterial(
+//   {
+//     randomFactors: [1, 1, 1],
+//     uTime: 0,
+//   },
+//   crtVertex,
+//   crtFragment
+// );
+// extend({ CrtMaterial });
 
+// const CRT = ({ sourceIndex }) => {
+//   const crt = useGLTF('/CRT/Television_01_1k.gltf');
+//   const crtMaterial = useRef();
+//   // const [sourceIndex, setSourceIndex] = useState(0);
 
+//   useFrame((state, delta) => {
+//     crtMaterial.current.uTime += delta;
+//   });
 
-const CRT = () => {
-  const crt = useGLTF('/CRT/Television_01_1k.gltf');
-  const crtMaterial = useRef();
+//   // const [clicked, setClicked] = useState(false);
 
-  useFrame((state, delta) => {
-    crtMaterial.current.uTime += delta;
-  });
+//   // const handleClick = () => {
+//   //   if (clicked) {
+//   //     setClicked(false);
+//   //   } else {
+//   //     setClicked(true);
+//   //   }
+//   // };
 
-  const [clicked, setClicked] = useState(false);
-
-  const handleClick = () => {
-    if (clicked) {
-      setClicked(false);
-    } else {
-      setClicked(true);
-    }
-  };
-
-  console.log(clicked);
-
-  return (
-    <>
-      <group
-        dispose={null}
-        scale={15}
-        position={[0, 0.5, 2]}
-        castShadow
-        receiveShadow
-        onClick={handleClick}
-      >
-        <primitive object={crt.scene} />
-      </group>
-      <group position={[-1, 4.4, 4.89]}>
-        <mesh>
-          <planeGeometry args={[5.5, 4.2]} />
-          <crtMaterial ref={crtMaterial} />
-        </mesh>
-      </group>
-      {clicked ? (
-        // <group position={[-3.8, 6.6, 4.9]}>
-        <SoundPalette />
-      ) : // </group>
-        null}
-    </>
-  );
-};
+//   return (
+//     <>
+//       <group
+//         dispose={null}
+//         scale={15}
+//         position={[0, 0.5, 2]}
+//         castShadow
+//         receiveShadow
+//         // onClick={handleClick}
+//       >
+//         <primitive object={crt.scene} />
+//       </group>
+//       <group position={[-1, 4.4, 4.89]}>
+//         <mesh>
+//           <planeGeometry args={[5.5, 4.2]} />
+//           <crtMaterial ref={crtMaterial} />
+//         </mesh>
+//         <Project sourceIndex={sourceIndex} />
+//       </group>
+//     </>
+//   );
+// };
 
 const ProjectsText = () => {
   const textRef = useRef();
@@ -112,13 +107,15 @@ const ProjectsText = () => {
 
 export default function MainStage() {
   const [clicked, setClicked] = useState(false);
+  const [sourceIndex, setSourceIndex] = useState(0);
 
-  const handleClick = () => {
-    if (clicked) {
-      setClicked(false);
-    } else {
-      setClicked(true);
-    }
+  const handleClickUp = () => {
+    sourceIndex < 5 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
+
+  };
+
+  const handleClickDown = () => {
+    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(2);
   };
 
   return (
@@ -142,17 +139,17 @@ export default function MainStage() {
           <Stage shadows="contact" center>
             <ambientLight intensity={0.5} />
             <CRT
-            // onClick={handleClick}
+              sourceIndex={sourceIndex}
+              // onClick={handleClick}
             />
-            <Html
-              position={[3.2, 5, 4.8]}
-              transform
-            >
+            <Html position={[3.18, 5.34, 4.8]} transform>
               <div className="channel">
-                <img src={upArrow} className="upArrow" />
+                {/* <img src={upArrow} className="upArrow" onClick={handleClickUp} /> */}
+                <div className="upDial" onClick={handleClickUp} />
               </div>
               <div className="channel">
-                <img src={downArrow} className="downArrow" />
+                {/* <img src={downArrow} className="downArrow" onClick={handleClickDown} /> */}
+                {/* <div className="downDial" onClick={handleClickDown} /> */}
               </div>
             </Html>
           </Stage>

@@ -9,8 +9,7 @@ const searchImages = async (searchTerm) => {
       query: searchTerm,
     },
   });
-  console.log('response: ', response);
-  console.log('response.data.results: ', response.data.results);
+
   return response.data.results;
 };
 

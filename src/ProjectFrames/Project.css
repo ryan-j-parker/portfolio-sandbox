@@ -1,0 +1,15 @@
+.projectIframe iframe {
+  border: none;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 1920px;
+  height: 1448px;
+  margin: 0 auto;
+  object-fit: cover;
+  z-index: 12;
+}
+
+iframe {
+  overflow: hidden;
+}

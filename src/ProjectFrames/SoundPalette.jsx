@@ -10,12 +10,14 @@ import './SoundPalette.css';
 
 export default function SoundPalette() {
   const [source, setSource] = useState('https://sound-palette.netlify.app/');
+  // const [sourceIndex, setSourceIndex] = useState(0);
+  // const sources = [
+  //   'https://sound-palette.netlify.app/',
+  //   'https://marble-ninja-warrior.netlify.app/',
+  //   'https://collabomusic.co',
+  // ];
 
-  const sources = [
-    'https://sound-palette.netlify.app/',
-    'https://idyllic-frangollo-1ec6ab.netlify.app/',
-    'https://collabomusic.co',
-  ];
+  // src={sources[0]}
 
   return (
     <>
