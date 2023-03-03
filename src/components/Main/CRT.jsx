@@ -49,7 +49,7 @@ export default function CRT({ sourceIndex }) {
       </group>
       <group position={[-1, 4.4, 4.89]}>
         {/* {clicked ? ( */}
-        <Project sourceIndex={sourceIndex} />
+        <Project args={[5.5, 4.2]} sourceIndex={sourceIndex} />
         {/* ) : ( */}
         <mesh>
           <planeGeometry args={[5.5, 4.2]} />

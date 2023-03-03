@@ -3,7 +3,7 @@
 .navbar {
   position: fixed;
   right: 0;
-  top: 8px;
+  top: 12.5px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;

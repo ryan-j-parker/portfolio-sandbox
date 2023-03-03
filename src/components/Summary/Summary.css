@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 .introCanvas {
-  /* height: 60vh; */
+  height: 60vh;
   height: 100%;
   /* position: fixed; */
   position: relative;
   top: 10vh;
   left: 0;
-  border: 2px dashed pink;
+  border: 2px dashed hotpink;
+  background: #f2f2f2;
   box-sizing: border-box;
 }
 
@@ -29,6 +32,8 @@
 
 .intro {
   color: white;
+  width: 100%;
+  height: 10vh;
   position: relative;
   font-size: 1.5rem;
   margin-top: 100px;
@@ -46,6 +51,81 @@
   color: rgb(116, 116, 116);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
     Verdana, sans-serif;
+}
+
+/* #hi, #my, #ryan, #imA, #portland { */
+/* animation: moveLeft 1s ease-in-out; */
+/* animation-duration: 2s; */
+/* animation-iteration-count: 1; */
+/* } */
+
+/* #my {
+  animation-delay: 0.25s;
+}
+
+#ryan {
+  animation-delay: .5s;
+}
+
+#imA {
+  animation-delay: .75s;
+}
+
+#portland {
+  animation-delay: 1s;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+#hi {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#my {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+#myNameIs {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation-delay: 0.25s;
+  animation-delay: 0.25s;
+}
+
+#name {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+#is {
+  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation-delay: 0.75s;
+  animation-delay: 0.75s;
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 
 .my {
@@ -74,14 +154,45 @@
 }
 
 .summary {
-  position: relative;
-  color: rgb(155, 155, 155);
-  font-size: 2.25rem;
-  line-height: 2rem;
   font-weight: 500;
-  text-align: center;
-  margin-top: 100px;
+  margin-top: 200px;
   padding: 0;
   border: 2px dashed red;
   font-family: 'Days One';
+}
+
+.summaryText,
+.ryan {
+  position: relative;
+  left: 5vw;
+  text-align: left;
+  color: #e2e2e2;
+  text-shadow: 1px 1px #bababa;
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 500;
+  width: 88.5vw;
+  margin: 10px 0;
+  border: 2px dashed darkred;
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+}
+
+.software {
+  color: var(--orange);
+}
+
+.ryan {
+  font-size: 5rem;
+  margin: 25px 0;
+  line-height: 3.5rem;
+  color: var(--blue);
+}
+
+.portland {
+  color: var(--yellow);
+}
+
+#hi,
+#my,
+#imA {
 }

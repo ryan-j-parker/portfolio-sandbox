@@ -6,6 +6,7 @@ import Experience from './components/Sandbox/Experience';
 import Sandbox from './components/Sandbox/Sandbox';
 import { ImageSearch } from './components/Sandbox/ImageSearch';
 import Profile from './components/Summary/Profile';
+import Footer from './components/Header/Footer';
 
 function App() {
   return (
@@ -17,7 +18,10 @@ function App() {
     //   <Route path="/main" element={<Main />} />
     //   <Route path="/image" element={<ImageSearch />} />
     // </Routes>
-    <Profile />
+    <div className="App">
+      <Profile />
+      <Footer />
+    </div>
   );
 }
 

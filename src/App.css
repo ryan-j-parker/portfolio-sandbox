@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&family=Special+Elite&display=swap');
+
 :root {
   --blue: #44e4fc;
   --green: #00af54;
@@ -14,7 +16,7 @@ html {
 }
 
 .App {
-  height: 100%;
+  height: auto;
   overflow: hidden;
 }
 

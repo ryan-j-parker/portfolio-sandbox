@@ -15,12 +15,10 @@ export default function Profile() {
       <Navbar />
       <Social />
       {/* <Footer /> */}
-      <ParallaxProvider>
-        <Summary />
-        <MainPage />
-        <MainStage />
-        <Experience />
-      </ParallaxProvider>
+      <Summary />
+      {/* <MainPage /> */}
+      <MainStage />
+      {/* <Experience /> */}
     </>
   );
 }

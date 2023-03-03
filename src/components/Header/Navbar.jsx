@@ -1,6 +1,6 @@
 // this is still a WIP - bars need to expand and show vertical list when clicked 
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <a href="/mainstage">Projects</a>
           </li>
           <li>
             <a href="/resume">Resume</a>
