@@ -11,6 +11,7 @@ import {
   Html,
   Loader,
   useTexture,
+  Backdrop,
 } from '@react-three/drei';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
@@ -59,7 +60,7 @@ export default function MainStage() {
           }}
           style={{ height: '100%', width: '100%' }}
         >
-          <ambientLight intensity={0.5} />
+          <ambientLight intensity={0.25} />
           <PresentationControls
             target={[0, 20, 0]}
             polar={[-0.4, 0.4]}
@@ -67,9 +68,16 @@ export default function MainStage() {
             config={{ mass: 2, tension: 400 }}
             snap={{ mass: 2, tension: 400 }}
           >
-            <App3dText text={'Projects'} title="click on the channels below to see my latest projects" />
-            <Stage shadows="contact" center>
-              <CRT sourceIndex={sourceIndex} position={[0, 0, -20]}/>
+            <App3dText
+              text={'Projects'}
+              title="click on the channels below to see my latest projects"
+            />
+            <Stage
+              shadows="contact"
+              // adjustCamera={25}
+              preset="soft"
+            >
+              <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
               <Html position={[3.18, 5.34, 4.8]} transform>
                 <div className="channel">
                   <img src={upArrow} className="upArrow" onClick={handleClickUp} />

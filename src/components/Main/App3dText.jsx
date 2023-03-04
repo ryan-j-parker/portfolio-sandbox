@@ -7,16 +7,16 @@ export default function App3dText({ text }) {
   //   const matcap = useTexture('/matcaps/matcapBl1.png');
   //   const matcap = useTexture('/matcaps/matcapBl2.png');
 
-//   const matcap = useTexture('/matcaps/matcapB1.png');
+  //   const matcap = useTexture('/matcaps/matcapB1.png');
   // const matcap = useTexture('/matcaps/matcapB2.png');
-//   const matcap = useTexture('/matcaps/matcapOB1.png');
-//   const matcap = useTexture('/matcaps/matcapOG1.png');
+  //   const matcap = useTexture('/matcaps/matcapOB1.png');
+  //   const matcap = useTexture('/matcaps/matcapOG1.png');
   const matcap = useTexture('/matcaps/matcapW1.png');
   // const matcap = useTexture('/matcaps/matcapG.png');
   // const matcap = useTexture('/matcaps/matcapChr.png');
 
   return (
-    <group ref={textRef} position={[0, 5.25, 2]}>
+    <group ref={textRef} position={[0, 5.25, 2]} castShadow receiveShadow>
       <Center>
         <Float floatIntensity={0.1} floatingRange={0.1} rotationIntensity={0.1}>
           <Text3D
