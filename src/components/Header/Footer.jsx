@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="footerText">
-        <p>©2023 Ryan J. Parker, All Rights Reserved ❤</p>
+        <p>©&#169;2023 Ryan J. Parker ❤</p>
       </div>
     </div>
   );

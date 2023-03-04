@@ -5,7 +5,7 @@ import './Navbar.css';
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
+    <div className="navbar">
       <a href="#" className="toggle-button" id="toggle">
         <span className="bar"></span>
         <span className="bar"></span>
@@ -17,16 +17,16 @@ export default function Navbar() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/mainstage">Projects</a>
+            <a href="/projects">Projects</a>
           </li>
           <li>
             <a href="/resume">Resume</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/projects3d">3D</a>
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 }

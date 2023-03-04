@@ -1,0 +1,104 @@
+.projectsWrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;    
+  align-items: center;
+  justify-content: center;
+  margin: 5vh auto;
+  padding: 0 10vw;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 5vh;
+  overflow: scroll;
+  /* top: 5vh; */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--dark);
+  width: 80vw;
+  margin: 2vh auto;
+}
+
+.linksBox {
+  /* position: relative;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+.netlifyIcon {
+  height: 50px;
+  width: 50px;
+  background: hotpink;
+}
+
+.githubIcon {
+  height: 50px;
+  width: 50px;
+  background: hotpink;
+}
+
+.netlifyLink {
+  background: pink;
+}
+
+.githubLink {
+  background: pink;
+}
+
+a,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.imageBox {
+    background: var(--green);
+}
+
+.projectImg {
+  height: 200px;
+  width: 200px;
+}
+
+.projectName {
+    background: var(--orange);
+    /* padding: 20px 0; */
+    font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+    color: #e2e2e2;
+    font-size: 2rem;
+}
+
+.projectDesc {
+    background: var(--orange);
+    color: #e2e2e2;
+    padding: 0 5vw;
+}
+
+.personal {
+  /* background: rgba(44, 54, 94, 0.9); */
+  background: rgba(255, 214, 57, 0.15);
+  /* width: 60%; */
+  color: var(--yellow);
+  padding: 10px 5vw;
+  box-shadow: inset 2px 1px 12px -8px var(--yellow);
+}
+
+.descriptionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/* @media (min-width: 480px) {
+  .card {
+    width: 40vw;
+  }
+} */
+

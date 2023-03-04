@@ -1,0 +1,161 @@
+/* .projectsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow: scroll;
+  flex-direction: column;
+  width: 100%;
+} */
+/* 
+.card {
+  box-sizing: border-box;
+  margin: 20px;
+  width: 260px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 380px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(70, 70, 70);
+  box-shadow: 0 0 14px -4px rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  z-index: 5;
+}
+
+.image-box .github {
+  visibility: hidden;
+}
+
+.image-box:hover > .github {
+  visibility: visible;
+}
+
+.image-box .netlify {
+  visibility: hidden;
+}
+
+.image-box:hover > .netlify {
+  visibility: visible;
+} */
+
+/* .netlify-icon:hover > .image-box {
+  filter: grayscale(100%);
+  opacity: 30%;
+}
+
+.github-icon:hover > .image-box {
+  filter: grayscale(100%);
+  opacity: 30%;
+} */
+/* 
+.image-box:hover {
+  filter: grayscale(100%);
+  opacity: 30%;
+} */
+
+/* test */
+
+/* .image-box:has(> .github-icon:hover) {
+    filter: grayscale(100%);
+    opacity: 30%;
+} */
+
+/* .image-box:hover {
+  filter: grayscale(100%);
+  opacity: 30%;
+}
+
+.github-icon:active,
+.netlify-icon:active {
+  scale: 0.95;
+}
+
+.github,
+.netlify {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.proj-img {
+  height: 180px;
+  width: 260px;
+  object-fit: contain;
+  box-shadow: inset -3px -3px 12px -4px rgba(0, 0, 0, 0.9);
+  filter: grayscale(0%);
+  transition: all 0.5s ease;
+}
+
+.proj-img:hover,
+.proj-img:active {
+  filter: saturate(50%);
+  opacity: 30%;
+} */
+
+/* .netlify-icon:hover > .proj-img {
+  filter: grayscale(100%);
+  opacity: 30%;
+  scale: 1.05;
+}
+
+.github-icon:hover > .proj-img {
+  filter: grayscale(100%);
+  opacity: 30%;
+  scale: 1.05;
+}
+
+.netlify:hover > .proj-img {
+  filter: grayscale(100%);
+  opacity: 30%;
+  scale: 1.05;
+}
+
+.github:hover > .proj-img {
+  filter: grayscale(100%);
+  opacity: 30%;
+  scale: 1.05;
+} */
+/* 
+.name {
+  font-family: 'Silkscreen';
+  color: white;
+  width: 100%;
+  font-size: 1.4rem;
+  margin: 0 auto;
+  font-weight: 600;
+  position: relative;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  font-family: 'Inconsolata';
+  color: white;
+  width: 235px;
+}
+
+.github-icon,
+.netlify-icon {
+  height: 50px;
+  width: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.github-icon:hover,
+.netlify-icon:hover {
+  opacity: 1;
+  filter: grayscale(0);
+} */

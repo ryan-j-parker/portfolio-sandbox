@@ -31,15 +31,17 @@
 }
 
 .mainPage {
-  position: relative;
-  top: 10vh;
+  /* position: relative; */
+  /* top: 10vh; */
   display: flex;
+  height: 80%;
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px dashed pink;
   justify-content: space-evenly;
   padding: 40px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  overflow: scroll;
 }
 
 .nameBox {

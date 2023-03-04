@@ -36,7 +36,6 @@
   height: 10vh;
   position: relative;
   font-size: 1.5rem;
-  margin-top: 100px;
   padding: 0;
   border: 2px dashed red;
   font-family: 'Days One';
@@ -44,7 +43,7 @@
 
 .hi {
   font-size: 4rem;
-  border: 2px dashed green;
+  /* border: 2px dashed green; */
   position: relative;
   width: 25%;
   left: 50px;
@@ -85,47 +84,82 @@
 } */
 
 #hi {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-#my {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0.25s;
-  animation-delay: 0.25s;
+  -webkit-animation: slide-left 1.25s ease-in-out both;
+  animation: slide-left 1.25s ease-in-out both;
 }
 
 #myNameIs {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0.25s;
-  animation-delay: 0.25s;
+  -webkit-animation: slide-left 1.25s ease-in-out both;
+  animation: slide-left 1.25s ease-in-out both;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
-#name {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
+/* #ryanparker {
+  -webkit-animation: slide-up 1s ease-in-out both;
+  animation: slide-up 1s ease-in-out both;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+} */
+
+#ryanparker {
+  -webkit-animation: scale-up 1s ease-in-out both;
+  animation: scale-up 1s ease-in-out both;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
 
-#is {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  -webkit-animation-delay: 0.75s;
+#imA {
+  -webkit-animation: slide-up 2s ease-in-out both;
+  animation: slide-up 2s ease-in-out both;
+  -webkit-animation-delay: 0.8s;
   animation-delay: 0.75s;
 }
 
-@keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+.further {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px dashed white; */
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  margin-top: 50px;
+
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.projects, .resume, .proj3d {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px dashed purple; */
+  width: 100%;
+  height: 100%;
+  color: rgb(116, 116, 116);
+  font-size: 1.5rem;
+  z-index: 3;
+}
+
+.projects:hover, .resume:hover, .proj3d:hover{
+  text-align: center;
+  background: rgb(116, 116, 116);
+  color: rgb(212, 212, 212);
+  transform: scale(1.2);
+  font-weight: 600;
+}
+
+.projects:active, .resume:active, .proj3d:active {
+  color: rgb(212, 212, 212);
 }
 
 .my {
@@ -154,31 +188,35 @@
 }
 
 .summary {
-  font-weight: 500;
-  margin-top: 200px;
-  padding: 0;
-  border: 2px dashed red;
-  font-family: 'Days One';
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* top: -20px; */
+  /* padding: 0; */
+  /* margin: 0 auto; */
+  /* border: 2px dashed red; */
+  /* height: 99.5%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
 }
 
-.summaryText,
-.ryan {
-  position: relative;
-  left: 5vw;
+.summaryText {
+  /* position: relative; */
+  /* left: calc(100vw - (width / 2)); */
   text-align: left;
   color: #e2e2e2;
   text-shadow: 1px 1px #bababa;
   font-size: 3rem;
   line-height: 3rem;
   font-weight: 500;
-  width: 88.5vw;
+  width: 70vw;
   margin: 10px 0;
-  border: 2px dashed darkred;
-  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
-}
-
-.software {
-  color: var(--orange);
+  /* border: 2px dashed darkred; */
 }
 
 .ryan {
@@ -186,6 +224,34 @@
   margin: 25px 0;
   line-height: 3.5rem;
   color: var(--blue);
+  /* color: var(--green); */
+
+  text-shadow: 1px 1px #bababa;
+  text-align: left;
+  font-weight: 500;
+  width: 70vw;
+  /* border: 2px dashed darkred; */
+}
+
+@media (max-width: 479px) {
+  .summaryText {
+    font-size: 2rem;
+    line-height: 2rem;
+    width: 90vw;
+  }
+  .ryan {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0;
+  }
+  .further {
+    flex-direction: column;
+  }
+}
+
+.software {
+  color: var(--orange);
+
 }
 
 .portland {
@@ -195,4 +261,37 @@
 #hi,
 #my,
 #imA {
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateZ(160px) translateY(400px);
+    transform: translateZ(160px) translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }

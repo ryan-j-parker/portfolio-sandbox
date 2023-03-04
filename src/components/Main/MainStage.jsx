@@ -51,7 +51,7 @@ export default function MainStage() {
       <Suspense fallback={<Loader />}>
         <Canvas
           className="mainstage-canvas"
-          perspectiveCamera={{ near: 0, far: 100, zoom: 20, position: [0, 0, 10], fov: 15 }}
+          camera={{ near: 0, far: 100, zoom: 20, position: [0, 0, 10], fov: 15 }}
           onCreated={({ gl }) => {
             gl.outputEncoding = THREE.sRGBEncoding;
             gl.toneMapping = THREE.ACESFilmicToneMapping;
@@ -61,14 +61,15 @@ export default function MainStage() {
         >
           <ambientLight intensity={0.5} />
           <PresentationControls
+            target={[0, 20, 0]}
             polar={[-0.4, 0.4]}
             azimuth={[-1, 1]}
             config={{ mass: 2, tension: 400 }}
             snap={{ mass: 2, tension: 400 }}
           >
-            <App3dText text={'Projects'} />
+            <App3dText text={'Projects'} title="click on the channels below to see my latest projects" />
             <Stage shadows="contact" center>
-              <CRT sourceIndex={sourceIndex} />
+              <CRT sourceIndex={sourceIndex} position={[0, 0, -20]}/>
               <Html position={[3.18, 5.34, 4.8]} transform>
                 <div className="channel">
                   <img src={upArrow} className="upArrow" onClick={handleClickUp} />

@@ -1,8 +1,8 @@
 .social-wrapper {
-  position: fixed;
+  position: absolute;
   z-index: 1;
-  top: 25px;
-  left: 120px;
+  top: 40px;
+  left: 140px;
 }
 
 .social-list li a {
