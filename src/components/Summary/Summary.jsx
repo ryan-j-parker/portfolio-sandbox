@@ -45,7 +45,7 @@ export default function Summary() {
         <div ref={myRef} className="summaryText" id="myNameIs">
           <span id="my">My</span> <span id="name">name</span> <span id="is">is</span>
         </div>
-        <div ref={ryanRef} className="ryan" id="ryanparker">Ryan Parker.</div>
+        <div ref={ryanRef} className="ryan" id="ryan">Ryan Parker.</div>
         <div ref={imARef} className="summaryText" id="imA">
           I&apos;m a <span className="software" id="software">full-stack software developer</span> based in{' '}
           <span className="portland">Portland, Oregon.</span>

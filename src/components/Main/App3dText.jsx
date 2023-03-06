@@ -2,7 +2,7 @@
 import { Center, Float, Text3D, useTexture } from '@react-three/drei';
 import React, { useRef } from 'react';
 
-export default function App3dText({ text }) {
+export default function App3dText({ text, position }) {
   const textRef = useRef();
   //   const matcap = useTexture('/matcaps/matcapBl1.png');
   //   const matcap = useTexture('/matcaps/matcapBl2.png');
@@ -16,7 +16,7 @@ export default function App3dText({ text }) {
   // const matcap = useTexture('/matcaps/matcapChr.png');
 
   return (
-    <group ref={textRef} position={[0, 5.25, 2]} castShadow receiveShadow>
+    <group ref={textRef} position={position} castShadow receiveShadow>
       <Center>
         <Float floatIntensity={0.1} floatingRange={0.1} rotationIntensity={0.1}>
           <Text3D

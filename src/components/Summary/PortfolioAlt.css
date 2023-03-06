@@ -2,7 +2,7 @@
   height: auto;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;    
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 5vh auto;
@@ -22,6 +22,7 @@
   background: var(--dark);
   width: 80vw;
   margin: 2vh auto;
+  padding: 2vh;
 }
 
 .linksBox {
@@ -59,26 +60,32 @@ a:active {
 }
 
 .imageBox {
-    background: var(--green);
+  background: var(--green);
 }
 
 .projectImg {
-  height: 200px;
-  width: 200px;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+
 }
 
 .projectName {
-    background: var(--orange);
-    /* padding: 20px 0; */
-    font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
-    color: #e2e2e2;
-    font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--orange);
+  padding: 10px 0 0 10px;
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+  color: #e2e2e2;
+  font-size: 4rem;
+  text-shadow: 2px 2px #a0a0a0;
 }
 
 .projectDesc {
-    background: var(--orange);
-    color: #e2e2e2;
-    padding: 0 5vw;
+  background: var(--orange);
+  color: #e2e2e2;
+  padding: 0 5vw;
 }
 
 .personal {
@@ -102,3 +109,52 @@ a:active {
   }
 } */
 
+.projHeader {
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e2e2e2;
+  /* width: 100%; */
+  /* width: calc(100% + 5vw); */
+  border: 1px dotted white;
+  position: relative;
+  left: 0;
+  /* left: -20.5vw; */
+  box-shadow: 
+    inset -4px 4px 5px -2.5px #e2e2e2,
+    -2px 2px 4px 1px #e2e2e2;
+  font-size: 1.8rem;
+  background: #a0a0a0;
+  /* padding: 5px 0 0 4px; */
+}
+
+.descriptionHeader, .contributionHeader, .projectDesc, .personal {
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+  border: 1px dotted white;
+  /* position: relative; */
+  background: transparent;
+  z-index: 4;
+}
+
+.personal {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.portfolioCanvas {
+  height: 20vh;
+  width: 100%;
+  position: absolute;
+  top: 10vh;
+  z-index: 5;
+}
+
+.projectName {
+  z-index: 4;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}

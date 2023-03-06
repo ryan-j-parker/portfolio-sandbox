@@ -27,7 +27,7 @@ export default function Project({ sourceIndex }) {
   // buttons will be a level above --> will send an index prop down to project
   // buttons will be in mainstage -->
   return (
-    <Html position={[0, 0.2, 0]} transform wrapperClass="projectIframe" ref={projectRef} distanceFactor={1.25}>
+    <Html position={[0, 0, 0]} transform wrapperClass="projectIframe" ref={projectRef} distanceFactor={1.25}>
       <iframe scrolling="no" src={sources[sourceIndex]} />
     </Html>
   );

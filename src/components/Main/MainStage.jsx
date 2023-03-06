@@ -51,8 +51,14 @@ export default function MainStage() {
     <div className="mainstage">
       <Suspense fallback={<Loader />}>
         <Canvas
-          className="mainstage-canvas"
-          camera={{ near: 0, far: 100, zoom: 20, position: [0, 0, 10], fov: 15 }}
+          className="mainstageCanvas"
+          camera={{ 
+            near: 0, 
+            far: 100, 
+            zoom: 10, 
+            position: [0, 2, 10], 
+            fov: 45 
+          }}
           onCreated={({ gl }) => {
             gl.outputEncoding = THREE.sRGBEncoding;
             gl.toneMapping = THREE.ACESFilmicToneMapping;
@@ -69,12 +75,13 @@ export default function MainStage() {
             snap={{ mass: 2, tension: 400 }}
           >
             <App3dText
+              position={[0, 5.25, 2]}
               text={'Projects'}
               title="click on the channels below to see my latest projects"
             />
             <Stage
               shadows="contact"
-              // adjustCamera={25}
+              adjustCamera={15}
               preset="soft"
             >
               <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
