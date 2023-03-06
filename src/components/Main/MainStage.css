@@ -3,7 +3,7 @@
   /* top: 10vh; */
   position: relative;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   top: calc((100vh - 80vh) / 2);
   background: #f2f2f2;
   z-index: 1;
@@ -71,6 +71,23 @@
 .downDial {
   position: absolute;
   top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff0000;
+  z-index: 5;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  transform: rotate(45deg);
+  transition: all 0.2s ease-in-out;
+}
+
+
+.infoText {
+  position: absolute;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;

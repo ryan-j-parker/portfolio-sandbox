@@ -4,21 +4,34 @@ import React, { useRef } from 'react';
 
 export default function App3dText({ text, position }) {
   const textRef = useRef();
-  //   const matcap = useTexture('/matcaps/matcapBl1.png');
-  //   const matcap = useTexture('/matcaps/matcapBl2.png');
-
+  
   //   const matcap = useTexture('/matcaps/matcapB1.png');
   // const matcap = useTexture('/matcaps/matcapB2.png');
-  //   const matcap = useTexture('/matcaps/matcapOB1.png');
-  //   const matcap = useTexture('/matcaps/matcapOG1.png');
-  const matcap = useTexture('/matcaps/matcapW1.png');
-  // const matcap = useTexture('/matcaps/matcapG.png');
+  //   const matcap = useTexture('/matcaps/matcapBl1.png');
+  //   const matcap = useTexture('/matcaps/matcapBl2.png');
   // const matcap = useTexture('/matcaps/matcapChr.png');
+  // const matcap = useTexture('/matcaps/matcapGold1.png');
+  // const matcap = useTexture('/matcaps/matcapGold2.png');
+  // const matcap = useTexture('/matcaps/matcapGr1.png');
+  // const matcap = useTexture('/matcaps/matcapGr2.png');
+  // const matcap = useTexture('/matcaps/matcapGr3.png');
+  // const matcap = useTexture('/matcaps/matcapOB1.png');
+  // const matcap = useTexture('/matcaps/matcapOG1.png');
+  const matcap = useTexture('/matcaps/matcapR1.png');
+  // const matcap = useTexture('/matcaps/matcapW1.png');
+  // const matcap = useTexture('/matcaps/matcapW2.png');
 
   return (
     <group ref={textRef} position={position} castShadow receiveShadow>
       <Center>
-        <Float floatIntensity={0.1} floatingRange={0.1} rotationIntensity={0.1}>
+        <Float
+          floatIntensity={0.75} 
+          floatingRange={0.05} 
+          rotationIntensity={0.5}
+          rotateOnAxis={'y'}
+          
+
+        >
           <Text3D
             size={1.6}
             font={'/Righteous_Regular.json'}

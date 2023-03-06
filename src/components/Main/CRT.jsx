@@ -41,15 +41,13 @@ export default function CRT({ sourceIndex }) {
         dispose={null}
         scale={15}
         position={[0, 0.5, 2]}
-        castShadow
-        receiveShadow
         onClick={handleClick}
       >
         <primitive object={crt.scene} />
       </group>
       <group position={[-1, 4.4, 4.89]}>
         {/* {clicked ? ( */}
-        <Project args={[5.5, 4.2]} sourceIndex={sourceIndex} />
+        <Project sourceIndex={sourceIndex} />
         {/* ) : ( */}
         <mesh>
           <planeGeometry args={[5.5, 4.2]} />
