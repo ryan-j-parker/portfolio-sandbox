@@ -28,7 +28,7 @@ export const Projects = [
     description:
       'A 3D platformer game built as a solo project in a 3-day sprint using React Three Fiber and the Rapier physics library. Game state is managed with Zustand and the game logic is handled through a central GameContext file. The game features a dynamic camera that follows the player, procedurally generated obstacles, and the length of the level can be updated by changing the value of a single variable.',
     personal: 
-      'All of it!',
+      'My sister asked me to make her a game, so I built this project for her, and as a way to learn the Rapier physics library. I also wanted to create a game that was fun to play and share with others.',
     github: 'https://github.com/ryan-j-parker/r3f-game',
     netlify: 'https://marble-ninja-warrior.netlify.app/',
   },
@@ -37,9 +37,9 @@ export const Projects = [
     name: 'Escape From Terminal Forest',
     image: 'terminal-forest',
     description:
-      'A command-line application in which users interact with objects to find clues to aid their escape from a cabin in the woods',
+      'A command-line application in which users interact with objects to find clues to aid their escape from a cabin in the woods. Built with a team of 4 in a 4-day sprint using Express, Node, and PostgreSQL. Includes custom ASCII art, SQL tables for in-game objects, player items, and game state. Deployed on Heroku and published as an NPM package.',
     personal:
-      '',
+      'For this project, I created a library of over 30 unique ASCII assets and wrote the conditional logic for their display based on game state. I also built the CLI and provided the styling for the app.',
     github: 'https"//github.com/Terminal-Escape/terminal-frontend',
     netlify: 'https://terminalescaperoom.herokuapp.com',
   },
@@ -48,9 +48,9 @@ export const Projects = [
     name: 'Alchemy Tic-Tac-Toe',
     image: 'tic-tac-toe',
     description:
-      'A React-built tic-tac-toe app with all game logic handled through a central GameContext file',
+      'A React-built tic-tac-toe app with all game logic handled through a central GameContext file. Includes a custom hook for handling game state and a custom hook for handling the game board.',
     personal:
-      '',
+      'This project was built as a way to learn React and to practice using custom hooks.',
     github: 'https://github.com/ryan-j-parker/react-tic-tac-toe',
     netlify: 'https://deploy-preview-1--xs-vs-os.netlify.app/',
   },
@@ -61,7 +61,7 @@ export const Projects = [
     description:
       "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags",
     personal:
-      '',
+      'This project was built as a way to learn React and to practice fetching data from an API.',
     github: 'https://github.com/ryan-j-parker/react-countries',
     netlify: 'https://deploy-preview-1--classy-duckanoo-f676f6.netlify.app/',
   },
@@ -72,18 +72,18 @@ export const Projects = [
     description:
       'Message-board app built with a team of 3 using React router and Supabase that allows authenticated users to add posts',
     personal:
-      '',  
+      'This project was built as a way to learn Supabase and to practice using React router.',  
     github: 'https://github.com/ryan-j-parker/react-crud',
     netlify: 'https://courageous-gingersnap-290832.netlify.app/',
   },
   {
     id: 7,
-    name: 'color router',
+    name: 'Color Router',
     image: 'color-router',
     description:
       "A single-page React app that displays colors and routes URL based on each color's RGB values",
     personal:
-      '',  
+      'This project was built as a way to learn React router and update URLs with template literals.',  
     github: 'https://github.com/ryan-j-parker/react-colors',
     netlify: 'https://deploy-preview-1--superb-pudding-13669b.netlify.app/',
   },
@@ -94,7 +94,7 @@ export const Projects = [
     description:
       "A simple app that uses CSS grid to render CFOP method algorithms for the final two stages of solving a Rubik's cube",
     personal:
-      '',  
+      'This project was built as a way to learn CSS grid.',  
     github: 'https://github.com/ryan-j-parker/3x3x3-algorithms',
     netlify: 'https://wondrous-snickerdoodle-50e6bf.netlify.app/',
   },
@@ -105,7 +105,7 @@ export const Projects = [
     description:
       'A front-end application built with React that indexes through an array of items and renders them on the page',
     personal:
-      '',  
+      'This project was built as a way to learn React and to practice using the map method.',  
     github: 'https://github.com/ryan-j-parker/react-zodiac',
     netlify: 'https://deploy-preview-1--chipper-trifle-bed483.netlify.app/',
   },

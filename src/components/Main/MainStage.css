@@ -48,11 +48,11 @@
 
 .upDial {
   position: absolute;
-  top: -2vh;
-  left: 1vw;
-  width: 80%;
-  height: 60%;
-  background: #6F635F;
+  top: 2vh;
+  left: 2vw;
+  width: 4vw;
+  height: 2vh;
+  background: #ffffff;
   z-index: 2;
   border-radius: 50%;
   box-sizing: border-box;
@@ -86,24 +86,13 @@
 
 
 .infoText {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* left: 0; */
+  /* font-size: 3rem;
+  color: green;
   width: 100%;
   height: 100%;
-  background: #f2f2f2;
-  z-index: 2;
-  border-radius: 50%;
-  box-sizing: border-box;
-  border: 2px solid #f2f2f2;
-  border-bottom: 2px solid #f2f2f2;
-  border-right: 2px solid #f2f2f2;
-  border-top: 2px solid #f2f2f2;
-  border-left: 2px solid #f2f2f2;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  transform: rotate(45deg);
-  transition: all 0.2s ease-in-out;
+  background: #ff00cc;
+  z-index: 15; */
 }

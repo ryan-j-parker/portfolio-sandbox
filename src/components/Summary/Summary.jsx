@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unknown-property */
-import { Center, Float, PresentationControls, Stars, Text3D } from '@react-three/drei';
+import { Center, Float, Loader, PresentationControls, Stars, Text3D } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 import { sRGBEncoding } from 'three';
 import './Summary.css';
 import * as THREE from 'three';
@@ -45,15 +45,35 @@ export default function Summary() {
         <div ref={myRef} className="summaryText" id="myNameIs">
           <span id="my">My</span> <span id="name">name</span> <span id="is">is</span>
         </div>
-        <div ref={ryanRef} className="ryan" id="ryan">Ryan Parker.</div>
+        <div ref={ryanRef} className="ryan" id="ryan">
+          Ryan Parker.
+        </div>
         <div ref={imARef} className="summaryText" id="imA">
-          I&apos;m a <span className="software" id="software">full-stack software developer</span> based in{' '}
-          <span className="portland">Portland, Oregon.</span>
+          I&apos;m a{' '}
+          <span className="software" id="software">
+            full-stack software developer
+          </span>{' '}
+          based in <span className="portland">Portland, Oregon.</span>
         </div>
         <div className="further">
-          <div className="resume"><a className="appLink" href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link">resume</a></div>
-          <div className="projects"><a className="appLink" href="/projects">projects</a></div>
-          <div className="proj3d"><a className="appLink" href="/projects3d">3D</a></div>
+          <div className="resume">
+            <a
+              className="appLink"
+              href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link"
+            >
+              resume
+            </a>
+          </div>
+          <div className="projects">
+            <a className="appLink" href="/projects">
+              projects
+            </a>
+          </div>
+          <div className="proj3d">
+            <a className="appLink" href="/projects3d">
+              3D
+            </a>
+          </div>
         </div>
       </div>
     </>

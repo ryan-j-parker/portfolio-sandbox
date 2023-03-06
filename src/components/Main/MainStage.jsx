@@ -12,6 +12,7 @@ import {
   Loader,
   useTexture,
   Backdrop,
+  Text,
 } from '@react-three/drei';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
@@ -27,18 +28,11 @@ import downArrow from './down-arrow-svgrepo-com.svg';
 import Project from '../../ProjectFrames/Project';
 import CRT from './CRT';
 import App3dText from './App3dText';
-
-function InfoText() {
-  return (
-    <Html className="infoText">
-      <p>Click on the channel dials to navigate through the projects</p>
-    </Html>
-  );
-}
+import InfoText from './InfoText';
 
 export default function MainStage() {
   const [sourceIndex, setSourceIndex] = useState(0);
-
+  const ref = useRef();
   const infoRef = useRef();
 
   const handleClickUp = () => {
@@ -52,10 +46,10 @@ export default function MainStage() {
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
-    setHover(!hover);
     if (hover) {
-      gsap.to('.upArrow', { duration: 0.5, y: 0 });
-      gsap.to('.downArrow', { duration: 0.5, y: 0 });
+      ref.current.position.y = 3;
+    } else if (!hover) {
+      ref.current.position.y = -10;
     }
   };
 
@@ -77,8 +71,6 @@ export default function MainStage() {
             gl.toneMappingExposure = 1;
           }}
           style={{ height: '100%', width: '100%' }}
-          onPointerOver={() => setHover(true)}
-          onPointerOut={() => setHover(false)}
         >
           {/* <ambientLight intensity={0.25} /> */}
           <PresentationControls
@@ -89,29 +81,51 @@ export default function MainStage() {
             snap={{ mass: 2, tension: 400 }}
           >
             <Stage shadows="contact" adjustCamera={10} preset="soft">
-              <App3dText
-                position={[0, 8.75, 2]}
-                text={'Projects'}
-                title="click on the channels below to see my latest projects"
-                castShadow
-              />
+              <Float
+                floatIntensity={0.75}
+                floatingRange={0.05}
+                rotationIntensity={0.5}
+                rotateOnAxis={'y'}
+              >
+                <App3dText
+                  position={[0, 10.25, 2]}
+                  text={'change the channels to see'}
+                  title="click to see projects"
+                  castShadow
+                  onPointerOver={() => setHover(true)}
+                  onPointerOut={() => setHover(false)}
+                  size={0.5}
+                />
+                <App3dText
+                  position={[0, 8.75, 2]}
+                  text={'Projects'}
+                  size={1.6}
+                  title="projects"
+                  castShadow
+                  onPointerOver={() => setHover(true)}
+                  onPointerOut={() => setHover(false)}
+                />
+              </Float>
+              {/* {hover && <InfoText />} */}
               <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
               <Html position={[3.18, 5.34, 4.8]} transform>
                 <div className="channel upArrow" onClick={handleClickUp}>
                   {/* <img src={upArrow} /> */}
                   {/* <div className="upDial" onClick={handleClickUp} /> */}
+                  <div className="upDial" />
                 </div>
                 <div className="channel downArrow" onClick={handleClickDown}>
                   {/* <img src={downArrow} /> */}
                   {/* <div className="downDial" onClick={handleClickDown} /> */}
+                  {/* <div className="downDial" /> */}
                 </div>
               </Html>
             </Stage>
-            <group className="infoBox">
-              {/* <Html className="infoText"></Html> */}
-              <InfoText />
-            </group>
           </PresentationControls>
+          {/* <group className="infoBox" ref={ref}> */}
+          {/* <Html className="infoText"></Html> */}
+          {/* <InfoText /> */}
+          {/* </group> */}
         </Canvas>
       </Suspense>
     </div>
