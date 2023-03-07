@@ -19,7 +19,6 @@
   margin: 0;
   padding: 0;
   display: flex;
-  border: 2px dashed red;
 }
 
 .navbar-links li {
@@ -34,12 +33,13 @@
 }
 
 .navbar-links li:hover {
-  background-color: rgb(0, 95, 150);
+  background-color: var(--orange);
   transform: scale(1.15);
 }
 
 .navbar-links li:active {
-  background-color: rgb(0, 95, 150);
+  background-color: var(--yellow);
+  color: var(--blue);
   transform: scale(0.95);
 }
 
@@ -92,5 +92,10 @@
 
   .navbar-links.active {
     display: flex;
+    margin-top: 10px;
+    width: auto;
+    margin-right: 50px;
+    padding: 0;
   }
+
 }

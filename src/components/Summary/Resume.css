@@ -7,3 +7,49 @@
     height: auto;
     object-fit: contain;
 }
+
+.resumeLink {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2vh;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    left: 0;
+    bottom: 2vh;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    font-size: 2rem;
+    text-align: center;
+    /* background: #ffffff50 */
+    /* bottom: 50px; */
+}
+
+.resumeLink:hover {
+    cursor: pointer;
+    background: #ffffff;
+}
+
+.linkText {
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    bottom: 4px;
+    width: 70%;
+    height: 100%;
+    z-index: 2;
+    text-align: center;
+    background: hotpink;
+    opacity: 0.6;
+    border-radius: 2vw;
+}
+
+.resumeIcon {
+    width: 10%;
+    height: auto;
+}

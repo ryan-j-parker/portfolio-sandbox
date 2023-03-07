@@ -6,11 +6,13 @@ import './PortfolioAlt.css';
 import { Canvas } from '@react-three/fiber';
 import App3dText from '../Main/App3dText';
 import * as THREE from 'three';
+import NavBar from '../Header/NavBar';
 
 function PortfolioProject() {
   const card = Projects.map((project) => {
     return (
       <>
+        <NavBar />
         <div key={project.id} className="card">
           <p className="projectName">{project.name}</p>
           {/* <div className="imageBox"> */}

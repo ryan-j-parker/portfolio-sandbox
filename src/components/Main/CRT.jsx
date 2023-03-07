@@ -6,6 +6,7 @@ import crtFragment from '../../shaders/crtFragment';
 import crtVertex from '../../shaders/crtVertex';
 import { useRef, useState } from 'react';
 import Project from '../../ProjectFrames/Project';
+import Channel from './Channel';
 
 const CrtMaterial = shaderMaterial(
   {
@@ -54,6 +55,12 @@ export default function CRT({ sourceIndex }) {
           <crtMaterial ref={crtMaterial} />
         </mesh>
         {/* )} */}
+      </group>
+      <group position={[3.2, 5.7, 5]}>
+        <Channel />      
+      </group>
+      <group position={[3.2, 4.5, 5]}>
+        <Channel />      
       </group>
     </>
   );

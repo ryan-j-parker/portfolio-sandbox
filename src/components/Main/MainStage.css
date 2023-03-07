@@ -1,10 +1,11 @@
 .mainstage {
-  /* position: fixed; */
+  position: absolute;
+  top: 0;
   /* top: 10vh; */
-  position: relative;
+  /* position: relative; */
+  /* top: 80px; */
   width: 100vw;
-  height: 90vh;
-  top: calc((100vh - 80vh) / 2);
+  height: 100vh;
   background: #f2f2f2;
   z-index: 1;
   box-sizing: border-box;
@@ -15,15 +16,14 @@
   height: 100%;
   width: 100%;
   position: relative;
-  border: 2px dashed pink;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   background: #f2f2f2;
 }
 
 .upArrow,
 .downArrow {
-  height: 20px;
-  width: auto;
+  height: 25px;
+  width: 30px;
   opacity: 0.25;
 }
 
@@ -95,4 +95,9 @@
   height: 100%;
   background: #ff00cc;
   z-index: 15; */
+}
+
+.channel {
+  background: hotpink;
+  bottom: 10px;
 }

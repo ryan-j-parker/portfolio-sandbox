@@ -8,6 +8,7 @@ import * as THREE from 'three';
 import App3dText from '../Main/App3dText';
 import gsap from 'gsap';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
+import NavBar from '../Header/NavBar';
 
 export default function Summary() {
   const props = {
@@ -38,6 +39,7 @@ export default function Summary() {
 
   return (
     <>
+      <NavBar />
       <div className="summary">
         <div ref={hiRef} className="summaryText" id="hi">
           Hi.

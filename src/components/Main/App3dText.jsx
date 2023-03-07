@@ -2,7 +2,7 @@
 import { Center, Float, Text3D, useTexture } from '@react-three/drei';
 import React, { useRef } from 'react';
 
-export default function App3dText({ text, position, size }) {
+export default function App3dText({ text, position, size, matcapIndex }) {
   const textRef = useRef();
 
   //   const matcap = useTexture('/matcaps/matcapB1.png');
@@ -17,9 +17,27 @@ export default function App3dText({ text, position, size }) {
   // const matcap = useTexture('/matcaps/matcapGr3.png');
   // const matcap = useTexture('/matcaps/matcapOB1.png');
   // const matcap = useTexture('/matcaps/matcapOG1.png');
-  const matcapRed = useTexture('/matcaps/matcapR1.png');
+  // const matcapRed = useTexture('/matcaps/matcapR1.png');
   // const matcap = useTexture('/matcaps/matcapW1.png');
   // const matcap = useTexture('/matcaps/matcapW2.png');
+
+  const matcaps = useTexture([
+    '/matcaps/matcapB1.png',
+    '/matcaps/matcapB2.png',
+    '/matcaps/matcapBl1.png',
+    '/matcaps/matcapBl2.png',
+    '/matcaps/matcapChr.png',
+    '/matcaps/matcapGold1.png',
+    '/matcaps/matcapGold2.png',
+    '/matcaps/matcapGr1.png',
+    '/matcaps/matcapGr2.png',
+    '/matcaps/matcapGr3.png',
+    '/matcaps/matcapOB1.png',
+    '/matcaps/matcapOG1.png',
+    '/matcaps/matcapR1.png',
+    '/matcaps/matcapW1.png',
+    '/matcaps/matcapW2.png',
+  ]);
 
   return (
     <group ref={textRef} position={position} castShadow receiveShadow>
@@ -41,7 +59,7 @@ export default function App3dText({ text, position, size }) {
           bevelThickness={0.25}
         >
           {text}
-          <meshMatcapMaterial matcap={matcapRed} />
+          <meshMatcapMaterial matcap={matcaps[matcapIndex]} />
         </Text3D>
         {/* </Float> */}
       </Center>
