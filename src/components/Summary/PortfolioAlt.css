@@ -13,9 +13,7 @@
   left: 0;
   padding-bottom: 5vh;
   overflow: scroll;
-
   scroll-behavior: smooth;
-  /* top: 5vh; */
 }
 
 .card {
@@ -25,14 +23,6 @@
   width: 80vw;
   margin: 2vh auto;
   padding: 2vh;
-}
-
-.linksBox {
-  /* position: relative;
-  z-index: 2;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
 }
 
 .netlifyIcon {
@@ -69,7 +59,6 @@ a:active {
   height: 400px;
   width: 400px;
   position: absolute;
-
 }
 
 .projectName {
@@ -91,9 +80,7 @@ a:active {
 }
 
 .personal {
-  /* background: rgba(44, 54, 94, 0.9); */
   background: rgba(255, 214, 57, 0.15);
-  /* width: 60%; */
   color: var(--yellow);
   padding: 10px 5vw;
   box-shadow: inset 2px 1px 12px -8px var(--yellow);
@@ -105,11 +92,6 @@ a:active {
   align-items: center;
   justify-content: center;
 }
-/* @media (min-width: 480px) {
-  .card {
-    width: 40vw;
-  }
-} */
 
 .projHeader {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
@@ -118,24 +100,19 @@ a:active {
   align-items: center;
   justify-content: flex-start;
   color: #e2e2e2;
-  /* width: 100%; */
-  /* width: calc(100% + 5vw); */
   border: 1px dotted white;
   position: relative;
   left: 0;
-  /* left: -20.5vw; */
   box-shadow: 
     inset -4px 4px 5px -2.5px #e2e2e2,
     -2px 2px 4px 1px #e2e2e2;
   font-size: 1.8rem;
   background: #a0a0a0;
-  /* padding: 5px 0 0 4px; */
 }
 
 .descriptionHeader, .contributionHeader, .projectDesc, .personal {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
   border: 1px dotted white;
-  /* position: relative; */
   background: transparent;
   z-index: 4;
 }

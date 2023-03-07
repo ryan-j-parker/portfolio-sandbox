@@ -84,7 +84,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-
 .infoText {
   /* position: absolute; */
   /* bottom: 0; */
@@ -100,4 +99,34 @@
 .channel {
   background: hotpink;
   bottom: 10px;
+}
+.upBtn {
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid #ff0000;
+}
+
+.downBtn {
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-right: 150px solid #ff0000;
+}
+
+.upBtn,
+.downBtn {
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 5;
+  position: relative;
+  /* transform: rotate(45deg); */
+  transition: all 0.2s ease-in-out;
+}
+
+.upBtn:hover {
+  cursor: pointer;
+}
+
+.downBtn {
 }

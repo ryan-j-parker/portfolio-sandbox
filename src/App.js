@@ -6,6 +6,7 @@ import AltCanvas from './components/Main/AltCanvas';
 import Social from './components/Header/Social';
 import { Portfolio } from './components/Summary/Portfolio';
 import Resume from './components/Summary/Resume';
+import FrameCycle from './components/Main/FrameCycle';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/resume" element={<Resume />} />
         <Route path="/projects3d" element={<MainStage />} />
         <Route path="/altCanvas" element={<AltCanvas />} />
+        <Route path="/projects2d" element={<FrameCycle />} />
       </Routes>
       {/* <Footer /> */}
     </div>

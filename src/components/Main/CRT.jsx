@@ -2,11 +2,16 @@
 import { shaderMaterial, useGLTF } from '@react-three/drei';
 import { extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
-import crtFragment from '../../shaders/crtFragment';
-import crtVertex from '../../shaders/crtVertex';
 import { useRef, useState } from 'react';
 import Project from '../../ProjectFrames/Project';
 import Channel from './Channel';
+import dotsVertex from '../../shaders/dotsVertex';
+import dotsFragment from '../../shaders/dotsFragment';
+import attractFragment from '../../shaders/attractFragment';
+import attractVertex from '../../shaders/attractVertex';
+import crtFragment from '../../shaders/crtFragment';
+import crtVertex from '../../shaders/crtVertex';
+import ShaderMaterial from './ShaderMaterial';
 
 const CrtMaterial = shaderMaterial(
   {
@@ -17,6 +22,31 @@ const CrtMaterial = shaderMaterial(
   crtFragment
 );
 extend({ CrtMaterial });
+
+const DotsMaterial = shaderMaterial(
+  {
+    u_resolution: [window.innerWidth, window.innerHeight],
+    u_mouse: [0.7 * window.innerWidth, window.innerHeight],
+    u_time: 0,
+    u_frame: 0,
+  },
+  dotsVertex,
+  dotsFragment
+);
+extend({ DotsMaterial });
+
+const AttractMaterial = shaderMaterial(
+  {
+    u_resolution: [window.innerWidth, window.innerHeight],
+    u_mouse: [0.7 * window.innerWidth, window.innerHeight],
+    u_time: 0,
+    u_frame: 0,
+  },
+  attractVertex,
+  attractFragment
+);
+extend({ AttractMaterial });
+
 
 export default function CRT({ sourceIndex }) {
   const crt = useGLTF('/CRT/Television_01_1k.gltf');
@@ -52,7 +82,8 @@ export default function CRT({ sourceIndex }) {
         {/* ) : ( */}
         <mesh>
           <planeGeometry args={[5.5, 4.2]} />
-          <crtMaterial ref={crtMaterial} />
+          {/* <crtMaterial ref={crtMaterial} /> */}
+          <ShaderMaterial />
         </mesh>
         {/* )} */}
       </group>
