@@ -28,7 +28,7 @@ export const Projects = [
     description:
       'A 3D platformer game built as a solo project in a 3-day sprint using React Three Fiber and the Rapier physics library. Game state is managed with Zustand and the game logic is handled through a central GameContext file. The game features a dynamic camera that follows the player, procedurally generated obstacles, and the length of the level can be updated by changing the value of a single variable.',
     personal: 
-      'My sister asked me to make her a game, so I built this project for her, and as a way to learn the Rapier physics library. I also wanted to create a game that was fun to play and share with others.',
+      'My sister asked me to make her a game, so I used the opportunity to learn the Rapier physics library. I also wanted to create a game that was fun to play and share with others.',
     github: 'https://github.com/ryan-j-parker/r3f-game',
     netlify: 'https://marble-ninja-warrior.netlify.app/',
   },
@@ -40,7 +40,7 @@ export const Projects = [
       'A command-line application in which users interact with objects to find clues to aid their escape from a cabin in the woods. Built with a team of 4 in a 4-day sprint using Express, Node, and PostgreSQL. Includes custom ASCII art, SQL tables for in-game objects, player items, and game state. Deployed on Heroku and published as an NPM package.',
     personal:
       'For this project, I created a library of over 30 unique ASCII assets and wrote the conditional logic for their display based on game state. I also built the CLI and provided the styling for the app.',
-    github: 'https"//github.com/Terminal-Escape/terminal-frontend',
+    github: 'https://github.com/Terminal-Escape/terminal-frontend',
     netlify: 'https://terminalescaperoom.herokuapp.com',
   },
   {
@@ -56,7 +56,7 @@ export const Projects = [
   },
   {
     id: 5,
-    name: 'world flags',
+    name: 'Flags of the World',
     image: 'world-flags',
     description:
       "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags",
@@ -81,7 +81,7 @@ export const Projects = [
     name: 'Color Router',
     image: 'color-router',
     description:
-      "A single-page React app that displays colors and routes URL based on each color's RGB values",
+      'A single-page React app that uses React Router to display colors based on RGB values and na',
     personal:
       'This project was built as a way to learn React router and update URLs with template literals.',  
     github: 'https://github.com/ryan-j-parker/react-colors',
@@ -89,18 +89,18 @@ export const Projects = [
   },
   {
     id: 8,
-    name: '3x3x3 trainer',
+    name: '3x3x3 Algorithms',
     image: '3x3x3-algorithms',
     description:
-      "A simple app that uses CSS grid to render CFOP method algorithms for the final two stages of solving a Rubik's cube",
+      "A simple app that uses CSS grid to render CFOP method algorithms for the final two stages of solving a Rubik's cube. This is a static, single page site built with vanilla JavaScript making use of CSS grid.",
     personal:
-      'This project was built as a way to learn CSS grid.',  
+      'This project was built as a way to learn CSS grid and to help a classmate learn Rubik\'s cube algorithms.',  
     github: 'https://github.com/ryan-j-parker/3x3x3-algorithms',
     netlify: 'https://wondrous-snickerdoodle-50e6bf.netlify.app/',
   },
   {
     id: 9,
-    name: 'zodiac signs',
+    name: 'Alchemy Astrology',
     image: 'zodiac',
     description:
       'A front-end application built with React that indexes through an array of items and renders them on the page',
@@ -111,7 +111,7 @@ export const Projects = [
   },
   {
     id: 10,
-    name: 'pokemon',
+    name: 'Pokemon Compendium',
     image: 'pokemon',
     description:
       'A compendium of Pokemon built with React and the Alchemy Pokemon API. Pokemon can be filtered by type and searched by name. Built in a 2-day sprint on a team of 2.',

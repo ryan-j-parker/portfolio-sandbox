@@ -8,7 +8,7 @@ import * as THREE from 'three';
 import App3dText from '../Main/App3dText';
 import gsap from 'gsap';
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-import NavBar from '../Header/NavBar';
+// import NavBar from '../Header/NavBar';
 
 export default function Summary() {
   const props = {
@@ -39,7 +39,6 @@ export default function Summary() {
 
   return (
     <>
-      <NavBar />
       <div className="summary">
         <div ref={hiRef} className="summaryText" id="hi">
           Hi.
@@ -57,25 +56,23 @@ export default function Summary() {
           </span>{' '}
           based in <span className="portland">Portland, Oregon.</span>
         </div>
-        <div className="further">
-          <div className="resume">
-            <a
-              className="appLink"
-              href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link"
-            >
-              resume
-            </a>
-          </div>
-          <div className="projects">
-            <a className="appLink" href="/projects">
-              projects
-            </a>
-          </div>
-          <div className="proj3d">
-            <a className="appLink" href="/projects3d">
-              3D
-            </a>
-          </div>
+      </div>
+
+      <div className="further">
+        <div className="resume">
+          <a className="appLink" href="/RJP-SWE-resume-2023.pdf">
+            resume
+          </a>
+        </div>
+        <div className="projects">
+          <a className="appLink" href="/projects">
+            projects
+          </a>
+        </div>
+        <div className="proj3d">
+          <a className="appLink" href="/projects3d">
+            3D
+          </a>
         </div>
       </div>
     </>

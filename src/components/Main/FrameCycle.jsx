@@ -43,7 +43,7 @@ export default function FrameCycle() {
 
   return (
     <div className="mainstage">
-      <Canvas
+      {/* <Canvas
         className="mainstageCanvas"
         camera={{ position: [0, 0, 5], fov: 50 }}
         onCreated={({ gl }) => {
@@ -62,16 +62,17 @@ export default function FrameCycle() {
           >
             <iframe scrolling="no" src={sources[sourceIndex]} />
           </Html>
-          <Html position={[0, -3, -10]} transform distanceFactor={1.25}>
-            <button className="upBtn" onClick={handleClickUp}>
-              UP
-            </button>
-            <button className="downBtn" onClick={handleClickDown}>
-                DOWN
-            </button>
-          </Html>
+          <Html position={[0, -3, -10]} transform distanceFactor={1.25}> */}
+      <iframe scrolling="no" src={sources[sourceIndex]} />;
+      <button className="upBtn" onClick={handleClickUp}>
+        UP
+      </button>
+      <button className="downBtn" onClick={handleClickDown}>
+        DOWN
+      </button>
+      {/* </Html>
         </group>
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 }

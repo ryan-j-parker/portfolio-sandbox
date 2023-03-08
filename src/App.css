@@ -34,3 +34,8 @@ html {
 html {
   background: #292426;
 }
+
+body {
+  position: fixed;
+  left: 0;
+}

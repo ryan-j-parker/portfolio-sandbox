@@ -73,6 +73,8 @@ export default function CRT({ sourceIndex }) {
         scale={15}
         position={[0, 0.5, 2]}
         onClick={handleClick}
+        castShadow
+        receiveShadow
       >
         <primitive object={crt.scene} />
       </group>
@@ -82,8 +84,8 @@ export default function CRT({ sourceIndex }) {
         {/* ) : ( */}
         <mesh>
           <planeGeometry args={[5.5, 4.2]} />
-          {/* <crtMaterial ref={crtMaterial} /> */}
-          <ShaderMaterial />
+          <crtMaterial ref={crtMaterial} />
+          {/* <ShaderMaterial /> */}
         </mesh>
         {/* )} */}
       </group>

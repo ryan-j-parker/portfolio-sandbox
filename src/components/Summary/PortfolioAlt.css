@@ -1,5 +1,5 @@
 .projectsWrapper {
-  height: auto;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -7,42 +7,55 @@
   justify-content: center;
   margin: 5vh auto;
   padding: 0 10vw;
+  padding-top: 10vh;
+  margin-top: 0;
   box-sizing: border-box;
   position: absolute;
   top: 0;
   left: 0;
-  padding-bottom: 5vh;
+  padding-bottom: 250px;
   overflow: scroll;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
+  /* margin-bottom: 150px; */
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.2) 8%,
+    transparent 8%
+  );
+  background-position: 0% 0%;
+  background-size: 5vmin 5vmin;
+  animation: pan-overlay 32s infinite linear;
 }
+
+@keyframes pan-overlay {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 0% -100%;
+  }
+}
+
 
 .card {
   display: flex;
   flex-direction: column;
   background: var(--dark);
   width: 80vw;
-  margin: 2vh auto;
+  margin: 4vh auto;
   padding: 2vh;
+  min-height: 400px;
 }
 
 .netlifyIcon {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   background: hotpink;
 }
 
 .githubIcon {
-  height: 50px;
-  width: 50px;
+  height: 100px;
+  width: 100px;
   background: hotpink;
-}
-
-.netlifyLink {
-  background: pink;
-}
-
-.githubLink {
-  background: pink;
 }
 
 a,
@@ -64,7 +77,8 @@ a:active {
 .projectName {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  text-align: right;
   background: var(--orange);
   padding: 10px 0 0 10px;
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
@@ -77,6 +91,7 @@ a:active {
   background: var(--orange);
   color: #e2e2e2;
   padding: 0 5vw;
+  background: rgba(255, 214, 57, 0.15);
 }
 
 .personal {
@@ -103,22 +118,20 @@ a:active {
   border: 1px dotted white;
   position: relative;
   left: 0;
-  box-shadow: 
-    inset -4px 4px 5px -2.5px #e2e2e2,
-    -2px 2px 4px 1px #e2e2e2;
+  box-shadow: inset -4px 4px 5px -2.5px #e2e2e2, -2px 2px 4px 1px #e2e2e2;
   font-size: 1.8rem;
   background: #a0a0a0;
 }
 
-.descriptionHeader, .contributionHeader, .projectDesc, .personal {
+.descriptionHeader,
+.contributionHeader,
+.projectDesc,
+.personal {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
   border: 1px dotted white;
-  background: transparent;
+  background: rgba(44, 44, 44, 0.788);
+  padding: 20px;
   z-index: 4;
-}
-
-.personal {
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .portfolioCanvas {
@@ -134,6 +147,93 @@ a:active {
   background: transparent;
 }
 
+.projectsHeader {
+  font-size: 3rem;
+  color: #e2e2e2;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
+}
+
+/* .card:nth-child(1) {
+  -webkit-animation: slide-up 2s ease-in-out both;
+  animation: slide-up 2s ease-in-out both;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.75s;
+} */
+/* 
+.card:nth-child(2) {
+} */
+
+@keyframes slide-up {
+  0% {
+    -webkit-transform: translateZ(160px) translateY(400px);
+    transform: translateZ(160px) translateY(400px);
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+.ghBtn {
+  background: #e2e2e2;
+  color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 1px #a0a0a0;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.liveBtn {
+  background: #e2e2e2;
+  color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 1px #a0a0a0;
+  margin: 10px;
+  transition: all 0.3s ease-in-out;
+}
+/* 
+.netlifyLink {
+
+}
+
+.githubLink {
+
+} */
+
+.linksBox {
+  position: relative;
+  /* top: 50%; */
+  left: 50%;
+  /* transform: translate(-50%, -100%); */
+  z-index: 9;
+}
+
+.ghBtn:hover, .liveBtn:hover {
+  background: #a0a0a0;
+  color: #e2e2e2;
+  border: 1px solid #e2e2e2;
+  box-shadow: 2px 2px 4px 1px #e2e2e2;
+  cursor: pointer;
+}
+
+.ghBtn:active, .liveBtn:active {
+  background: #e2e2e2;
+  color: #a0a0a0;
+  border: 1px solid #a0a0a0;
+  box-shadow: 2px 2px 4px 1px #a0a0a0;
+  cursor: pointer;
+  transform: scale(0.95);
+  animation: all 0.1s;
 }

@@ -7,6 +7,7 @@ import Social from './components/Header/Social';
 import { Portfolio } from './components/Summary/Portfolio';
 import Resume from './components/Summary/Resume';
 import FrameCycle from './components/Main/FrameCycle';
+import NavBar from './components/Header/NavBar';
 
 function App() {
   return (
@@ -20,12 +21,12 @@ function App() {
     // <ParallaxProvider>
     <div className="App">
       <Social />/{/* <Profile /> */}
-      {/* <Navbar /> */}
+      <NavBar />
       <Routes>
         <Route path="/" element={<Summary />} />
         {/* <Route path="/projects" element={<MainPage />} /> */}
         <Route path="/projects" element={<Portfolio />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/RJP-SWE-resume-2023.pdf" />
         <Route path="/projects3d" element={<MainStage />} />
         <Route path="/altCanvas" element={<AltCanvas />} />
         <Route path="/projects2d" element={<FrameCycle />} />

@@ -6,11 +6,14 @@ export default function Project({ sourceIndex }) {
   const sources = [
     'https://tv-static-shader.netlify.app',
     'https://sound-palette.netlify.app',
-    'https://marble-ninja-warrior.netlify.app',
     'https://collabomusic.co',
+    'https://marble-ninja-warrior.netlify.app',
     'https://r3f-portal.netlify.app',
     'https://xs-vs-os.netlify.app',
-    // 'https://tv-static-shader.netlify.app',
+    'https://flags-of-earth.netlify.app',
+    'https://3x3x3-algorithms.netlify.app',
+    'https://nature-soundboard.netlify.app',
+    'https://r3f-frame.netlify.app'
   ];
 
   const projectRef = useRef();
@@ -30,12 +33,12 @@ export default function Project({ sourceIndex }) {
     <Html position={[0, 0.4, 0]} 
       transform 
       wrapperClass="projectIframe" 
-      // args={[5.5, 4.2]}
-      // style={{ width: '100%', height: '100%' }}
-      ref={projectRef} 
+      args={[5.5, 4.2]}
+      style={{ width: '100%', height: '100%' }}
+      // ref={projectRef} 
       distanceFactor={1.25}
     >
-      <iframe scrolling="no" src={sources[sourceIndex]} />
+      <iframe src={sources[sourceIndex]} />
     </Html>
   );
 }

@@ -37,11 +37,11 @@ export default function MainStage() {
   const infoRef = useRef();
 
   const handleClickUp = () => {
-    sourceIndex < 5 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
+    sourceIndex < 9 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
   };
 
   const handleClickDown = () => {
-    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(2);
+    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(9);
   };
 
   const [hover, setHover] = useState(false);
@@ -56,10 +56,11 @@ export default function MainStage() {
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar style={{ background: 'black' }} /> */}
       <div className="mainstage">
         <Suspense fallback={<Loader />}>
           <Canvas
+            shadows
             className="mainstageCanvas"
             camera={{
               near: 0,
@@ -75,6 +76,7 @@ export default function MainStage() {
             }}
             style={{ height: '100%', width: '100%' }}
           >
+            {/* <spotLight castShadow position={[5, 2.5, 0]} intensity={15} color={'#ff0000'} /> */}
             {/* <ambientLight intensity={0.25} /> */}
             <PresentationControls
               target={[0, 20, 0]}
@@ -112,8 +114,10 @@ export default function MainStage() {
                   />
                 </Float>
                 {/* {hover && <InfoText />} */}
-                <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
-                <Html position={[3.18, 4.34, 4.8]} transform>
+                <mesh castShadow receiveShadow>
+                  <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
+                </mesh>
+                <Html position={[3.18, 4.74, 4.8]} transform>
                   <div className="channel upArrow" onClick={handleClickUp}>
                     {/* <img src={upArrow} /> */}
                     {/* <div className="upDial" onClick={handleClickUp} /> */}

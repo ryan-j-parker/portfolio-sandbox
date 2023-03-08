@@ -57,7 +57,7 @@ export default function NavBar() {
             <a href="/projects">Projects</a>
           </li>
           <li>
-            <a href="/resume">Resume</a>
+            <a href="/RJP-SWE-resume-2023.pdf">Resume</a>
           </li>
           <li>
             <a href="/projects3d">3D</a>
