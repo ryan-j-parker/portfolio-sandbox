@@ -1,14 +1,6 @@
 /* eslint-disable react/no-unknown-property */
-import { Center, Float, Loader, PresentationControls, Stars, Text3D } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense, useEffect, useRef, useState } from 'react';
-import { sRGBEncoding } from 'three';
+import React, { useEffect, useRef, useState } from 'react';
 import './Summary.css';
-import * as THREE from 'three';
-import App3dText from '../Main/App3dText';
-import gsap from 'gsap';
-import { Parallax, ParallaxProvider } from 'react-scroll-parallax';
-// import NavBar from '../Header/NavBar';
 
 export default function Summary() {
   const props = {

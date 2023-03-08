@@ -3,11 +3,6 @@ import React, { useState } from 'react';
 // import './Portfolio.css';
 import { Projects } from './Projects';
 import './PortfolioAlt.css';
-import { Canvas } from '@react-three/fiber';
-import App3dText from '../Main/App3dText';
-import * as THREE from 'three';
-import NavBar from '../Header/NavBar';
-import { ParallaxProvider, Parallax, useParallax } from 'react-scroll-parallax';
 
 function PortfolioProject() {
   // const parallax = useParallax({

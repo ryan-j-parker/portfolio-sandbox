@@ -1,6 +1,5 @@
 // this is still a WIP - bars need to expand and show vertical list when clicked
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function NavBar() {
