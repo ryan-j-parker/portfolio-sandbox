@@ -59,7 +59,7 @@ export const Projects = [
     name: 'Flags of the World',
     image: 'world-flags',
     description:
-      "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags",
+      "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags. Filter alphabetically, by continent, or use the search bar to match ",
     personal:
       'This project was built as a way to learn React and to practice fetching data from an API.',
     github: 'https://github.com/ryan-j-parker/react-countries',
@@ -81,7 +81,7 @@ export const Projects = [
     name: 'Color Router',
     image: 'color-router',
     description:
-      'A single-page React app that uses React Router to display colors based on RGB values and na',
+      'A single-page React app that uses React Router to update the URL with RGB values and display the corresponding color.',
     personal:
       'This project was built as a way to learn React router and update URLs with template literals.',  
     github: 'https://github.com/ryan-j-parker/react-colors',

@@ -1,40 +1,21 @@
 /* eslint-disable react/no-unknown-property */
 import {
-  Center,
-  OrbitControls,
   PresentationControls,
-  shaderMaterial,
   Stage,
-  Text3D,
-  useGLTF,
   Float,
   Html,
   Loader,
-  useTexture,
-  Backdrop,
-  Text,
 } from '@react-three/drei';
-import { Canvas, extend, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import './MainStage.css';
 import * as THREE from 'three';
-import { DoubleSide } from 'three';
-import crtFragment from '../../shaders/crtFragment';
-import crtVertex from '../../shaders/crtVertex';
 import { Suspense, useRef, useState } from 'react';
-import SoundPalette from '../../ProjectFrames/SoundPalette';
-import gsap from 'gsap';
-import upArrow from './up-arrow-svgrepo-com.svg';
-import downArrow from './down-arrow-svgrepo-com.svg';
-import Project from '../../ProjectFrames/Project';
 import CRT from './CRT';
 import App3dText from './App3dText';
-import InfoText from './InfoText';
-import NavBar from '../Header/NavBar';
 
 export default function MainStage() {
   const [sourceIndex, setSourceIndex] = useState(0);
   const ref = useRef();
-  const infoRef = useRef();
 
   const handleClickUp = () => {
     sourceIndex < 10 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
@@ -56,7 +37,6 @@ export default function MainStage() {
 
   return (
     <>
-      {/* <NavBar style={{ background: 'black' }} /> */}
       <div className="mainstage">
         <Suspense fallback={<Loader />}>
           <Canvas

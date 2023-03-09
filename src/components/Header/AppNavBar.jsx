@@ -1,8 +1,8 @@
 // this is still a WIP - bars need to expand and show vertical list when clicked
 import React, { useState } from 'react';
-import './NavBar.css';
+import './AppNavBar.css';
 
-export default function NavBar() {
+export default function AppNavBar() {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
