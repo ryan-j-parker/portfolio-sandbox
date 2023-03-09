@@ -1,11 +1,9 @@
 /* eslint-disable react/no-unknown-property */
 import { Center, Html, OrbitControls } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
-import gsap from 'gsap';
+import { Canvas } from '@react-three/fiber';
 import React, { useRef } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { ACESFilmicToneMapping, DoubleSide, InvertStencilOp, sRGBEncoding } from 'three';
 import * as THREE from 'three';
 import './Experience.css';
 

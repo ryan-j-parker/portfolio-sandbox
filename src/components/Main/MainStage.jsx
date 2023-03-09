@@ -37,11 +37,11 @@ export default function MainStage() {
   const infoRef = useRef();
 
   const handleClickUp = () => {
-    sourceIndex < 9 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
+    sourceIndex < 10 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
   };
 
   const handleClickDown = () => {
-    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(9);
+    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(10);
   };
 
   const [hover, setHover] = useState(false);
