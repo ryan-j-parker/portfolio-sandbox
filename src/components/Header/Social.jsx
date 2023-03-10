@@ -6,7 +6,7 @@ export default function Social() {
     <div className="social-wrapper">
       <ul className="social-list">
         <li>
-          <a href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link" target="_blank" rel="noreferrer">
+          <a href="/RJP-SWE-resume-2023.pdf" target="_blank" rel="noreferrer">
             <i className="fas fa-address-card icon" />
           </a>
         </li>
