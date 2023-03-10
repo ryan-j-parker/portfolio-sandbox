@@ -83,7 +83,7 @@
   }
 } */
 
-#hi {
+/* #hi {
   -webkit-animation: slide-left 1.25s ease-in-out both;
   animation: slide-left 1.25s ease-in-out both;
 }
@@ -93,7 +93,7 @@
   animation: slide-left 1.25s ease-in-out both;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
-}
+} */
 
 /* #ryanparker {
   -webkit-animation: slide-up 1s ease-in-out both;
@@ -102,21 +102,21 @@
   animation-delay: 0.6s;
 } */
 
-#ryan {
+/* #ryan { */
   /* -webkit-animation: scale-up 1s ease-in-out both;
   animation: scale-up 1s ease-in-out both; */
-  -webkit-animation: bounce-in-top 1.5s ease-in-out both;
+  /* -webkit-animation: bounce-in-top 1.5s ease-in-out both;
   animation: bounce-in-top 1.5s ease-in-out both;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
-}
+} */
 
-#imA {
+/* #imA {
   -webkit-animation: slide-up 2s ease-in-out both;
   animation: slide-up 2s ease-in-out both;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
-}
+} */
 
 a,
 a:hover,
@@ -408,12 +408,11 @@ a:active {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
 }
 
-.resume {
-  /* animation: slide-rotate 1s ease-in-out both; */
+/* .resume {
   animation: tilt-in-bl 1.4s ease-out both;
   animation-delay: 1.55s;
-}
-
+} */
+/* 
 .projects {
   animation: slide-rotate 1.4s ease-in-out both;
   animation-delay: 1.8s;
@@ -422,7 +421,7 @@ a:active {
 .proj3d {
   animation: tilt-in-br 1.4s ease-out both;
   animation-delay: 2.05s;
-}
+} */
 
 .projects,
 .resume,

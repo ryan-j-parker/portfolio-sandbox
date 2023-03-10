@@ -52,7 +52,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn React and to practice using custom hooks.',
     github: 'https://github.com/ryan-j-parker/react-tic-tac-toe',
-    netlify: 'https://deploy-preview-1--xs-vs-os.netlify.app/',
+    netlify: 'https://xs-vs-os.netlify.app/',
   },
   {
     id: 5,
@@ -63,7 +63,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn React and to practice fetching data from an API.',
     github: 'https://github.com/ryan-j-parker/react-countries',
-    netlify: 'https://deploy-preview-1--classy-duckanoo-f676f6.netlify.app/',
+    netlify: 'https://flags-of-earth.netlify.app/',
   },
   {
     id: 6,
@@ -74,7 +74,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn Supabase and to practice using React router.',  
     github: 'https://github.com/ryan-j-parker/react-crud',
-    netlify: 'https://courageous-gingersnap-290832.netlify.app/',
+    netlify: 'https://devpal.netlify.app/',
   },
   {
     id: 7,
@@ -85,7 +85,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn React router and update URLs with template literals.',  
     github: 'https://github.com/ryan-j-parker/react-colors',
-    netlify: 'https://deploy-preview-1--superb-pudding-13669b.netlify.app/',
+    netlify: 'https://color-router-react.netlify.app/',
   },
   {
     id: 8,
@@ -96,7 +96,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn CSS grid and to help a classmate learn Rubik\'s cube algorithms.',  
     github: 'https://github.com/ryan-j-parker/3x3x3-algorithms',
-    netlify: 'https://wondrous-snickerdoodle-50e6bf.netlify.app/',
+    netlify: 'https://3x3x3-algorithms.netlify.app/',
   },
   {
     id: 9,
@@ -107,7 +107,7 @@ export const Projects = [
     personal:
       'This project was built as a way to learn React and to practice using the map method.',  
     github: 'https://github.com/ryan-j-parker/react-zodiac',
-    netlify: 'https://deploy-preview-1--chipper-trifle-bed483.netlify.app/',
+    netlify: 'https://alchemy-astrology.netlify.app/',
   },
   {
     id: 10,
@@ -118,6 +118,6 @@ export const Projects = [
     personal:
       'Developed the search bar and the filter by type functionality, and all styling for the app.',  
     github: 'https://github.com/ryan-j-parker/react-pokemon',
-    netlify: 'https://deploy-preview-4--venerable-otter-347010.netlify.app/',
+    netlify: 'https://pokemon-compendium.netlify.app/',
   },
 ];
