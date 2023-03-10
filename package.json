@@ -1,5 +1,6 @@
 {
-  "name": "Ryan Parker Software Developer Portfolio",
+  "name": "ryanparker.io",
+  "homepage": "https://ryanparker.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
