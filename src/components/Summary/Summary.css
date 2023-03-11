@@ -197,7 +197,9 @@ a:active {
   }
   .further {
     flex-direction: column;
-    padding-top: 20px;
+    padding-top: 10px;
+    height: auto;
+    margin: 0 auto;
   }
   .resume, .projects, .proj3d {
     margin: 10px 0;
@@ -366,6 +368,10 @@ a:active {
 
 /* links @ bottom of 1st page summary */
 
+.appLink {
+  text-align: center;
+}
+
 .summary {
   margin: 0 0 20px 0;
   font-size: 1.2em;
@@ -401,12 +407,12 @@ a:active {
   color: rgb(116, 116, 116);
   font-size: 1.5rem;
   z-index: 3;
+  cursor: pointer;
 }
 
 .projects:hover,
 .resume:hover,
 .proj3d:hover {
-  text-align: center;
   background: rgb(116, 116, 116);
   color: rgb(212, 212, 212);
   transform: scale(1.2);
@@ -417,4 +423,10 @@ a:active {
 .resume:active,
 .proj3d:active {
   color: rgb(212, 212, 212);
+}
+
+@media (max-width: 300px) {
+  .summaryText {
+    font-size: 0.8rem;
+  }
 }

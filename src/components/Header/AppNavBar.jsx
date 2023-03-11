@@ -1,4 +1,3 @@
-// this is still a WIP - bars need to expand and show vertical list when clicked
 import React, { useState } from 'react';
 import './AppNavBar.css';
 
@@ -19,34 +18,10 @@ export default function AppNavBar() {
   return (
     <div className="navbar">
       <a href="#" className="toggle-button" id="toggle" onClick={handleClick}>
-        {/* {clicked ? (
-          <span className="bar">X</span>
-        ) : (
-          <> */}
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
-        {/* </>
-        )} */}
       </a>
-      {/* {clicked ? (
-        <div className="vertical" id="links">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/resume">Resume</Link>
-            </li>
-            <li>
-              <Link to="/projects3d">3D</Link>
-            </li>
-          </ul>
-        </div>
-      ) : null} */}
       <div className="navbar-links" id="links">
         <ul>
           <li>
@@ -56,7 +31,7 @@ export default function AppNavBar() {
             <a href="/projects">Projects</a>
           </li>
           <li>
-            <a href="/RJP-SWE-resume-2023.pdf">Resume</a>
+            <a href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link" target="_blank" rel="noreferrer">Resume</a>
           </li>
           <li>
             <a href="/projects3d">3D</a>

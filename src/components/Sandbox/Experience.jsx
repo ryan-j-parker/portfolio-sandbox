@@ -38,7 +38,6 @@ export default function Experience() {
     >
       <Center>
         <Html
-          // position={[0, 0, 0]}
           position-x={-4}
           scale={2}
         >

@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Summary from './components/Summary/Summary';
 import MainStage from './components/Main/MainStage';

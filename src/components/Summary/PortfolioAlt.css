@@ -15,8 +15,6 @@
   left: 0;
   padding-bottom: 250px;
   overflow: scroll;
-  /* scroll-behavior: smooth; */
-  /* margin-bottom: 150px; */
   background-image: radial-gradient(
     rgba(255, 255, 255, 0.2) 8%,
     transparent 8%
@@ -157,16 +155,6 @@ a:active {
   width: 0px;
 }
 
-/* .card:nth-child(1) {
-  -webkit-animation: slide-up 2s ease-in-out both;
-  animation: slide-up 2s ease-in-out both;
-  -webkit-animation-delay: 0.8s;
-  animation-delay: 0.75s;
-} */
-/* 
-.card:nth-child(2) {
-} */
-
 @keyframes slide-up {
   0% {
     -webkit-transform: translateZ(160px) translateY(400px);
@@ -203,20 +191,10 @@ a:active {
   margin: 10px;
   transition: all 0.3s ease-in-out;
 }
-/* 
-.netlifyLink {
-
-}
-
-.githubLink {
-
-} */
 
 .linksBox {
   position: relative;
-  /* top: 50%; */
   left: 50%;
-  /* transform: translate(-50%, -100%); */
   z-index: 9;
 }
 

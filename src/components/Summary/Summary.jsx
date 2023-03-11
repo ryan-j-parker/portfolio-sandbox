@@ -41,7 +41,7 @@ export default function Summary() {
 
       <div className="further">
         <div className="resume">
-          <a className="appLink" href="/RJP-SWE-resume-2023.pdf">
+          <a className="appLink" href="https://drive.google.com/file/d/1ZjwvYU8JQeSnCxEKKeexbT4eZmWRmRIr/view?usp=share_link" target="_blank" rel="noreferrer">
             resume
           </a>
         </div>
