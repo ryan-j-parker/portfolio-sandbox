@@ -3,23 +3,12 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Summary.css';
 
 export default function Summary() {
-  const props = {
-    font: '/Roboto_Slab_Regular.json',
-    size: 5,
-    width: 30,
-    bevelEnabled: true,
-    widthSegments: 20,
-    bevelSegments: 12,
-  };
 
   const hiRef = useRef();
   const myRef = useRef();
   const ryanRef = useRef();
   const imARef = useRef();
 
-  // useEffect(() => {
-  //   gsap.from(hiRef, { duration: 4, opacity: 0, x: -10, delay: 0.5 });
-  // }, []);
   const [offsetY, setOffsetY] = useState(0);
   const handleScroll = () => setOffsetY(window.pageYOffset);
 

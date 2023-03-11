@@ -11,7 +11,6 @@ import attractFragment from '../../shaders/attractFragment';
 import attractVertex from '../../shaders/attractVertex';
 import crtFragment from '../../shaders/crtFragment';
 import crtVertex from '../../shaders/crtVertex';
-import ShaderMaterial from './ShaderMaterial';
 
 const CrtMaterial = shaderMaterial(
   {
@@ -79,15 +78,11 @@ export default function CRT({ sourceIndex }) {
         <primitive object={crt.scene} />
       </group>
       <group position={[-1, 4.4, 4.89]}>
-        {/* {clicked ? ( */}
         <Project sourceIndex={sourceIndex} />
-        {/* ) : ( */}
         <mesh>
           <planeGeometry args={[5.5, 4.2]} />
           <crtMaterial ref={crtMaterial} />
-          {/* <ShaderMaterial /> */}
         </mesh>
-        {/* )} */}
       </group>
       <group position={[3.2, 5.7, 5]}>
         <Channel />      

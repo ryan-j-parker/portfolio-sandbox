@@ -59,9 +59,9 @@ export const Projects = [
     name: 'Flags of the World',
     image: 'world-flags',
     description:
-      "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags. Filter alphabetically, by continent, or use the search bar to match ",
+      "Web app built with React, Supabase, and the Flagpedia API to render a searchable index of the world's flags. Filter alphabetically, by continent, or use the search bar to partially or completely match a country's name.",
     personal:
-      'This project was built as a way to learn React and to practice fetching data from an API.',
+      'This project was built as a way to learn React and to practice fetching data from an API. Includes simple CSS and dropdown menus.',
     github: 'https://github.com/ryan-j-parker/react-countries',
     netlify: 'https://flags-of-earth.netlify.app/',
   },
@@ -70,20 +70,20 @@ export const Projects = [
     name: 'devPal',
     image: 'devPal',
     description:
-      'Message-board app built with a team of 3 using React router and Supabase that allows authenticated users to add posts',
+      'Message-board app built with a team of 3 using React router and Supabase that allows authenticated users to add posts to a community message board. Also includes a user profile feature that allows users to see their past posts, update and delete posts, and change their profile picture.',
     personal:
-      'This project was built as a way to learn Supabase and to practice using React router.',  
+      'My primary contributions to this app include building an authentication page with user sign-up and sign-in options, creating routes for posting, fetching and updating user posts, styling the app with Material UI, and implementing the ts-particles library to create a dynamic background.',  
     github: 'https://github.com/ryan-j-parker/react-crud',
-    netlify: 'https://devpal.netlify.app/',
+    netlify: 'https://dev-pal.netlify.app/',
   },
   {
     id: 7,
     name: 'Color Router',
     image: 'color-router',
     description:
-      'A single-page React app that uses React Router to update the URL with RGB values and display the corresponding color.',
+      'A simple React app that uses React Router to update the URL with RGB values and updates the background with the corresponding color.',
     personal:
-      'This project was built as a way to learn React router and update URLs with template literals.',  
+      'This project was built as a way to learn React Router and uses template literals to update the URL.',  
     github: 'https://github.com/ryan-j-parker/react-colors',
     netlify: 'https://color-router-react.netlify.app/',
   },

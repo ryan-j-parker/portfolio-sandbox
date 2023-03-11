@@ -27,14 +27,6 @@ export default function MainStage() {
 
   const [hover, setHover] = useState(false);
 
-  const handleHover = () => {
-    if (hover) {
-      ref.current.position.y = 3;
-    } else if (!hover) {
-      ref.current.position.y = -10;
-    }
-  };
-
   return (
     <>
       <div className="mainstage">
@@ -56,8 +48,6 @@ export default function MainStage() {
             }}
             style={{ height: '100%', width: '100%' }}
           >
-            {/* <spotLight castShadow position={[5, 2.5, 0]} intensity={15} color={'#ff0000'} /> */}
-            {/* <ambientLight intensity={0.25} /> */}
             <PresentationControls
               target={[0, 20, 0]}
               polar={[-0.4, 0.4]}
@@ -77,8 +67,6 @@ export default function MainStage() {
                     text={'change the channels to see'}
                     title="click to see projects"
                     castShadow
-                    onPointerOver={() => setHover(true)}
-                    onPointerOut={() => setHover(false)}
                     size={0.5}
                     matcapIndex={13}
                   />
@@ -88,33 +76,18 @@ export default function MainStage() {
                     size={1.6}
                     title="projects"
                     castShadow
-                    onPointerOver={() => setHover(true)}
-                    onPointerOut={() => setHover(false)}
                     matcapIndex={12}
                   />
                 </Float>
-                {/* {hover && <InfoText />} */}
                 <mesh castShadow receiveShadow>
                   <CRT sourceIndex={sourceIndex} position={[0, 0, -20]} />
                 </mesh>
                 <Html position={[3.18, 4.74, 4.8]} transform>
-                  <div className="channel upArrow" onClick={handleClickUp}>
-                    {/* <img src={upArrow} /> */}
-                    {/* <div className="upDial" onClick={handleClickUp} /> */}
-                    {/* <div className="upDial" /> */}
-                  </div>
-                  <div className="channel downArrow" onClick={handleClickDown}>
-                    {/* <img src={downArrow} /> */}
-                    {/* <div className="downDial" onClick={handleClickDown} /> */}
-                    {/* <div className="downDial" /> */}
-                  </div>
+                  <div className="channel upArrow" onClick={handleClickUp} />
+                  <div className="channel downArrow" onClick={handleClickDown} />
                 </Html>
               </Stage>
             </PresentationControls>
-            {/* <group className="infoBox" ref={ref}> */}
-            {/* <Html className="infoText"></Html> */}
-            {/* <InfoText /> */}
-            {/* </group> */}
           </Canvas>
         </Suspense>
       </div>

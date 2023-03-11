@@ -3,7 +3,6 @@
 .introCanvas {
   height: 60vh;
   height: 100%;
-  /* position: fixed; */
   position: relative;
   top: 10vh;
   left: 0;
@@ -43,7 +42,6 @@
 
 .hi {
   font-size: 4rem;
-  /* border: 2px dashed green; */
   position: relative;
   width: 25%;
   left: 50px;
@@ -156,11 +154,6 @@ a:active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* top: -20px; */
-  /* padding: 0; */
-  /* margin: 0 auto; */
-  /* border: 2px dashed red; */
-  /* height: 99.5%; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,8 +163,6 @@ a:active {
 }
 
 .summaryText {
-  /* position: relative; */
-  /* left: calc(100vw - (width / 2)); */
   text-align: left;
   color: #e2e2e2;
   text-shadow: 1px 1px #bababa;
@@ -180,7 +171,6 @@ a:active {
   font-weight: 500;
   width: 70vw;
   margin: 10px 0;
-  /* border: 2px dashed darkred; */
 }
 
 .ryan {
@@ -188,13 +178,10 @@ a:active {
   margin: 25px 0;
   line-height: 3.5rem;
   color: var(--blue);
-  /* color: var(--green); */
-
   text-shadow: 1px 1px #bababa;
   text-align: left;
   font-weight: 500;
   width: 70vw;
-  /* border: 2px dashed darkred; */
 }
 
 @media (max-width: 399px) {
@@ -224,11 +211,6 @@ a:active {
 .portland {
   color: var(--yellow);
 }
-
-/* #hi,
-#my,
-#imA {
-} */
 
 @keyframes slide-left {
   0% {
@@ -399,7 +381,6 @@ a:active {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* border: 1px dashed white; */
   width: 100%;
   height: 10%;
   position: absolute;
@@ -408,21 +389,6 @@ a:active {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
 }
 
-/* .resume {
-  animation: tilt-in-bl 1.4s ease-out both;
-  animation-delay: 1.55s;
-} */
-/* 
-.projects {
-  animation: slide-rotate 1.4s ease-in-out both;
-  animation-delay: 1.8s;
-}
-
-.proj3d {
-  animation: tilt-in-br 1.4s ease-out both;
-  animation-delay: 2.05s;
-} */
-
 .projects,
 .resume,
 .proj3d {
@@ -430,7 +396,6 @@ a:active {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 1px dashed purple; */
   width: 100%;
   height: 100%;
   color: rgb(116, 116, 116);

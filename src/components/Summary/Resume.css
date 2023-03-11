@@ -14,9 +14,6 @@
     align-items: center;
     justify-content: center;
     border-radius: 2vh;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     left: 0;
     bottom: 2vh;
     width: 100%;
@@ -25,8 +22,6 @@
     z-index: 2;
     font-size: 2rem;
     text-align: center;
-    /* background: #ffffff50 */
-    /* bottom: 50px; */
 }
 
 .resumeLink:hover {
@@ -36,9 +31,6 @@
 
 .linkText {
     position: relative;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
     bottom: 4px;
     width: 70%;
     height: 100%;
