@@ -94,7 +94,7 @@ export const Projects = [
     description:
       "A simple app that uses CSS grid to render CFOP method algorithms for the final two stages of solving a Rubik's cube. This is a static, single page site built with vanilla JavaScript making use of CSS grid.",
     personal:
-      'This project was built as a way to learn CSS grid and to help a classmate learn Rubik\'s cube algorithms.',  
+      'This project was built as a way to learn CSS grid with the aim of helping a classmate learn Rubik\'s cube algorithms.',  
     github: 'https://github.com/ryan-j-parker/3x3x3-algorithms',
     netlify: 'https://3x3x3-algorithms.netlify.app/',
   },
@@ -116,7 +116,7 @@ export const Projects = [
     description:
       'A compendium of Pokemon built with React and the Alchemy Pokemon API. Pokemon can be filtered by type and searched by name. Built in a 2-day sprint on a team of 2.',
     personal:
-      'Developed the search bar and the filter by type functionality, and all styling for the app.',  
+      'For this app, I developed the search bar and the filter by type functionality, and all styling for the app.',  
     github: 'https://github.com/ryan-j-parker/react-pokemon',
     netlify: 'https://pokemon-compendium.netlify.app/',
   },

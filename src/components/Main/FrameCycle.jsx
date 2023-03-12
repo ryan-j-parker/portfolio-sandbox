@@ -1,11 +1,59 @@
 /* eslint-disable react/no-unknown-property */
-import { useGLTF, Html } from '@react-three/drei';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useGLTF, Html, shaderMaterial } from '@react-three/drei';
+import { Canvas, extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
 import { useRef, useState } from 'react';
 import Project from '../../ProjectFrames/Project';
 import Channel from './Channel';
 import ShaderMaterial from './ShaderMaterial';
+import voidFragment from '../../shaders/voidFragment';
+import voidVertex from '../../shaders/voidVertex';
+import attractFragment from '../../shaders/attractFragment';
+import attractVertex from '../../shaders/attractVertex';
+
+const VoidMaterial = shaderMaterial(
+  {
+    randomFactors: [1, 1, 1],
+    uTime: 1,
+  },
+  voidVertex,
+  voidFragment
+);
+extend({ VoidMaterial });
+
+const AttractMaterial = shaderMaterial(
+  {
+    u_resolution: [window.innerWidth, window.innerHeight],
+    u_mouse: [0.7 * window.innerWidth, window.innerHeight],
+    u_time: 0,
+    u_frame: 0,
+  },
+  attractVertex,
+  attractFragment
+);
+extend({ AttractMaterial });
+
+function ShaderEl() {
+  const projectRef = useRef();
+  const [sourceIndex, setSourceIndex] = useState(0);
+
+  const voidMaterial = useRef();
+  const attractMaterial = useRef();
+
+  useFrame((state, delta) => {
+    voidMaterial.current.uTime += delta;
+  });
+
+  return (
+    <group>
+      <mesh position={[0, 0, 0]}>
+        <planeGeometry args={[1, 1]} />
+        <voidMaterial ref={voidMaterial} />
+        {/* <attractMaterial ref={attractMaterial} /> */}
+      </mesh>
+    </group>
+  );
+}
 
 export default function FrameCycle() {
   const sources = [
@@ -18,61 +66,29 @@ export default function FrameCycle() {
     // 'https://tv-static-shader.netlify.app',
   ];
 
-  const projectRef = useRef();
-
-  // project is where index, mainstage is where buttons are,
-  // buttons depend on setIndex mainstage --> CRT --> project (path of index);;;
-  // pass index through CRT component to project, which uses index to
-  // change channel (mainstage buttons, CRT index)
-
-  // src={sources[0]}
-
-  // onClick --> increment index % 3
-
-  // buttons will be a level above --> will send an index prop down to project
-  // buttons will be in mainstage -->
-  const [sourceIndex, setSourceIndex] = useState(0);
-
-  const handleClickUp = () => {
-    sourceIndex < 5 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
-  };
-
-  const handleClickDown = () => {
-    sourceIndex > 0 ? setSourceIndex(sourceIndex - 1) : setSourceIndex(2);
-  };
-
   return (
     <div className="mainstage">
-      {/* <Canvas
+      <Canvas
         className="mainstageCanvas"
         camera={{ position: [0, 0, 5], fov: 50 }}
         onCreated={({ gl }) => {
           gl.setClearColor('#000000');
         }}
       >
-        <group scale={15}>
-          <Html
-            position={[0, 0, -10]}
-            transform
-            wrapperClass="projectIframe"
-            // args={[5.5, 4.2]}
-            // style={{ width: '100%', height: '100%' }}
-            ref={projectRef}
-            distanceFactor={1.25}
-          >
-            <iframe scrolling="no" src={sources[sourceIndex]} />
-          </Html>
-          <Html position={[0, -3, -10]} transform distanceFactor={1.25}> */}
-      <iframe scrolling="no" src={sources[sourceIndex]} />;
-      <button className="upBtn" onClick={handleClickUp}>
-        UP
-      </button>
-      <button className="downBtn" onClick={handleClickDown}>
-        DOWN
-      </button>
-      {/* </Html>
-        </group>
-      </Canvas> */}
+        <ShaderEl />
+        {/* <Html
+          position={[0, 0, -10]}
+          transform
+          wrapperClass="projectIframe"
+          // args={[5.5, 4.2]}
+          // style={{ width: '100%', height: '100%' }}
+          ref={projectRef}
+          distanceFactor={1.25}
+        >
+          <iframe scrolling="no" src={sources[sourceIndex]} />
+        </Html> */}
+        {/* <iframe scrolling="no" src={sources[sourceIndex]} /> */}
+      </Canvas>
     </div>
   );
 }

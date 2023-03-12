@@ -16,7 +16,7 @@
   padding-bottom: 250px;
   overflow: scroll;
   background-image: radial-gradient(
-    rgba(255, 255, 255, 0.2) 8%,
+    var(--green, 0.1) 4%,
     transparent 8%
   );
   background-position: 0% 0%;
@@ -37,7 +37,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  background: var(--dark);
   width: 80vw;
   margin: 4vh auto;
   padding: 2vh;
@@ -70,6 +69,9 @@ a:active {
   height: 400px;
   width: 400px;
   position: absolute;
+  margin-left: -30px;
+  margin-top: -20px;
+  opacity: 0.8;
 }
 
 .projectName {
@@ -83,6 +85,9 @@ a:active {
   color: #e2e2e2;
   font-size: 4rem;
   text-shadow: 2px 2px #a0a0a0;
+  position: relative;
+  right: -20px;
+  margin-right: -20px;
 }
 
 .projectDesc {
@@ -129,7 +134,7 @@ a:active {
   border: 1px dotted white;
   background: rgba(44, 44, 44, 0.788);
   padding: 20px;
-  z-index: 4;
+  z-index: 2;
 }
 
 .portfolioCanvas {
@@ -141,7 +146,7 @@ a:active {
 }
 
 .projectName {
-  z-index: 4;
+  z-index: 2;
   background: transparent;
 }
 
@@ -195,7 +200,7 @@ a:active {
 .linksBox {
   position: relative;
   left: 50%;
-  z-index: 9;
+  z-index: 2;
 }
 
 .ghBtn:hover, .liveBtn:hover {
@@ -214,4 +219,55 @@ a:active {
   cursor: pointer;
   transform: scale(0.95);
   animation: all 0.1s;
+}
+
+.linksBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 500px) {
+  .projectImg {
+    height: 300px;
+    width: 300px;
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+  .projectName {
+    font-size: 2.5rem;
+  }
+  .projectDesc {
+    padding: 0 2vw;
+  }
+  .descriptionBox {
+    padding: 0 2vw;
+  }
+  .projHeader {
+    font-size: 1.5rem;
+  }
+  .descriptionHeader,
+  .contributionHeader,
+  .projectDesc,
+  .personal {
+    padding: 10px;
+  }
+  .portfolioCanvas {
+    height: 10vh;
+  }
+  .projectsHeader {
+    font-size: 2rem;
+  }
+  .ghBtn {
+    font-size: 1rem;
+  }
+  .liveBtn {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 499px) {
+  .linksBox {
+    right: 400px;
+  }
 }
