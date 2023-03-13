@@ -37,7 +37,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  max-width: 80vw;
   margin: 4vh auto;
   padding: 2vh;
   min-height: 400px;
@@ -70,7 +70,7 @@ a:active {
   width: 400px;
   position: absolute;
   margin-left: -30px;
-  margin-top: -20px;
+  margin-top: -60px;
   opacity: 0.8;
 }
 
@@ -95,6 +95,7 @@ a:active {
   color: #e2e2e2;
   padding: 0 5vw;
   background: rgba(255, 214, 57, 0.15);
+  border-radius: 25px 25px 0 0;
 }
 
 .personal {
@@ -102,6 +103,8 @@ a:active {
   color: var(--yellow);
   padding: 10px 5vw;
   box-shadow: inset 2px 1px 12px -8px var(--yellow);
+  border-radius: 0 0 25px 25px;
+  margin-top: 10px;
 }
 
 .descriptionBox {
@@ -109,6 +112,7 @@ a:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-left: 60px solid transparent;
 }
 
 .projHeader {
@@ -232,10 +236,11 @@ a:active {
     height: 300px;
     width: 300px;
     margin-left: -20px;
-    margin-top: -10px;
+    margin-top: -50px;
   }
   .projectName {
     font-size: 2.5rem;
+    margin-right: 20px;
   }
   .projectDesc {
     padding: 0 2vw;
@@ -264,10 +269,13 @@ a:active {
   .liveBtn {
     font-size: 1rem;
   }
+  .linksBox {
+    margin-right: 50px;
+  }
 }
 
 @media (min-width: 250px) and (max-width: 499px) {
   .linksBox {
-    right: 400px;
+    border-right: 400px solid transparent;
   }
 }

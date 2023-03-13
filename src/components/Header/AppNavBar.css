@@ -43,6 +43,8 @@
   background-color: var(--yellow);
   color: var(--blue);
   transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+  animation: slide-up 0.3s ease-in-out;
 }
 
 .toggle-button {
@@ -55,7 +57,19 @@
   width: 2rem;
   height: 1.5rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
+
+#toggle:active {
+  transform: scale(0.95);
+  transition: all 0.3s ease-in-out;
+  animation: slide-up 0.3s ease-in-out;
+}
+/* 
+.toggle-button .active {
+  transition: all 0.3s ease-in-out;
+  animation: slide-up 0.3s ease-in-out;
+} */
 
 .toggle-button .bar {
   height: 0.25rem;
