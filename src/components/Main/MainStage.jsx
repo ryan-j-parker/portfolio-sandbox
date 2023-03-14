@@ -64,10 +64,10 @@ export default function MainStage() {
                 >
                   <App3dText
                     position={[0, 10.25, 2]}
-                    text={'change the channels to see'}
-                    title="click to see projects"
+                    text={'click on the dials to view'}
+                    title="click dials see projects"
                     castShadow
-                    size={0.5}
+                    size={0.55}
                     matcapIndex={13}
                   />
                   <App3dText

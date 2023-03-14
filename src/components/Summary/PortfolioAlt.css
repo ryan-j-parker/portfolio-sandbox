@@ -135,7 +135,7 @@ a:active {
 .projectDesc,
 .personal {
   font-family: 'Special Elite', 'Days One', 'Courier New', Courier, monospace;
-  border: 1px dotted white;
+  /* border: 1px dotted white; */
   background: rgba(44, 44, 44, 0.788);
   padding: 20px;
   z-index: 2;

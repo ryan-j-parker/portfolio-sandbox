@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unknown-property */
 import React, { useState } from 'react';
 import { Projects } from './Projects';
-import './PortfolioAlt.css';
+// import './PortfolioAlt.css';
+import './PortfolioCSS.css';
 
 function PortfolioProject() {
 

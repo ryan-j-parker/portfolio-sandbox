@@ -44,7 +44,7 @@
   color: var(--blue);
   transform: scale(0.95);
   transition: all 0.3s ease-in-out;
-  animation: slide-up 0.3s ease-in-out;
+  /* animation: slide-up 0.3s ease-in-out; */
 }
 
 .toggle-button {
@@ -60,11 +60,11 @@
   transition: all 0.3s ease-in-out;
 }
 
-#toggle:active {
+/* #toggle:active {
   transform: scale(0.95);
   transition: all 0.3s ease-in-out;
   animation: slide-up 0.3s ease-in-out;
-}
+} */
 /* 
 .toggle-button .active {
   transition: all 0.3s ease-in-out;
