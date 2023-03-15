@@ -8,7 +8,6 @@
   flex-direction: column;
   overflow: auto;
   height: 90%;
-
 }
 
 .card {
@@ -27,8 +26,12 @@
   width: 100%;
   display: flex;
   align-items: center;
-  color: var(--orange);
-  text-shadow: 2px 2px var(--blue);
+  color: var(--blue);
+  text-shadow: 1px 1px #bababa;
+}
+
+.personal {
+  color: var(--yellow);
 }
 
 .column {
