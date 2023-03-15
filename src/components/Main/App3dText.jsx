@@ -17,9 +17,9 @@ export default function App3dText({ text, position, size, matcapIndex }) {
           size={size}
           font={'/Righteous_Regular.json'}
           bevelEnabled
-          bevelSegments={3}
-          bevelSize={0.05}
-          bevelThickness={0.25}
+          bevelSegments={13}
+          bevelSize={0.025}
+          bevelThickness={0.1}
         >
           {text}
           <meshMatcapMaterial matcap={matcaps[matcapIndex]} />

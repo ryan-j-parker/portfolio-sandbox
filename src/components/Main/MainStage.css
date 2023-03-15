@@ -13,7 +13,8 @@
   height: 100%;
   width: 100%;
   position: relative;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
+  background: #292426;
 }
 
 .upArrow,
@@ -49,11 +50,11 @@
   left: 2vw;
   width: 4vw;
   height: 2vh;
-  background: #ffffff;
+  background: var(--yellow);
   z-index: 2;
   border-radius: 50%;
   box-sizing: border-box;
-  border-left: 2px solid #f2f2f2;
+  /* border-left: 2px solid #f2f2f2; */
 }
 
 .upDial:hover {

@@ -59,7 +59,8 @@
 .ghBtn,
 .liveBtn {
   border: 2px solid white;
-  background: #e2e2e2;
+  background: #f2f2f2;
+  /* background: var(--yellow); */
   padding: 10px;
   border-radius: 5px;
   font-weight: 500;

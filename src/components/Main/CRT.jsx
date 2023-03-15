@@ -84,10 +84,10 @@ export default function CRT({ sourceIndex }) {
           <crtMaterial ref={crtMaterial} />
         </mesh>
       </group>
-      <group position={[3.2, 5.7, 5]}>
+      <group position={[3.17, 5.7, 5]}>
         <Channel />      
       </group>
-      <group position={[3.2, 4.5, 5]}>
+      <group position={[3.17, 4.5, 5]}>
         <Channel />      
       </group>
     </>

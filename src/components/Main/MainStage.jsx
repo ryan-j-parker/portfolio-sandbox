@@ -63,7 +63,7 @@ export default function MainStage() {
                   rotateOnAxis={'y'}
                 >
                   <App3dText
-                    position={[0, 10.25, 2]}
+                    position={[0, 10.25, 3.25]}
                     text={'click on the dials to view'}
                     title="click dials see projects"
                     castShadow
@@ -71,7 +71,7 @@ export default function MainStage() {
                     matcapIndex={0}
                   />
                   <App3dText
-                    position={[0, 8.75, 2]}
+                    position={[0, 8.75, 3.25]}
                     text={'Projects'}
                     size={1.6}
                     title="projects"

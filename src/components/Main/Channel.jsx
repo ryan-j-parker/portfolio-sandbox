@@ -12,8 +12,8 @@ export default function Channel() {
       onPointerOut={() => setHovered(false)}
     >
       <mesh>
-        <circleGeometry args={[0.5, 24]} />
-        <meshBasicMaterial color={hovered ? '#ffc53d' : '#ebebeb'} />
+        <circleGeometry args={[0.51, 24]} />
+        <meshPhongMaterial color={hovered ? '#ccd234' : '#ffd639'} />
       </mesh>
     </group>
   );
