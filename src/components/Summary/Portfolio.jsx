@@ -1,24 +1,24 @@
-/* eslint-disable react/no-unknown-property */
 import React, { useState } from 'react';
 import { Projects } from './Projects';
-// import './PortfolioAlt.css';
 import './PortfolioCSS.css';
 
 function PortfolioProject() {
-
   const [hovered, setHovered] = useState(false);
 
   const card = Projects.map((project) => {
     return (
-      <>
-        <div
-          key={project.id}
-          className="card"
-          onPointerOver={() => setHovered(true)}
-          onPointerOut={() => setHovered(false)}
-        >
+      <div
+        key={project.id}
+        className="card"
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
+        <div className="column left">
           <p className="projectName">{project.name}</p>
+
           <img src={`../projects/sq-${project.image}.png`} className="projectImg" />
+        </div>
+        <div className="column right">
           <div className="descriptionBox">
             <p className="projectDesc">{project.description}</p>
             <p className="personal">{project.personal}</p>
@@ -32,7 +32,7 @@ function PortfolioProject() {
             </a>
           </div>
         </div>
-      </>
+      </div>
     );
   });
   return <>{card}</>;
@@ -41,6 +41,7 @@ function PortfolioProject() {
 export function Portfolio() {
   return (
     <>
+      <div className="space" />
       <div className="projectsWrapper">
         <PortfolioProject />
       </div>

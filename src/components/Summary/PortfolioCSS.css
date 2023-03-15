@@ -1,8 +1,126 @@
+.space {
+  padding: 40px;
+}
+
 .projectsWrapper {
-    width: 1000px;
+  max-width: 1000px;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+}
+
+.card {
+  display: flex;
+  margin: 40px auto;
+}
+
+.projectName {
+  font-size: 4rem;
+  line-height: 3.25rem;
+  /* margin-left: 40px; */
+  margin-bottom: 10px;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--orange);
+  text-shadow: 2px 2px var(--blue);
+}
+
+.column {
+  width: 50%;
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 
 .projectImg {
-    width: 300px;
-    height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 8px -1px rgba(255, 255, 255, 0.7);
+}
+
+.linksBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.ghBtn,
+.liveBtn {
+  border: 2px solid white;
+  background: #e2e2e2;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1.5rem;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .projectImg {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .card {
+    flex-direction: column;
+    margin: 40px auto;
+  }
+  .column {
+    width: 100%;
+    align-items: inherit;
+  }
+
+  /* .left {
+    margin: auto;
+  } */
+  .right {
+    margin-top: 20px;
+    padding: 0 20px;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1rem;
+  }
+  .projectName {
+    font-size: 3.6rem;
+    /* width: 100%; */
+    line-height: 2.5rem;
+  }
+  .projectImg {
+  }
+
+  .linksBox {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ghBtn:hover,
+.liveBtn:hover {
+  color: white;
+  background: var(--blue);
+  text-shadow: 2px 2px var(--orange);
+}
+
+.ghBtn:active,
+.liveBtn:active {
+  transform: scale(0.95);
+  color: white;
+  background: var(--orange);
+  text-shadow: 2px 2px var(--blue);
 }

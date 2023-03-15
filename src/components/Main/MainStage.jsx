@@ -68,7 +68,7 @@ export default function MainStage() {
                     title="click dials see projects"
                     castShadow
                     size={0.55}
-                    matcapIndex={13}
+                    matcapIndex={0}
                   />
                   <App3dText
                     position={[0, 8.75, 2]}
@@ -76,7 +76,7 @@ export default function MainStage() {
                     size={1.6}
                     title="projects"
                     castShadow
-                    matcapIndex={12}
+                    matcapIndex={1}
                   />
                 </Float>
                 <mesh castShadow receiveShadow>
