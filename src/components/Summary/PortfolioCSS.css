@@ -14,6 +14,7 @@
 .card {
   display: flex;
   margin: 40px auto;
+  padding: 0 20px;
 }
 
 .projectName {
@@ -38,7 +39,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 30px;
+}
+
+.right {
+  margin-top: 20px;
+  padding: 0 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: 'Patua One', 'Special Elite', 'Courier New', Courier, monospace;
+  z-index: 2;
 }
 
 .projectImg {

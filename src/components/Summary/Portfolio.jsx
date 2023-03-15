@@ -21,6 +21,7 @@ function PortfolioProject() {
         <div className="column right">
           <div className="descriptionBox">
             <p className="projectDesc">{project.description}</p>
+            &nbsp;
             <p className="personal">{project.personal}</p>
           </div>
           <div className="linksBox">
