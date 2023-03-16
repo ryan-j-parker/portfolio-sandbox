@@ -18,12 +18,18 @@
 
 .navbar-links ul {
   margin: 0;
-  padding: 0;
+  padding: 0 10px;
   display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  font-family: 'Special Elite', 'Open Sans', 'Patua One', 'Courier New', Courier, monospace;
+  font-weight: 500;
+  border: 1px solid white;
 }
 
 .navbar-links li {
   list-style: none;
+  background: #292426;
 }
 
 .navbar-links li a {

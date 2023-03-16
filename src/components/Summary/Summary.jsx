@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unknown-property */
+import { Cloud, Stars } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import './Summary.css';
 
@@ -20,6 +22,23 @@ export default function Summary() {
 
   return (
     <>
+      <Canvas className="summaryCanvas">
+        <ambientLight intensity={0.15} />
+        <Cloud 
+          position={[0, 0, -10]}
+          scale={[1, 1, 1]}
+          width={10}
+          depth={5}
+          segments={30}
+          speed={0.25}
+        />
+        <Stars
+          radius={500}
+          depth={50}
+          count={1000}
+          fade
+        />
+      </Canvas>
       <div className="summary">
         <div ref={hiRef} className="summaryText" id="hi">
           Hi.

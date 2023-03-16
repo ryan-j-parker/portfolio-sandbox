@@ -18,9 +18,9 @@ export default function AppNavBar() {
   return (
     <div className="navbar">
       <a href="#" className="toggle-button" id="toggle" onClick={handleClick}>
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+        <span className="bar" />
+        <span className="bar" />
+        <span className="bar" />
       </a>
       <div className="navbar-links" id="links">
         <ul>

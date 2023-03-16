@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 .space {
   padding: 40px;
 }
@@ -9,17 +11,20 @@
   overflow: auto;
   overflow-x: hidden;
   height: 90%;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .card {
-  max-width: 900px;
+  max-width: 800px;
   display: flex;
   margin: 40px auto;
   padding: 0 20px;
+  z-index: 2;
 }
 
 .projectName {
-  font-size: 4rem;
+  font-size: 4.5rem;
   line-height: 3.25rem;
   margin-bottom: 10px;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
@@ -51,7 +56,9 @@
   padding: 0 30px;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: 'Patua One', 'Special Elite', 'Courier New', Courier, monospace;
+  font-size: 1.1rem;
+  font-family: 'Open Sans', 'Patua One', 'Special Elite', 'Courier New', Courier, monospace;
+  font-weight: 400;
   z-index: 2;
 }
 
@@ -101,10 +108,7 @@
   background: var(--orange);
   text-shadow: 2px 2px var(--blue);
 }
-@media (min-width: 451px) and (max-width: 700px) {
-  .summaryText {
-    width: auto;
-  }
+@media (min-width: 551px) and (max-width: 780px) {
   .projectImg {
     max-width: 250px;
     max-height: 250px;
@@ -122,14 +126,14 @@
     padding: 0 20px;
     width: -moz-fit-content;
     width: fit-content;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .left {
     margin-top: 20px;
     align-items: flex-start;
   }
   .projectName {
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 3.5rem;
   }
   .linksBox {
@@ -138,26 +142,18 @@
   }
 }
 
-@media (max-width: 450px) {
-  .summaryText {
-    width: auto;
-  }
+@media (min-width: 351px) and (max-width: 550px) {
   .card {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 10px;
     margin: 30px auto;
     width: auto;
-    /* width: -moz-fit-content;
-    width: fit-content; */
   }
   .projectImg {
     max-width: 200px;
     max-height: 200px;
   }
-  /* .column {
-    width: fit-content;
-  } */
   .left {
     margin-top: 20px;
     align-items: flex-start;
@@ -169,4 +165,43 @@
   .right {
     font-size: 1rem;
   }
+}
+
+@media (min-width: 149px) and (max-width: 350px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    margin: 30px auto;
+    width: auto;
+  }
+  .projectImg {
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .left {
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+  .projectName {
+    font-size: 2.5rem;
+    line-height: 2rem;
+  }
+  .right {
+    font-size: 1rem;
+  }
+  .linksBox {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+
+.projectsCanvas {
+  position: fixed;
+  top: 100px;
+  height: 10%;
+  width: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
+  z-index: -10;
 }

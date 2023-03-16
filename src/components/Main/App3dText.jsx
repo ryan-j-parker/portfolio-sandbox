@@ -7,7 +7,7 @@ export default function App3dText({ text, position, size, matcapIndex }) {
 
   const matcaps = useTexture([
     '/matcaps/matcapLBL2.png',
-    '/matcaps/matcapOO3.png',
+    '/matcaps/matcapOR9.png',
   ]);
 
   return (

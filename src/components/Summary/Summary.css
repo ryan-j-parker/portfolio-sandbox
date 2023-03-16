@@ -430,3 +430,9 @@ a:active {
     font-size: 0.8rem;
   }
 }
+
+.summaryCanvas {
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
