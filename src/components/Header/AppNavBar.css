@@ -1,35 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
+:root {
+  --background: #292426;
+}
+
 .navbar {
   position: fixed;
   right: 0;
-  top: 12.5px;
+  top: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   color: white;
-  background-color: var(--capri);
-  font-family: 'Roboto Slab';
+  /* background-color: var(--background); */
   font-weight: 500;
-  text-shadow: 0 0 4px #292426;
+  font-size: 1.2rem;
+  /* text-shadow: 0 0 4px #292426; */
   z-index: 3;
 }
 
 .navbar-links ul {
-  margin: 0;
+  margin: 5px 0;
   padding: 0 10px;
   display: flex;
+  position: relative;
+  /* top: -4.5px; */
+  top: -5px;
   justify-content: flex-end;
   text-align: right;
-  font-family: 'Special Elite', 'Open Sans', 'Patua One', 'Courier New', Courier, monospace;
+  font-family: 'Roboto Slab', 'Open Sans', 'Patua One', 'Courier New', Courier, monospace;
   font-weight: 500;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  animation: scale-up-center 0.3s ease-in-out;
+  /* transition: all 0.3s ease-in-out; */
+}
+
+.x-bar-left {
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+  left: 5px;
+  color: white;
+  z-index: 5;
+}
+
+.x-bar-right {
+  transform: rotate(-45deg);
+  position: relative;
+  bottom: 10px;
+  left: 5px;
+  color: white;
+  z-index: 5;
+}
+
+.inactive {
+  visibility: hidden;
 }
 
 .navbar-links li {
   list-style: none;
-  background: #292426;
+  /* background: rgba(41, 36, 38, 0.8); */
+  /* border-radius: 5px; */
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s ease-in-out both;
+  animation: scale-up-center 0.4s ease-in-out both;
 }
 
 .navbar-links li a {
@@ -48,8 +85,8 @@
 .navbar-links li:active {
   background-color: var(--yellow);
   color: var(--blue);
-  transform: scale(0.95);
-  transition: all 0.3s ease-in-out;
+  transform: scale(1);
+  transition: all 0.005s ease-in;
   /* animation: slide-up 0.3s ease-in-out; */
 }
 
@@ -85,7 +122,16 @@
   border-radius: 10px;
 }
 
-@media (max-width: 2600px) {
+.x-bar {
+  position: relative;
+  font-size: 2.5rem;
+  left: 0;
+  top: -17.5px;
+  border-radius: 10px;
+  color: white;
+}
+
+@media (max-width: 625px) {
   .toggle-button {
     display: flex;
   }
@@ -100,6 +146,9 @@
   .navbar-links ul {
     width: 100%;
     flex-direction: column;
+    top: -10px;
+    background: rgba(41, 36, 38, 0.8);
+    border-radius: 10px;
   }
   .navbar-links li {
     text-align: center;

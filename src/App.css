@@ -32,7 +32,8 @@ html {
 }
 
 html {
-  background: #292426;
+  /* background: #292426; */
+  background: rgb(41, 36, 38);
 }
 
 body {

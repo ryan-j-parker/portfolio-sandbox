@@ -58,7 +58,7 @@ export default function Summary() {
         </div>
       </div>
 
-      <div className="further">
+      {/* <div className="further">
         <div className="resume">
           <a 
             className="appLink" 
@@ -79,7 +79,7 @@ export default function Summary() {
             3D
           </a>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

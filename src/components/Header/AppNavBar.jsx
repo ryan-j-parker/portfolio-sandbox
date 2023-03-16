@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 import './AppNavBar.css';
 
+function Bars() {
+  return (
+    <>
+      <span className="bar" />
+      <span className="bar" />
+      <span className="bar" />
+    </>
+  );
+}
+
+function XBar() {
+  return (
+    <>
+      <span className="bar x-bar-left" />
+      <span className="bar x-bar-right" />
+    </>
+  );
+}
+
 export default function AppNavBar() {
   const [clicked, setClicked] = useState(false);
 
@@ -18,9 +37,10 @@ export default function AppNavBar() {
   return (
     <div className="navbar">
       <a href="#" className="toggle-button" id="toggle" onClick={handleClick}>
-        <span className="bar" />
-        <span className="bar" />
-        <span className="bar" />
+        {clicked ? 
+          // <XBar />
+          <p className="x-bar">✖</p> 
+          : <Bars />}
       </a>
       <div className="navbar-links" id="links">
         <ul>
@@ -31,7 +51,13 @@ export default function AppNavBar() {
             <a href="/projects">Projects</a>
           </li>
           <li>
-            <a href="https://drive.google.com/file/d/1rdInWg42z5PoM4_Xqqqgrl8PAL_xlrTu/view?usp=sharing" target="_blank" rel="noreferrer">Resume</a>
+            <a
+              href="https://drive.google.com/file/d/1rdInWg42z5PoM4_Xqqqgrl8PAL_xlrTu/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Resume
+            </a>
           </li>
           <li>
             <a href="/projects3d">3D</a>

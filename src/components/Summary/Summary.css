@@ -188,7 +188,8 @@ a:active {
   .summaryText {
     font-size: 2rem;
     line-height: 2rem;
-    width: 90vw;
+    /* width: 90vw; */
+    width: 100%;
   }
   .ryan {
     font-size: 3rem;
@@ -427,7 +428,7 @@ a:active {
 
 @media (max-width: 300px) {
   .summaryText {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
   }
 }
 
