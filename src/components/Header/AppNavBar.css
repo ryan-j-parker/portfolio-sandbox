@@ -80,6 +80,7 @@
 .navbar-links li:hover {
   background-color: var(--orange);
   transform: scale(1.15);
+  border-radius: 5px;
 }
 
 .navbar-links li:active {
@@ -131,7 +132,7 @@
   color: white;
 }
 
-@media (max-width: 625px) {
+@media (max-width: 615px) {
   .toggle-button {
     display: flex;
   }
