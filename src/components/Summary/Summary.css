@@ -101,9 +101,9 @@
 } */
 
 /* #ryan { */
-  /* -webkit-animation: scale-up 1s ease-in-out both;
+/* -webkit-animation: scale-up 1s ease-in-out both;
   animation: scale-up 1s ease-in-out both; */
-  /* -webkit-animation: bounce-in-top 1.5s ease-in-out both;
+/* -webkit-animation: bounce-in-top 1.5s ease-in-out both;
   animation: bounce-in-top 1.5s ease-in-out both;
   -webkit-animation-delay: 0.7s;
   animation-delay: 0.7s;
@@ -202,7 +202,9 @@ a:active {
     height: auto;
     margin: 0 auto;
   }
-  .resume, .projects, .proj3d {
+  .resume,
+  .projects,
+  .proj3d {
     margin: 10px 0;
   }
 }
@@ -436,4 +438,138 @@ a:active {
   height: 100%;
   width: 100%;
   z-index: -2;
+}
+
+@keyframes shake-lr {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  90% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+}
+
+.ryan:hover {
+  animation: flicker 0.25s ease-in-out both;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.25;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0.35;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 0.1;
+  }
+  20.6% {
+    opacity: 0.8;
+  }
+  30% {
+    opacity: 0.6;
+  }
+  30.1% {
+    opacity: 0.3;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0.2;
+  }
+  45% {
+    opacity: 0.7;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  55% {
+    opacity: 0.1;
+  }
+  55.1% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0.5;
+  }
+  57.1% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  60.1% {
+    opacity: 0.2;
+  }
+  65% {
+    opacity: 0.9;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  75.1% {
+    opacity: 0.4;
+  }
+  77% {
+    opacity: 0.7;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 0.3;
+  }
+  85.1% {
+    opacity: 0.8;
+  }
+  86% {
+    opacity: 0.2;
+  }
+  86.1% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }

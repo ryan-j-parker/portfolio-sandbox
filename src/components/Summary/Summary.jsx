@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 import { Cloud, Stars } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import './Summary.css';
 
@@ -20,6 +20,10 @@ export default function Summary() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
+  // useFrame(() => {
+
+  // });
+
   return (
     <>
       <Canvas className="summaryCanvas">
@@ -27,13 +31,19 @@ export default function Summary() {
         <Cloud 
           position={[0, 0, -10]}
           scale={[1, 1, 1]}
-          width={10}
-          depth={5}
+          // width={10}
+          width={15}
+          // depth={5}
+          depth={1}
           segments={30}
           speed={0.25}
         />
         <Stars
-          radius={500}
+          // radius={500}
+          // depth={50}
+          // count={1000}
+          // fade
+          radius={100}
           depth={50}
           count={1000}
           fade
