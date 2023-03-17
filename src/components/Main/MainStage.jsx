@@ -5,8 +5,6 @@ import {
   Float,
   Html,
   Loader,
-  Cloud,
-  Sparkles,
 } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import './MainStage.css';
@@ -17,7 +15,6 @@ import App3dText from './App3dText';
 
 export default function MainStage() {
   const [sourceIndex, setSourceIndex] = useState(0);
-  const ref = useRef();
 
   const handleClickUp = () => {
     sourceIndex < 10 ? setSourceIndex(sourceIndex + 1) : setSourceIndex(0);
@@ -58,10 +55,6 @@ export default function MainStage() {
               snap={{ mass: 2, tension: 400 }}
             >
               <pointLight intensity={5} position={[4, 2, 2]}/>
-              {/* <Cloud 
-                position={[0, 9, -8]}
-                scale={[1, 1, 1]}
-              /> */}
               <Stage shadows="contact" adjustCamera={10} preset="soft">
                 <Float
                   floatIntensity={0.75}

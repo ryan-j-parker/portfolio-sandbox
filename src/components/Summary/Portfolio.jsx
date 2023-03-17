@@ -2,8 +2,6 @@
 import React, { useState } from 'react';
 import { Projects } from './Projects';
 import './PortfolioCSS.css';
-import { Canvas } from '@react-three/fiber';
-import { Cloud } from '@react-three/drei';
 
 function PortfolioProject() {
   const [hovered, setHovered] = useState(false);
@@ -48,10 +46,6 @@ export function Portfolio() {
   return (
     <>
       <div className="space" />
-      {/* <Canvas className="projectsCanvas">
-        <Cloud />
-        <ambientLight intensity={0.5} />
-      </Canvas> */}
       <div className="projectsWrapper">
         <PortfolioProject />
       </div>

@@ -13,11 +13,9 @@
   justify-content: space-evenly;
   align-items: center;
   color: white;
-  /* background-color: var(--background); */
   font-weight: 500;
   font-size: 1.2rem;
-  /* text-shadow: 0 0 4px #292426; */
-  z-index: 3;
+  z-index: 8;
 }
 
 .navbar-links ul {
@@ -25,15 +23,12 @@
   padding: 0 10px;
   display: flex;
   position: relative;
-  /* top: -4.5px; */
   top: -5px;
   justify-content: flex-end;
   text-align: right;
   font-family: 'Roboto Slab', 'Open Sans', 'Patua One', 'Courier New', Courier, monospace;
   font-weight: 500;
-  /* border: 1px solid white; */
   animation: scale-up-center 0.3s ease-in-out;
-  /* transition: all 0.3s ease-in-out; */
 }
 
 .x-bar-left {
@@ -60,8 +55,6 @@
 
 .navbar-links li {
   list-style: none;
-  /* background: rgba(41, 36, 38, 0.8); */
-  /* border-radius: 5px; */
 }
 
 .scale-up-center {
@@ -88,7 +81,6 @@
   color: var(--blue);
   transform: scale(1);
   transition: all 0.005s ease-in;
-  /* animation: slide-up 0.3s ease-in-out; */
 }
 
 .toggle-button {
@@ -103,17 +95,6 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
-/* #toggle:active {
-  transform: scale(0.95);
-  transition: all 0.3s ease-in-out;
-  animation: slide-up 0.3s ease-in-out;
-} */
-/* 
-.toggle-button .active {
-  transition: all 0.3s ease-in-out;
-  animation: slide-up 0.3s ease-in-out;
-} */
 
 .toggle-button .bar {
   height: 0.25rem;

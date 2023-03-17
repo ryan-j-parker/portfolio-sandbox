@@ -1,6 +1,8 @@
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+
 .social-wrapper {
   position: absolute;
-  z-index: 3;
+  z-index: 6;
   top: 40px;
   left: 140px;
 }
@@ -31,10 +33,8 @@
   height: 100%;
   background: #f00;
   transition: 0.5s;
-  z-index: 2;
+  z-index: 8;
 }
-
-@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
 
 .social-list {
   display: flex;
@@ -52,7 +52,7 @@
   position: relative;
   color: #0e1116;
   transition: 0.5s;
-  z-index: 4;
+  z-index: 8;
 }
 
 .social-list li a:hover .icon {
