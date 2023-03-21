@@ -27,7 +27,6 @@ const DotsMaterial = shaderMaterial(
     u_mouse: [0.7 * window.innerWidth, window.innerHeight],
     u_time: 0,
     u_frame: 0,
-
   },
   dotsVertex,
   dotsFragment
@@ -69,14 +68,14 @@ function Block(props) {
   const dotsMaterial = useRef();
   const attractMaterial = useRef();
 
-  // useFrame((state, delta) => {
-  //   crtMaterial.current.uTime += delta;
-  // });
+  useFrame((state, delta) => {
+    crtMaterial.current.uTime += delta;
+  });
 
-  // useFrame((state, delta) => {
-  //   dotsMaterial.current.u_time += delta;
-  //   // dotsMaterial.current.u_frame += delta;
-  // });
+  useFrame((state, delta) => {
+    dotsMaterial.current.u_time += delta;
+    dotsMaterial.current.u_frame += delta;
+  });
 
   useFrame((state, delta) => {
     attractMaterial.current.u_time += delta;
@@ -101,7 +100,13 @@ function Block(props) {
           emissiveIntensity={0.5}
         /> */}
         {/* <crtMaterial ref={crtMaterial} /> */}
-        {/* <dotsMaterial ref={dotsMaterial} /> */}
+        <dotsMaterial ref={dotsMaterial} />
+        {/* <attractMaterial ref={attractMaterial} /> */}
+      </Extrude>
+      <Extrude args={[shape, extrudeSettings]} {...props} position={[12, 12, 0]}>
+        <crtMaterial ref={crtMaterial} />
+      </Extrude>
+      <Extrude args={[shape, extrudeSettings]} {...props} position={[-12, -12, 0]}>
         <attractMaterial ref={attractMaterial} />
       </Extrude>
     </>
