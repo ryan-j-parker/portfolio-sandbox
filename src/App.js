@@ -8,6 +8,7 @@ import Social from './components/Header/Social';
 import { Portfolio } from './components/Summary/Portfolio';
 import FrameCycle from './components/Main/FrameCycle';
 import AppNavBar from './components/Header/AppNavBar';
+import Scrollable from './components/Sandbox/Scrollable';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/projects3d" element={<MainStage />} />
         <Route path="/altCanvas" element={<AltCanvas />} />
         <Route path="/projects2d" element={<FrameCycle />} />
+        <Route path="/scroll" element={<Scrollable />} />
       </Routes>
     </div>
   );

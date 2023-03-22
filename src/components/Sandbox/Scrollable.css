@@ -1,0 +1,18 @@
+.scrollable {
+    height: 100vh;
+    width: 100vw;
+    background: #292426;
+}
+
+.scrollableCanvas {
+    background: #292426;
+    height: 100%;
+    width: 100%;
+}
+
+.hoverText {
+    background: #020202;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px dotted white;
+}

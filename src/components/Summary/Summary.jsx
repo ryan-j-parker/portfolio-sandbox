@@ -58,6 +58,9 @@ export default function Summary() {
           based in <span className="portland">Portland, Oregon.</span>
         </div>
       </div>
+      <a href="/scroll">
+        <p className="easteregg">?</p>
+      </a>
     </>
   );
 }

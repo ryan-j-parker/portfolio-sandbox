@@ -500,3 +500,25 @@ a:active {
     opacity: 1;
   }
 }
+
+.easteregg {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  background: white;
+  color: red;
+  font-size: 3rem;
+  opacity: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.easteregg:hover {
+  opacity: 0.15;
+  animation: 0.5s ease-in-out both;
+}
