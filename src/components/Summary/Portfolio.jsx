@@ -18,7 +18,7 @@ function PortfolioProject() {
           <div className="column left">
             <p className="projectName">{project.name}</p>
 
-            <img src={`../projects/sq-${project.image}.png`} className="projectImg" />
+            <img src={`../projects/sq-${project.image}.png`} className="projectImg" loading="lazy" />
           </div>
           <div className="column right">
             <div className="descriptionBox">
