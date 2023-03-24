@@ -12,7 +12,9 @@ export default function Social() {
             target="_blank" 
             rel="noreferrer"
           >
-            <i className="fas fa-address-card icon" />
+            {/* <i className="fas fa-address-card icon" /> */}
+            {/* <i className="fas fa-user icon user-icon"></i> */}
+            <i className="fas fa-user icon user-icon"></i>
           </a>
         </li>
         <li>

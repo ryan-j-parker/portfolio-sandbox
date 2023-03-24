@@ -59,7 +59,9 @@ export default function Summary() {
         </div>
       </div>
       <a href="/scroll">
-        <p className="easteregg">?</p>
+        <div className="easteregg">
+          <i className="fa fa-envelope" aria-hidden="true"></i>
+        </div>
       </a>
     </>
   );
