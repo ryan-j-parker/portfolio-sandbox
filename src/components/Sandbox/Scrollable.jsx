@@ -3,31 +3,19 @@ import { Cloud, Html, OrbitControls, Stars, useAnimations, useGLTF } from '@reac
 import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { SphereGeometry } from 'three';
 import './Scrollable.css';
 
-function RotatingLight() {
+function SpotLight() {
   const lightRef = useRef();
-
-  // useFrame(({ clock }) => {
-  //   lightRef.current.position.x += Math.sin(clock.getElapsedTime()) * 2;
-  //   lightRef.current.position.z += Math.cos(clock.getElapsedTime()) * 2;
-  // });
-
   return (
     <spotLight ref={lightRef} intensity={0.6} position={[10, 15, 10]} angle={0.3} penumbra={1} />
-    // <mesh ref={lightRef}>
-    //   <sphereGeometry args={[5, 16, 16]} />
-    //   <meshStandardMaterial color="white" />
-    // </mesh>
   );
 }
 
-function MechDrone({ ...props }) {
+function MechDrone() {
   const { scene, animations } = useGLTF('/mech_drone.glb');
   const mechRef = useRef();
   const { actions } = useAnimations(animations, mechRef);
-  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     actions['Take 001'].play();
@@ -39,7 +27,6 @@ function MechDrone({ ...props }) {
     mechRef.current.position.z = Math.cos(clock.getElapsedTime()) * 0.25;
   });
 
-  console.log(animations);
   return (
     <group dispose={null} ref={mechRef}>
       <mesh scale={22} rotation={[0, Math.PI * -0.95, 0]} position={[0, -5, -2]}>
@@ -59,18 +46,6 @@ function HoverText() {
       >
         <p>...</p>
       </Html>
-      {/* <Html
-        position={[2.5, 3, 3]}
-        className="hoverText"
-        style={{ color: hover ? 'white' : 'pink' }}
-        onPointerOver={() => setHover(true)}
-        onPointerOut={() => setHover(false)}
-      >
-        <h1>
-          I&apos;m a wacky floating robot!
-        </h1>
-        <meshBasicMaterial color="white" />
-      </Html> */}
       <Html
         position={[1.75, 4.25, 3]}
         className="hoverText"
@@ -89,8 +64,6 @@ function HoverText() {
 }
 
 export default function Scrollable() {
-  const [hovered, setHovered] = useState(false);
-
   return (
     <div className="scrollable">
       <Canvas
@@ -122,7 +95,7 @@ export default function Scrollable() {
           penumbra={1}
           color={'#00ffff'}
         />
-        <RotatingLight />
+        <SpotLight />
       </Canvas>
     </div>
   );

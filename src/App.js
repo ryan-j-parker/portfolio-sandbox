@@ -22,7 +22,7 @@ function App() {
         <Route path="/projects3d" element={<MainStage />} />
         <Route path="/altCanvas" element={<AltCanvas />} />
         <Route path="/projects2d" element={<FrameCycle />} />
-        <Route path="/scroll" element={<Scrollable />} />
+        <Route path="/email" element={<Scrollable />} />
       </Routes>
     </div>
   );
