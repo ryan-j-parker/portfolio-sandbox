@@ -12,6 +12,23 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+
+<h5 align="left">
+    The landing page compononent is found in 
+    <code>/src/components/Summary/Summary.jsx</code>.
+    <br />
+    <br /> 
+    The clouds and stars were accomplished by adding a 
+    <code>Three.js</code> 
+    canvas to the scene, importing 
+    <code><Stars /></code> and 
+    ```<Cloud />``` from 
+    <code>@react-three/drei</code>, 
+    adding a low-intensity ambient light source, then using 
+    <code>CSS</code> 
+    to set the z-index to -1, behind the rest of the content.
+</h5>
+
 ## Available Scripts
 
 In the project directory, you can run:
