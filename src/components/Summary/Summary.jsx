@@ -19,6 +19,12 @@ export default function Summary() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
+  const HoverText = () => {
+    return <p className="emailBox">ryan.jos.parker@gmail.com</p>;
+  };
+
+  const [hovered, setHovered] = useState(false);
+
   return (
     <>
       <Suspense fallback={null}>
@@ -32,12 +38,7 @@ export default function Summary() {
             segments={30}
             speed={0.25}
           />
-          <Stars
-            radius={100}
-            depth={50}
-            count={1000}
-            fade
-          />
+          <Stars radius={100} depth={50} count={1000} fade />
         </Canvas>
       </Suspense>
       <div className="summary">
@@ -58,11 +59,16 @@ export default function Summary() {
           based in <span className="portland">Portland, Oregon.</span>
         </div>
       </div>
-      <a href="/scroll">
-        <div className="easteregg">
-          <i className="fa fa-envelope" aria-hidden="true"></i>
-        </div>
-      </a>
+      <div
+        className="easteregg"
+        onPointerOver={() => setHovered(true)}
+        onPointerOut={() => setHovered(false)}
+      >
+        <a title="ryan.jos.parker@gmail.com" href="mailto:ryan.jos.parker@gmail.com">
+          <i title="ryan.jos.parker@gmail.com" className="fa fa-envelope" aria-hidden="true" />
+          {hovered && <HoverText />}
+        </a>
+      </div>
     </>
   );
 }

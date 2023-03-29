@@ -1,5 +1,13 @@
 /* eslint-disable react/no-unknown-property */
-import { Cloud, Html, OrbitControls, Stars, useAnimations, useGLTF } from '@react-three/drei';
+import {
+  Center,
+  Cloud,
+  Html,
+  OrbitControls,
+  Stars,
+  useAnimations,
+  useGLTF,
+} from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
@@ -40,26 +48,24 @@ function HoverText() {
   const [hover, setHover] = useState(false);
 
   return (
-    <>
+    <Center
+      position-y={-4}      
+    >
       <Html
-        position={[2.25, 0, 0]}
-      >
-        <p>...</p>
-      </Html>
-      <Html
-        position={[1.75, 4.25, 3]}
         className="hoverText"
         style={{ color: hover ? 'white' : 'pink' }}
         onPointerOver={() => setHover(true)}
         onPointerOut={() => setHover(false)}
       >
-        <h1 
+        <h1
+          style={{ width: '100%' }}
         >
-          Email Ryan at: <br /> <a href="mailto:ryan.jos.parker@gmail.com">ryan.jos.parker@gmail.com</a>
+          Email Ryan at: <br />{' '}
+          <a href="mailto:ryan.jos.parker@gmail.com">ryan.jos.parker@gmail.com</a>
         </h1>
         <meshBasicMaterial color="white" />
       </Html>
-    </>
+    </Center>
   );
 }
 
