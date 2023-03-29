@@ -402,7 +402,7 @@ a:active {
 }
 
 .ryan:hover {
-  animation: flicker 0.25s ease-in-out both;
+  animation: flicker 1.75s ease-in-out infinite;
 }
 
 @keyframes flicker {
@@ -494,7 +494,7 @@ a:active {
     opacity: 0.2;
   }
   86.1% {
-    opacity: 0.8;
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -518,7 +518,7 @@ a:active {
 }
 
 .easteregg:hover {
-  opacity: 0.95;
+  opacity: 0.85;
   animation: 0.5s ease-in-out both;
 }
 
@@ -533,4 +533,5 @@ a:active {
   transition: ease-in-out 0.5s;
   /* transition-delay: 250ms; */
   font-size: 1.5rem;
+  opacity: 0.85;
 }

@@ -64,8 +64,8 @@ export default function Summary() {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
       >
-        <a title="ryan.jos.parker@gmail.com" href="mailto:ryan.jos.parker@gmail.com">
-          <i title="ryan.jos.parker@gmail.com" className="fa fa-envelope" aria-hidden="true" />
+        <a title="let's build something wonderful!" href="mailto:ryan.jos.parker@gmail.com">
+          <i title="let's build something wonderful!" className="fa fa-envelope" aria-hidden="true" />
           {hovered && <HoverText />}
         </a>
       </div>
