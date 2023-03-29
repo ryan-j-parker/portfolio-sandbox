@@ -1,11 +1,33 @@
-# Alchemy React Base Template
+# https://ryanparker.io
+<p>&nbsp;</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://user-images.githubusercontent.com/107072854/228451387-4d752b01-9d31-4f17-8ae9-271cc8a08a0e.png" height="300px" width="auto" align="left"/><p align="left"><code><-- Landing page</code></p>
+<img align="left" src="https://user-images.githubusercontent.com/107072854/228451404-95b4ad06-1038-46c2-8f45-6ec868312b4a.png" height="300px" width="auto"/><p align="left"><code><-- Project page</code></p>
+<img align="left" src="https://user-images.githubusercontent.com/107072854/228451371-7fc9c52e-1c7d-4b7f-9514-1545c0f613c2.png" height="300px" width="auto"/><p align="left"><code><-- 3D page</code></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-Use this template for all your "from scratch" deliverables. To start, simply run
-
-- `npm install`
-- `npm start`
+<h5 align="left">
+    The landing page compononent is found in 
+    <code>/src/components/Summary/Summary.jsx</code>.
+    <br />
+    <br /> 
+    The clouds and stars were accomplished by adding a 
+    <code>Three.js</code> 
+    canvas to the scene, importing 
+    <code><Stars /></code> and 
+    ```<Cloud />``` from 
+    <code>@react-three/drei</code>, 
+    adding a low-intensity ambient light source, then using 
+    <code>CSS</code> 
+    to set the z-index to -1, behind the rest of the content.
+</h5>
 
 ## Available Scripts
 
