@@ -19,11 +19,27 @@ export default function Summary() {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
-  const HoverText = () => {
-    return <p className="emailBox">ryan.jos.parker@gmail.com</p>;
-  };
-
   const [hovered, setHovered] = useState(false);
+  const [clicked, setClicked] = useState(false);
+
+  const showHeadshot = () => {
+    if (clicked) {
+      return (
+        <>
+          <div className="image-wrapper">
+            <p className="wave">👋</p>
+            <img src="/headshot-25.png" className="headshot profile-pic" loading="lazy" />
+          </div>
+          <p className="emailBox">ryan.jos.parker@gmail.com</p>
+          <div className="easteregg">
+            <a title="let's build something wonderful!" href="mailto:ryan.jos.parker@gmail.com">
+              <i className="fa fa-envelope" aria-hidden="true" />
+            </a>
+          </div>
+        </>
+      );
+    }
+  };
 
   return (
     <>
@@ -41,14 +57,20 @@ export default function Summary() {
           <Stars radius={100} depth={50} count={1000} fade />
         </Canvas>
       </Suspense>
-      <div className="summary">
+      <div className="summary" onClick={() => setClicked(!clicked)}>
         <div ref={hiRef} className="summaryText" id="hi">
           Hi.
         </div>
         <div ref={myRef} className="summaryText" id="myNameIs">
           <span id="my">My</span> <span id="name">name</span> <span id="is">is</span>
         </div>
-        <div ref={ryanRef} className="ryan" id="ryan">
+        <div
+          ref={ryanRef}
+          className="ryan"
+          id="ryan"
+          onPointerOver={() => setHovered(true)}
+          onPointerOut={() => setHovered(false)}
+        >
           Ryan Parker.
         </div>
         <div ref={imARef} className="summaryText" id="imA">
@@ -59,16 +81,7 @@ export default function Summary() {
           based in <span className="portland">Portland, Oregon.</span>
         </div>
       </div>
-      <div
-        className="easteregg"
-        onPointerOver={() => setHovered(true)}
-        onPointerOut={() => setHovered(false)}
-      >
-        <a title="let's build something wonderful!" href="mailto:ryan.jos.parker@gmail.com">
-          <i title="let's build something wonderful!" className="fa fa-envelope" aria-hidden="true" />
-          {hovered && <HoverText />}
-        </a>
-      </div>
+      {showHeadshot()}
     </>
   );
 }

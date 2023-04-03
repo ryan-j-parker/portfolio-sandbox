@@ -48,18 +48,14 @@ function HoverText() {
   const [hover, setHover] = useState(false);
 
   return (
-    <Center
-      position-y={-4}      
-    >
+    <Center position-y={-4}>
       <Html
         className="hoverText"
         style={{ color: hover ? 'white' : 'pink' }}
         onPointerOver={() => setHover(true)}
         onPointerOut={() => setHover(false)}
       >
-        <h1
-          style={{ width: '100%' }}
-        >
+        <h1 style={{ width: '100%' }}>
           Email Ryan at: <br />{' '}
           <a href="mailto:ryan.jos.parker@gmail.com">ryan.jos.parker@gmail.com</a>
         </h1>
