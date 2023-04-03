@@ -28,7 +28,7 @@ export default function Summary() {
         <>
           <div className="image-wrapper">
             <p className="wave">👋</p>
-            <img src="/headshot-25.png" className="headshot profile-pic" loading="lazy" />
+            <img src="/headshot-25.png" className="headshot profile-pic" />
           </div>
           <p className="emailBox">ryan.jos.parker@gmail.com</p>
           <div className="easteregg">
