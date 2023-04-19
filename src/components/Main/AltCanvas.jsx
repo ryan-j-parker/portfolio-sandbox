@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { Canvas, extend, useFrame } from '@react-three/fiber';
 import { Extrude, OrbitControls, Center, Loader, shaderMaterial } from '@react-three/drei';
@@ -45,21 +45,32 @@ const AttractMaterial = shaderMaterial(
 );
 extend({ AttractMaterial });
 
-const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false };
+// const extrudeSettings = { steps: 2, depth: 10, bevelEnabled: false };
+// const SIDE = 10;
+const extrudeSettings = { steps: 4, depth: 10, bevelEnabled: false };
 const SIDE = 10;
 
 function Block(props) {
   const shape = React.useMemo(() => {
     const _shape = new THREE.Shape();
 
+    // _shape.moveTo(0, 0);
+    // _shape.lineTo(SIDE, 0);
+    // _shape.lineTo(SIDE, SIDE * 2);
+    // _shape.lineTo(0, SIDE * 2);
+    // _shape.lineTo(0, SIDE * 3);
+    // _shape.lineTo(-SIDE, SIDE * 3);
+    // _shape.lineTo(-SIDE, SIDE);
+    // _shape.lineTo(0, SIDE);
+
     _shape.moveTo(0, 0);
-    _shape.lineTo(SIDE, 0);
-    _shape.lineTo(SIDE, SIDE * 2);
-    _shape.lineTo(0, SIDE * 2);
-    _shape.lineTo(0, SIDE * 3);
-    _shape.lineTo(-SIDE, SIDE * 3);
-    _shape.lineTo(-SIDE, SIDE);
-    _shape.lineTo(0, SIDE);
+    _shape.lineTo(10, 0);
+    _shape.lineTo(10, 10 * 2);
+    _shape.lineTo(0, 10 * 2);
+    _shape.lineTo(0, 10 * 3);
+    _shape.lineTo(-10, 10 * 3);
+    _shape.lineTo(-10, 10);
+    _shape.lineTo(0, 10);
 
     return _shape;
   }, []);
@@ -81,6 +92,35 @@ function Block(props) {
     attractMaterial.current.u_time += delta;
     attractMaterial.current.u_frame += delta;
   });
+
+  const shapeRef = useRef();
+
+  useEffect(() => {
+    const { current } = shapeRef;
+    const { current: crt } = crtMaterial;
+    const { current: dots } = dotsMaterial;
+    const { current: attract } = attractMaterial;
+
+    const onMouseMove = (e) => {
+      crt.uMouse = [e.clientX, e.clientY];
+      dots.u_mouse = [e.clientX, e.clientY];
+      attract.u_mouse = [e.clientX, e.clientY];
+    };
+
+    const onResize = () => {
+      crt.uResolution = [window.innerWidth, window.innerHeight];
+      dots.u_resolution = [window.innerWidth, window.innerHeight];
+      attract.u_resolution = [window.innerWidth, window.innerHeight];
+    };
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('resize', onResize);
+
+    return () => {
+      window.removeEventListener('mousemove', onMouseMove);
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
 
   return (
     <>
@@ -119,7 +159,8 @@ export default function AltCanvas() {
       <Suspense fallback={<Loader />}>
         <Canvas
           dpr={window.devicePixelRatio}
-          camera={{ position: new THREE.Vector3(8, 5, 40) }}
+          // camera={{ position: new THREE.Vector3(8, 5, 40) }}
+          camera={{ position: new THREE.Vector3(8, 15, 20) }}
           className="mainstageCanvas"
           style={{ height: '100%', width: '100%' }}
         >
@@ -127,14 +168,39 @@ export default function AltCanvas() {
           <color attach="background" args={['#06092c']} />
           <pointLight position={[-20, 10, 25]} />
           <gridHelper
-            args={[100, 20, '#4D089A', '#4D089A']}
-            position={[0, 0, -10]}
+            args={[240, 20, '#FB7C45', '#44E4FC']}
+            position={[0, 0, 120]}
             rotation={[-Math.PI / 2, 0, 0]}
+          />
+          <gridHelper
+            args={[240, 20, '#FB7C45', '#44E4FC']}
+            position={[0, 0, -120]}
+            rotation={[-Math.PI / 2, 0, 0]}
+          />
+          <gridHelper
+            args={[240, 20, '#FB7C45', '#44E4FC']}
+            position={[-120, 0, 0]}
+            rotation={[0, 0, -Math.PI / 2]}
+          />
+          <gridHelper
+            args={[240, 20, '#FB7C45', '#44E4FC']}
+            position={[120, 0, 0]}
+            rotation={[0, 0, -Math.PI / 2]}
+          />
+          <gridHelper
+            args={[240, 40, '#FB7C45', '#44E4FC']}
+            position={[0, 120, 0]}
+            rotation={[0, -Math.PI / 2, 0]}
+          />
+          <gridHelper
+            args={[240, 40, '#FB7C45', '#44E4FC']}
+            position={[0, -120, 0]}
+            rotation={[0, -Math.PI / 2, 0]}
           />
           <Center>
             <Block />
           </Center>
-          <OrbitControls autoRotate autoRotateSpeed={5} />
+          <OrbitControls autoRotate autoRotateSpeed={-2.5} />
         </Canvas>
       </Suspense>
     </div>
