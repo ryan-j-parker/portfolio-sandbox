@@ -33,7 +33,7 @@ export default function Summary() {
           <p className="emailBox">ryan.jos.parker@gmail.com</p>
           <div className="easteregg">
             <a title="let's build something wonderful!" href="mailto:ryan.jos.parker@gmail.com">
-              <i className="fa fa-envelope" aria-hidden="true" />
+              <i className="fa fa-envelope email" aria-hidden="true" />
             </a>
           </div>
         </>
