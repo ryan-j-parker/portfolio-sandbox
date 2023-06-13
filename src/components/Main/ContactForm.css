@@ -1,0 +1,95 @@
+.contact-form-wrapper {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 300px; */
+  /* height: 400px; */
+  /* margin: 0 auto; */
+  /* margin-top: 50%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 1rem;
+  /* background-color: #0000ff39; */
+  background: var(--grey);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
+  padding-bottom: 15px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  padding: 20px;
+  /* background: #00ffff; */
+  text-align: left;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+
+.contact-form-wrapper h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #2c365e;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  font-family: 'Special Elite', cursive;
+  color: #2c365e;
+  background: #00ffff;
+  box-shadow: 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 1px solid #2c365e;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-form button {
+  width: 60%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Special Elite', cursive;
+  color: #2c365e;
+  background-color: var(--orange);
+  /* color: var(--blue); */
+  color: var(--grey);
+  cursor: pointer;
+  box-shadow: 0 0 0.5rem 0.25rem rgba(68, 228, 252, 0.7),
+    inset 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.25);
+  margin-top: 10px;
+  transition: all 0.21s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: var(--dark);
+  color: #00ffff;
+}
+
+.contact-form button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 0.5rem 0.25rem rgba(68, 228, 252, 0.7),
+    inset 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.25);
+}
+
+.contact-form button:focus {
+  outline: 1px solid #2c365e;
+}

@@ -1,11 +1,5 @@
 /* eslint-disable react/no-unknown-property */
-import {
-  PresentationControls,
-  Stage,
-  Float,
-  Html,
-  Loader,
-} from '@react-three/drei';
+import { PresentationControls, Stage, Float, Html, Loader } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import './MainStage.css';
 import * as THREE from 'three';
@@ -54,7 +48,7 @@ export default function MainStage() {
               config={{ mass: 2, tension: 400 }}
               snap={{ mass: 2, tension: 400 }}
             >
-              <pointLight intensity={5} position={[4, 2, 2]}/>
+              <pointLight intensity={5} position={[4, 2, 2]} />
               <Stage shadows="contact" adjustCamera={10} preset="soft">
                 <Float
                   floatIntensity={0.75}
