@@ -64,6 +64,9 @@ export default function AppNavBar() {
           <li>
             <a href="/projects3d">3D</a>
           </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
         </ul>
       </div>
     </div>
