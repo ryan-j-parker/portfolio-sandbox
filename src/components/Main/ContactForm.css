@@ -40,6 +40,7 @@
   margin: 1rem;
   width: 100%;
   text-align: center;
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
 }
 
 .contact-form input,
@@ -84,6 +85,7 @@
     inset 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.25);
   margin-top: 10px;
   transition: all 0.21s ease-in-out;
+  text-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .contact-form button:hover {
