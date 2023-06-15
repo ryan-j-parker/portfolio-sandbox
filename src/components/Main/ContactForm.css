@@ -17,6 +17,21 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
   padding-bottom: 15px;
+  /* animation: formAnimation 0.5s ease-in-out; */
+}
+
+/* make wobble animation */
+
+@keyframes formAnimation {
+  0% {
+    transform: scale(0.5);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .contact-form {
@@ -31,16 +46,19 @@
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 5px;
+  animation: formAnimation 0.5s ease-in-out;
 }
 
 .contact-form-wrapper h1 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #ffffff;
   margin: 1rem;
   width: 100%;
   text-align: center;
-  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5), 3.5px 3.5px 1px var(--orange),
+    4.5px 4.5px 1px var(--blue);
+  font-family: 'Nunito', sans-serif;
 }
 
 .contact-form input,
@@ -72,7 +90,9 @@
   font-weight: 600;
   font-family: 'Special Elite', cursive;
   color: #2c365e;
-  background-color: var(--orange);
+  /* background-color: var(--orange); */
+  /* background-color: var(--yellow); */
+  background: rgba(41, 36, 38, 0);
   /* color: var(--blue); */
   /* color: var(--grey); */
   color: white;
@@ -89,7 +109,8 @@
 }
 
 .contact-form button:hover {
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
+  background-color: var(--orange);
   /* box-shadow: 0 0 0.5rem 0.25rem rgba(68, 228, 252, 0.7); */
   color: #00ffff;
 }
@@ -98,6 +119,7 @@
   transform: scale(0.95);
   box-shadow: 0 0 0.5rem 0.25rem rgba(68, 228, 252, 0.7),
     inset 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.25);
+  transition: all 0.1s ease-in-out;
 }
 
 .contact-form button:focus {

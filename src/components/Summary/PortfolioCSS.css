@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   color: var(--blue);
-  text-shadow: 1px 1px #bababa;
+  text-shadow: -1px -1px rgba(251, 124, 69, 0.9), 1px 1px rgba(255, 214, 57, 0.9);
 }
 
 .personal {
@@ -221,4 +221,11 @@
 }
 .personal {
   font-weight: 400;
+}
+
+.tools {
+  font-weight: 400;
+}
+
+.projectTools {
 }

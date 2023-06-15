@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 527 609.52">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fb7c45;
+        font-family: Nunito-ExtraBold, Nunito;
+        font-size: 370px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #44e4fc;
+      }
+    </style>
+  </defs>
+  <g id="Layer_10" data-name="Layer 10">
+    <rect class="cls-2" x="10" y="15" width="512" height="512"/>
+  </g>
+  <g id="Layer_11" data-name="Layer 11">
+    <text class="cls-1" transform="translate(10 507.78)"><tspan x="0" y="0">RP</tspan></text>
+  </g>
+</svg>

@@ -1,6 +1,9 @@
 import React, { Suspense, useEffect, useState, useRef } from 'react';
 import './ContactForm.css';
 import emailjs from '@emailjs/browser';
+import CloudsBG from '../Summary/CloudsBG';
+
+const alertMessage = 'Your message has been sent. I look forward to working with you!';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -22,49 +25,53 @@ export default function ContactForm() {
     setName('');
     setEmail('');
     setMessage('');
-    alert('Your message has been sent. I look forward to working with you!');
+    alert(alertMessage);
+    window.location.replace('/');
   };
 
   return (
-    <div className="contact-form-wrapper">
-      <h1>Let&apos;s work together!</h1>
-      <form
-        className="contact-form"
-        ref={contactRef}
-        onSubmit={handleSubmit}
-        id="contact"
-        //
-      >
-        <input
-          value={name}
-          name="name"
-          className="form-name"
-          type="text"
-          placeholder="name"
-          onChange={(event) => setName(event.target.value)}
-        />
-        <input
-          value={email}
-          name="email"
-          className="form-email"
-          type="email"
-          placeholder="email"
-          onChange={(event) => setEmail(event.target.value)}
-        />
-        <textarea
-          value={message}
-          cols={40}
-          rows={10}
-          name="message"
-          className="form-message"
-          type="text"
-          placeholder="message"
-          onChange={(event) => setMessage(event.target.value)}
-        />
-        <button className="form-submit" type="submit">
-          Send
-        </button>
-      </form>
-    </div>
+    <>
+      <CloudsBG />
+      <div className="contact-form-wrapper">
+        <h1>Let&apos;s work together!</h1>
+        <form
+          className="contact-form"
+          ref={contactRef}
+          onSubmit={handleSubmit}
+          id="contact"
+          //
+        >
+          <input
+            value={name}
+            name="name"
+            className="form-name"
+            type="text"
+            placeholder="name"
+            onChange={(event) => setName(event.target.value)}
+          />
+          <input
+            value={email}
+            name="email"
+            className="form-email"
+            type="email"
+            placeholder="email"
+            onChange={(event) => setEmail(event.target.value)}
+          />
+          <textarea
+            value={message}
+            cols={40}
+            rows={10}
+            name="message"
+            className="form-message"
+            type="text"
+            placeholder="message"
+            onChange={(event) => setMessage(event.target.value)}
+          />
+          <button className="form-submit" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+    </>
   );
 }

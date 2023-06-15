@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 522 522">
+  <defs>
+    <style>
+      .cls-1 {
+        mix-blend-mode: lighten;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        fill: #ffd639;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-family: Nunito-ExtraBold, Nunito;
+        font-size: 340px;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill: #fb7c45;
+      }
+
+      .cls-5 {
+        fill: #333;
+      }
+    </style>
+  </defs>
+  <g class="cls-2">
+    <g id="Layer_5_copy" data-name="Layer 5 copy">
+      <g class="cls-1">
+        <text class="cls-4" transform="translate(28.27197 381.69824)"><tspan x="0" y="0">RP</tspan></text>
+        <text class="cls-4" transform="translate(18.27197 371.69824)"><tspan x="0" y="0">RP</tspan></text>
+      </g>
+      <g>
+        <g class="cls-1">
+          <text class="cls-3" transform="translate(38.27197 391.69824)"><tspan x="0" y="0">RP</tspan></text>
+        </g>
+        <text class="cls-5" transform="translate(28.27197 381.69824)"><tspan x="0" y="0">RP</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
