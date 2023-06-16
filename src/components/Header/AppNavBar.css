@@ -2,6 +2,7 @@
 
 :root {
   --background: #292426;
+  /* --background: rgb(0, 0, 19); */
 }
 
 .navbar {
@@ -26,8 +27,7 @@
   top: -5px;
   justify-content: flex-end;
   text-align: right;
-  /* font-family: 'Roboto Slab', 'Open Sans', 'Patua One', 'Courier New', Courier, monospace; */
-  font-family: 'Nunito';
+  font-family: 'Nunito', sans-serif;
   font-weight: 1000;
   animation: scale-up-center 0.3s ease-in-out;
 }
@@ -78,7 +78,6 @@
 }
 
 .navbar-links li:active {
-  background-color: var(--yellow);
   color: var(--blue);
   transform: scale(1);
   transition: all 0.005s ease-in;
@@ -112,7 +111,6 @@
   top: -17.5px;
   border-radius: 10px;
   color: white;
-  /* make transition animation */
   transition: all 1.3s ease-in-out;
 }
 
