@@ -22,20 +22,40 @@ function PortfolioProject() {
               className="projectImg"
               loading="lazy"
             />
-            <p className="projectTools">{project.tools}</p>
+            <div className="projectTools">
+              {/* <p className="tools">Tools used:</p> */}
+              {project.tools.map((tool) => (
+                <img
+                  key={project.id + tool}
+                  src={`../icons/${tool}-icon.png`}
+                  className="toolImg"
+                  alt={tool}
+                  loading="lazy"
+                />
+              ))}
+            </div>
           </div>
           <div className="column right">
             <div className="descriptionBox">
               <p className="projectDesc">{project.description}</p>
               &nbsp;
-              <p className="personal">{project.personal}</p>
+              {/* <p className="personal">{project.personal}</p> */}
             </div>
             <div className="linksBox">
               <a className="githubLink" href={project.github} rel="noreferrer" target="_blank">
-                <button className="ghBtn">GitHub</button>
+                {/* <button className="ghBtn">GitHub</button> */}
+                <img src="../icons/github-icon.png" className="ghImg" loading="lazy" alt="github" />
+                <p className="img-p">Source code</p>
               </a>
               <a className="netlifyLink" href={project.netlify} rel="noreferrer" target="_blank">
-                <button className="liveBtn">Live</button>
+                {/* <button className="liveBtn">Live</button> */}
+                <img
+                  src="../icons/netlify-icon.png"
+                  className="netlifyImg"
+                  loading="lazy"
+                  alt="netlify"
+                />
+                <p className="img-p">Deployed</p>
               </a>
             </div>
           </div>
