@@ -9,6 +9,7 @@ import { Portfolio } from './components/Summary/Portfolio';
 import FrameCycle from './components/Main/FrameCycle';
 import AppNavBar from './components/Header/AppNavBar';
 import Scrollable from './components/Sandbox/Scrollable';
+import ContactForm from './components/Main/ContactForm';
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Summary />} />
         <Route path="/projects" element={<Portfolio />} />
-        <Route path="/RJP-SWE-resume-2023.pdf" />
+        <Route path="/frontend-june-2023.pdf" />
         <Route path="/projects3d" element={<MainStage />} />
         <Route path="/altCanvas" element={<AltCanvas />} />
         <Route path="/projects2d" element={<FrameCycle />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="/email" element={<Scrollable />} />
       </Routes>
     </div>

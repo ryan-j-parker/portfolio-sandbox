@@ -37,10 +37,12 @@ export default function AppNavBar() {
   return (
     <div className="navbar">
       <a href="#" className="toggle-button" id="toggle" onClick={handleClick}>
-        {clicked ? 
+        {clicked ? (
           // <XBar />
-          <p className="x-bar">✖</p> 
-          : <Bars />}
+          <p className="x-bar">✖</p>
+        ) : (
+          <Bars />
+        )}
       </a>
       <div className="navbar-links" id="links">
         <ul>
@@ -61,6 +63,9 @@ export default function AppNavBar() {
           </li>
           <li>
             <a href="/projects3d">3D</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
           </li>
         </ul>
       </div>

@@ -3,6 +3,7 @@ import { Cloud, Stars } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import React, { Suspense, useEffect, useRef, useState } from 'react';
 import './Summary.css';
+import CloudsBG from './CloudsBG';
 
 export default function Summary() {
   const hiRef = useRef();
@@ -43,7 +44,7 @@ export default function Summary() {
 
   return (
     <>
-      <Suspense fallback={null}>
+      {/* <Suspense fallback={null}>
         <Canvas className="summaryCanvas">
           <ambientLight intensity={0.15} />
           <Cloud
@@ -56,13 +57,14 @@ export default function Summary() {
           />
           <Stars radius={100} depth={50} count={1000} fade />
         </Canvas>
-      </Suspense>
+      </Suspense> */}
+      <CloudsBG />
       <div className="summary" onClick={() => setClicked(!clicked)}>
         <div ref={hiRef} className="summaryText" id="hi">
           Hi.
-        </div>
-        <div ref={myRef} className="summaryText" id="myNameIs">
-          <span id="my">My</span> <span id="name">name</span> <span id="is">is</span>
+          {/* </div>
+        <div ref={myRef} className="summaryText" id="myNameIs"> */}
+          <span id="my"> My</span> <span id="name">name</span> <span id="is">is</span>
         </div>
         <div
           ref={ryanRef}
@@ -71,12 +73,12 @@ export default function Summary() {
           onPointerOver={() => setHovered(true)}
           onPointerOut={() => setHovered(false)}
         >
-          Ryan Parker.
+          Ryan J. Parker.
         </div>
         <div ref={imARef} className="summaryText" id="imA">
           I&apos;m a{' '}
           <span className="software" id="software">
-            full-stack software developer
+            full stack software developer
           </span>{' '}
           based in <span className="portland">Portland, Oregon.</span>
         </div>

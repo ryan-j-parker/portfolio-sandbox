@@ -47,7 +47,7 @@
   display: flex;
   align-items: center;
   color: var(--blue);
-  text-shadow: 1px 1px #bababa;
+  text-shadow: -1px -1px rgba(251, 124, 69, 0.9), 1px 1px rgba(255, 214, 57, 0.9);
 }
 
 .personal {
@@ -216,9 +216,92 @@
   width: 100%;
   z-index: -10;
 }
-.description {
+.projectDesc {
+  font-size: 1.2rem;
   font-weight: 400;
+  font-family: 'Nunito', sans-serif;
 }
 .personal {
   font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+}
+
+.tools {
+  font-weight: 400;
+}
+
+.projectTools {
+  position: relative;
+  right: 0;
+  width: 100%;
+  opacity: 0.95;
+  /* background: pink; */
+  /* display: flex; */
+  /* margin-top: 25px; */
+  margin-top: -25px;
+}
+
+/* .tools {
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  color: var(--yellow);
+} */
+
+.toolImg {
+  max-width: 50px;
+  display: inline;
+  max-height: 100px;
+  margin: 0 5px;
+  backdrop-filter: blur(5px);
+}
+
+.netlifyImg,
+.ghImg {
+  max-width: 50px;
+  display: inline;
+  max-height: 50px;
+  margin: 0 5px;
+}
+
+.linksBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.githubLink,
+.netlifyLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  margin: 0 5px;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+  padding: 0 5px;
+}
+
+.githubLink:hover,
+.netlifyLink:hover {
+  color: var(--blue);
+  /* text-shadow: 2px 2px var(--orange); */
+  /* transform: scale(1.05); */
+  box-shadow: -7px 7px 4px -4px rgba(255, 255, 255, 1);
+  transform: translate(7px, -7px);
+}
+
+.githubLink:active,
+.netlifyLink:active {
+  color: var(--orange);
+  text-shadow: 2px 2px var(--blue);
+  /* transform: scale(0.98); */
+  box-shadow: 7px 7px 4px -4px rgba(255, 255, 255, 1);
+  filter: invert(100%);
 }

@@ -13,8 +13,8 @@ export default function Project({ sourceIndex }) {
     'https://flags-of-earth.netlify.app',
     'https://3x3x3-algorithms.netlify.app',
     'https://nature-soundboard.netlify.app',
-    'https://r3f-frame.netlify.app',
-    'https://cube-field.netlify.app',
+    // 'https://r3f-frame.netlify.app',
+    // 'https://cube-field.netlify.app',
   ];
 
   const projectRef = useRef();
