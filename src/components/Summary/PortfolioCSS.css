@@ -46,7 +46,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  color: var(--blue);
+  /* color: var(--blue); */
+  color: transparent;
   text-shadow: -1px -1px rgba(251, 124, 69, 0.9), 1px 1px rgba(255, 214, 57, 0.9);
 }
 
@@ -235,9 +236,6 @@
   right: 0;
   width: 100%;
   opacity: 0.95;
-  /* background: pink; */
-  /* display: flex; */
-  /* margin-top: 25px; */
   margin-top: -25px;
 }
 
@@ -283,7 +281,7 @@
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
   margin: 0 5px;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.21s ease-in-out;
   position: relative;
   padding: 0 5px;
 }
@@ -302,6 +300,6 @@
   color: var(--orange);
   text-shadow: 2px 2px var(--blue);
   /* transform: scale(0.98); */
-  box-shadow: 7px 7px 4px -4px rgba(255, 255, 255, 1);
+  box-shadow: -7px 7px 4px -4px rgba(255, 255, 255, 1);
   filter: invert(100%);
 }

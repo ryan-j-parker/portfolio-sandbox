@@ -153,7 +153,7 @@ function Block(props) {
   );
 }
 
-export default function AltCanvas() {
+function AltCanvas() {
   return (
     <div className="mainstage">
       <Suspense fallback={<Loader />}>
@@ -165,7 +165,7 @@ export default function AltCanvas() {
           style={{ height: '100%', width: '100%' }}
         >
           <ambientLight intensity={2.5} />
-          <color attach="background" args={['#06092c']} />
+          {/* <color attach="background" args={['#06092c']} /> */}
           <pointLight position={[-20, 10, 25]} />
           <gridHelper
             args={[240, 20, '#FB7C45', '#44E4FC']}
@@ -206,3 +206,5 @@ export default function AltCanvas() {
     </div>
   );
 }
+
+// export default AltCanvas;
