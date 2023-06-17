@@ -55,7 +55,7 @@ function ShaderEl() {
   );
 }
 
-export default function FrameCycle() {
+function FrameCycle() {
   const sources = [
     'https://tv-static-shader.netlify.app',
     'https://sound-palette.netlify.app',
@@ -92,3 +92,5 @@ export default function FrameCycle() {
     </div>
   );
 }
+
+// export default FrameCycle;

@@ -7,7 +7,7 @@ import { Suspense, useRef, useState } from 'react';
 import CRT from './CRT';
 import App3dText from './App3dText';
 
-export default function MainStage() {
+function MainStage() {
   const [sourceIndex, setSourceIndex] = useState(0);
 
   const handleClickUp = () => {
@@ -88,3 +88,5 @@ export default function MainStage() {
     </>
   );
 }
+
+export default MainStage;

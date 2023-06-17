@@ -21,8 +21,8 @@ function App() {
         <Route path="/projects" element={<Portfolio />} />
         <Route path="/frontend-june-2023.pdf" />
         <Route path="/projects3d" element={<MainStage />} />
-        <Route path="/altCanvas" element={<AltCanvas />} />
-        <Route path="/projects2d" element={<FrameCycle />} />
+        {/* <Route path="/altCanvas" element={<AltCanvas />} /> */}
+        {/* <Route path="/projects2d" element={<FrameCycle />} /> */}
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/email" element={<Scrollable />} />
       </Routes>
