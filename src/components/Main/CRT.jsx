@@ -11,6 +11,7 @@ import attractFragment from '../../shaders/attractFragment';
 import attractVertex from '../../shaders/attractVertex';
 import crtFragment from '../../shaders/crtFragment';
 import crtVertex from '../../shaders/crtVertex';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const CrtMaterial = shaderMaterial(
   {
@@ -46,9 +47,9 @@ const AttractMaterial = shaderMaterial(
 );
 extend({ AttractMaterial });
 
-
 export default function CRT({ sourceIndex }) {
   const crt = useGLTF('/CRT/Television_01_1k.gltf');
+
   const crtMaterial = useRef();
 
   useFrame((state, delta) => {
@@ -85,10 +86,10 @@ export default function CRT({ sourceIndex }) {
         </mesh>
       </group>
       <group position={[3.17, 5.7, 5]}>
-        <Channel />      
+        <Channel />
       </group>
       <group position={[3.17, 4.5, 5]}>
-        <Channel />      
+        <Channel />
       </group>
     </>
   );
