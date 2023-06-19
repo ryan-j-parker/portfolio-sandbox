@@ -24,7 +24,7 @@ function App() {
         {/* <Route path="/altCanvas" element={<AltCanvas />} /> */}
         {/* <Route path="/projects2d" element={<FrameCycle />} /> */}
         <Route path="/contact" element={<ContactForm />} />
-        <Route path="/email" element={<Scrollable />} />
+        {/* <Route path="/email" element={<Scrollable />} /> */}
       </Routes>
     </div>
   );

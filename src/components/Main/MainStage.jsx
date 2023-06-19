@@ -35,7 +35,7 @@ function MainStage() {
               fov: 45,
             }}
             onCreated={({ gl }) => {
-              gl.outputEncoding = THREE.sRGBEncoding;
+              // gl.outputEncoding = THREE.sRGBEncoding;
               gl.toneMapping = THREE.ACESFilmicToneMapping;
               gl.toneMappingExposure = 1;
             }}

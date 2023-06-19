@@ -26,7 +26,7 @@ function PortfolioProject() {
               {/* <p className="tools">Tools used:</p> */}
               {project.tools.map((tool) => (
                 <img
-                  key={project.id + tool}
+                  key={project.id + Date.now() * Math.random()}
                   src={`../icons/${tool}-icon.png`}
                   className="toolImg"
                   alt={tool}
