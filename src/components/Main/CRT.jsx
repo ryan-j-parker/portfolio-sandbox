@@ -2,7 +2,7 @@
 import { shaderMaterial, useGLTF } from '@react-three/drei';
 import { extend, useFrame } from '@react-three/fiber';
 import './MainStage.css';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Project from '../../ProjectFrames/Project';
 import Channel from './Channel';
 import dotsVertex from '../../shaders/dotsVertex';
@@ -49,6 +49,15 @@ extend({ AttractMaterial });
 
 export default function CRT({ sourceIndex }) {
   const crt = useGLTF('/CRT/Television_01_1k.gltf');
+
+  // // TODO: import GLTFLoader
+  // const gltfLoader = new GLTFLoader();
+  // const [crt, setCrt] = useState();
+  // useEffect(() => {
+  //   gltfLoader.load('/CRT/Television_01_1k.gltf', (gltf) => {
+  //     setCrt(gltf);
+  //   });
+  // }, []);
 
   const crtMaterial = useRef();
 
