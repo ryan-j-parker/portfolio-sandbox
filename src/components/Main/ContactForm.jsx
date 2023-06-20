@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Suspense, useEffect, useState, useRef } from 'react';
 import './ContactForm.css';
 import emailjs from '@emailjs/browser';
@@ -13,15 +14,15 @@ export default function ContactForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log('Form data:', { name, email, message });
-    // emailjs.sendForm('service_i70vkk5', 'template_0z30u1o', event.target, 'xKFk6ZSEiYrwgvG7V').then(
-    //   (result) => {
-    //     console.log(result.text);
-    //   },
-    //   (error) => {
-    //     console.log(error.text);
-    //   }
-    // );
+    console.log('Form data:', { name, email, message });
+    emailjs.sendForm('service_i70vkk5', 'template_0z30u1o', event.target, 'xKFk6ZSEiYrwgvG7V').then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
     setName('');
     setEmail('');
     setMessage('');
