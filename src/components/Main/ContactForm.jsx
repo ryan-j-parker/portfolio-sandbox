@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { Suspense, useEffect, useState, useRef } from 'react';
 import './ContactForm.css';
 import emailjs from '@emailjs/browser';
