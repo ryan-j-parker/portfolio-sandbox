@@ -17,7 +17,7 @@ export const Projects = [
     image: 'collabo',
     description:
       'An open-source collaborative music platform that allows musicians to connect remotely and create and contribute to song projects. Built with a team of 4 in a 4-day sprint using vanilla JS, Supabase, and the Waveform Playlist API. Users can create and join projects, add tracks, and collaborate in real-time on the same project. Users can upload and download mp3 tracks and add tags for genre, tempo, time signature, and key. Built in a 4-day sprint with a team of 5.',
-    tools: ['javascript', 'css', 'supabase'],
+    tools: ['javascript', 'css', 'supabase', 'vercel'],
     personal:
       'My primary contributions to this app included building the landing page and the auth component. I also contributed to the overall styling of the app.',
     github: 'https://github.com/Collabo-Team/collabo',
