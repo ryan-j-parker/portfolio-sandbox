@@ -17,6 +17,8 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.25);
   padding-bottom: 15px;
+  min-width: 600px;
+  max-width: 800px;
   /* animation: formAnimation 0.5s ease-in-out; */
 }
 
@@ -39,6 +41,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 600px;
+  max-width: 800px;
   /* width: 100%; */
   padding: 20px;
   /* background: #00ffff; */
