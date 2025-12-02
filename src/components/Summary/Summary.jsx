@@ -29,7 +29,7 @@ export default function Summary() {
         <>
           <div className="image-wrapper">
             <p className="wave">👋</p>
-            <img src="/headshot-gradient-1024.png" className="headshot profile-pic" />
+            <img src="/ryhead.png" className="headshot profile-pic" />
           </div>
           <p className="emailBox">ryan.jos.parker@gmail.com</p>
           <div className="easteregg">
@@ -60,10 +60,12 @@ export default function Summary() {
       </Suspense> */}
       <CloudsBG />
       <div className="summary" onClick={() => setClicked(!clicked)}>
-        <div ref={hiRef} className="summaryText" id="hi">
-          Hi.
-          {/* </div>
-        <div ref={myRef} className="summaryText" id="myNameIs"> */}
+        <div ref={hiRef} className="summaryText portland" id="hi">
+          こんにちは!
+          <p />
+          <p />
+        </div>
+        <div ref={myRef} className="summaryText" id="myNameIs">
           <span id="my"> My</span> <span id="name">name</span> <span id="is">is</span>
         </div>
         <div
@@ -73,14 +75,14 @@ export default function Summary() {
           onPointerOver={() => setHovered(true)}
           onPointerOut={() => setHovered(false)}
         >
-          Ryan J. Parker.
+          Ryan Joseph Parker.
         </div>
         <div ref={imARef} className="summaryText" id="imA">
           I&apos;m a{' '}
           <span className="software" id="software">
             full stack software developer
           </span>{' '}
-          based in <span className="portland">Portland, Oregon.</span>
+          based in <span className="portland">Okinawa, Japan.</span>
         </div>
       </div>
       {showHeadshot()}
