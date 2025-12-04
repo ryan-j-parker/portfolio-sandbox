@@ -70,7 +70,7 @@ export default function Summary() {
         </div>
         <div
           ref={ryanRef}
-          className="ryan"
+          className="ryan cursor"
           id="ryan"
           onPointerOver={() => setHovered(true)}
           onPointerOut={() => setHovered(false)}
