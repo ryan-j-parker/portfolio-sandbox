@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@formspree/react": "^3.0.0",
     "@react-spring/parallax": "^9.7.0",
     "@react-spring/web": "^9.7.0",
     "@react-three/drei": "^9.76.1",

@@ -9,7 +9,8 @@ import { Portfolio } from './components/Summary/Portfolio';
 // import FrameCycle from './components/Main/FrameCycle';
 import AppNavBar from './components/Header/AppNavBar';
 import Scrollable from './components/Sandbox/Scrollable';
-import ContactForm from './components/Main/ContactForm';
+// import ContactForm from './components/Main/ContactForm';
+import ContactForm2 from './components/Main/ContactForm2';
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
         <Route path="/projects3d" element={<MainStage />} />
         {/* <Route path="/altCanvas" element={<AltCanvas />} /> */}
         {/* <Route path="/projects2d" element={<FrameCycle />} /> */}
-        <Route path="/contact" element={<ContactForm />} />
+        {/* <Route path="/contact" element={<ContactForm />} /> */}
+        <Route path="/contact" element={<ContactForm2 />} />
         <Route path="/email" element={<Scrollable />} />
       </Routes>
     </div>
